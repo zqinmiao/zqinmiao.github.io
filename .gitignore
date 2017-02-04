@@ -11,6 +11,7 @@ node_modules
 *.log
 .deploy*/
 db.json
+public/
 
 # Windows:
 Thumbs.db

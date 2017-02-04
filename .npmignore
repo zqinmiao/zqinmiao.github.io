@@ -1,7 +1,19 @@
-.DS_Store
-Thumbs.db
-db.json
+# IntelliJ project files
+.git
+.idea
+*.iml
+out
+gen
+node_modules
 *.log
-node_modules/
-public/
 .deploy*/
+db.json
+public/
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+#Mac:
+.DS_Store
