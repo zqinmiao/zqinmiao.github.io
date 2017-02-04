@@ -1,0 +1,21 @@
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.git
+.idea
+*.iml
+out
+gen
+node_modules
+*.log
+.deploy*/
+db.json
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+#Mac:
+.DS_Store
