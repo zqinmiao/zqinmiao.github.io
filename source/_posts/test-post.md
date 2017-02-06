@@ -4,7 +4,7 @@ date: 2017-01-03 21:49:46
 update:
 comments:
 tags:
-categories:
+categories: think
 permalink:
 ---
 hahaa

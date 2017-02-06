@@ -1,1 +1,9 @@
 testtittle: hahaha
+
+# Sidebar
+widgets:
+- category
+- tag
+- tagcloud
+- archive
+- recent_posts

@@ -66,7 +66,7 @@ pagination_dir: page
 plugin:
 - hexo-generator-feed
 ## Themes: https://hexo.io/themes/
-theme: yayajiu
+theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
