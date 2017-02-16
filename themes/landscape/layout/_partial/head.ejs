@@ -17,6 +17,8 @@
     title = __('category') + ': ' + page.category;
   } else if (is_tag()){
     title = __('tag') + ': ' + page.tag;
+  }else if(is_current('about')){
+    title = __('about');
   }
   %>
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>

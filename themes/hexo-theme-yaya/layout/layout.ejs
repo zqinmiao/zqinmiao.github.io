@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<%- partial('_partial/head') %>
+<body>
+<div id="page">
+	<%- partial("_partial/header") %>
+	<div class="main">
+		<article><%- body %></article>
+		<aside></aside>
+	</div>
+	<%- partial("_partial/footer") %>
+</div>
+<%- js('js/jquery.min')%>
+<%- js('js/script') %>
+</body>
+</html>

@@ -1,4 +1,8 @@
-testtittle: hahaha
+# Header
+menu:
+  首页: /
+  关于: /about
+  RSS: /atom.xml
 
 # Sidebar
 widgets:

@@ -65,8 +65,9 @@ pagination_dir: page
 #RSS订阅
 plugin:
 - hexo-generator-feed
+
 ## Themes: https://hexo.io/themes/
-theme: yayajiu
+theme: hexo-theme-yaya
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
