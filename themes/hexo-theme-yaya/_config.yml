@@ -1,13 +1,12 @@
 # Header
 menu:
-  首页: /
-  关于: /about
+  HOME: /
+  ABOUT: /about
   RSS: /atom.xml
 
 # Sidebar
 widgets:
 - category
 - tag
-- tagcloud
 - archive
 - recent_posts

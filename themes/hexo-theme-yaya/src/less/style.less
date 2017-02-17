@@ -1,22 +1,75 @@
-/*颜色*/
-@color-white: #fff;
-@color-black: #333;
-@color-gray: #e5e5e5;
+*{
+  box-sizing: border-box;
+}
 
-/*字体*/
-@font-yahei:      "\5FAE\8F6F\96C5\9ED1";
-@font-heiti:      "\9ED1\4F53";
-@font-songti:     "\5b8b\4f53";
-@font-tahoma:     Tahoma;
-@font-arial:      Arial;
+html {
+  font: 12px/1.5 @font-yahei, @font-heiti, @font-songti, @font-tahoma, @font-arial;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
 
-/*通用宽度*/
-.default-width() {
-  width: 960px;
-  margin: auto;
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #fff;
+}
+
+/*清除浮动*/
+.clearfix {
+  *zoom: 1;
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: "";
+    clear: both;
+    height: 0;
+    *zoom: 1;
+  }
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.fc {
+  clear: both;
+}
+.fz {
+  zoom: 1;
+}
+
+/*a标签link、visited、hover、active状态时的样式*/
+a{
+  &:link,
+  &:visited{
+    text-decoration: none;
+    color: #333;
+  }
+  &:hover,
+  &:active{
+    text-decoration: none;
+    outline-width: 0;
+  }
+}
+
+ul{
+  list-style: none;
+  .reset-mp;
+}
+h1{
+  .reset-mp;
+}
+
+
+#page {
+  height: 500px;
+  background-color: #3e3e3e;
 }
 
 /*引入文件*/
-@import "base";
+@import "variable";
 @import "_partial/header";
 @import "_partial/sidebar";

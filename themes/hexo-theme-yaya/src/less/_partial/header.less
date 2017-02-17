@@ -4,8 +4,115 @@
   right: 0;
   left: 0;
   background-color: @color-black;
+  border-bottom: 1px solid #333;
   z-index: 100;
+
   &-wrap{
     .default-width;
+    position: relative;
+    height: 54px;
+    line-height: 54px;
+
+    a{
+      display: block;
+      padding: 0 20px;
+      color: @color-white;
+    }
+
+    .cur{
+      display: block;
+    }
+
+    .brand{
+      a{
+        font-size: 24px;
+      }
+    }
+
+    /*头部菜单栏增加过渡动画*/
+    .header-menu-transition-show(@borderBottom1){
+      border-bottom: @borderBottom1 solid #fff;
+      transition: border-bottom .5s ease-in;
+    }
+    .header-menu-transition-hide(@borderBottom2){
+      border-bottom: @borderBottom2 solid #fff;
+      transition: border-bottom .5s ease-in;
+    }
+
+    /*菜单栏变量*/
+    .menu-pc-var(@fontSize;@paddingWidth;@borderBottom1;@borderBottom2){
+      li{
+        float: left;
+        a{
+          height: 54px;
+          padding: 0 @paddingWidth;
+          font-size: @fontSize;
+          color: @color-gray;
+          &:hover{
+            color: @color-white;
+            .header-menu-transition-show(@borderBottom1);
+          }
+          .header-menu-transition-hide(@borderBottom2);
+        }
+      }
+    }
+
+    .menu-pc{
+      .menu-pc-var(18px;20px;15px;0);
+    }
+
+    .hide{
+      display: block;
+    }
+
+    /*PC端——屏幕大于599px时*/
+    @media all and(min-width:600px){
+      /*隐藏mb-tab、mb-btn*/
+      .mb-tab,
+      .mb-btn{
+        display: none;
+      }
+    }
+
+    /*移动端——屏幕小于600px时*/
+    @media all and(max-width:599px){
+      /*隐藏RSS*/
+      .hide{
+        display: none;
+      }
+      .menu-pc{
+        .menu-pc-var(12px;35px;0;0);
+      }
+      .menu{
+        float: none;
+        margin: 0 auto;
+      }
+
+      /*小屏幕，菜单栏按钮*/
+      .mb-btn{
+        display: block;
+        width: 30px;
+        height: 54px;
+        position: absolute;
+        top: 50%;
+        right: 35px;
+        margin-top: -27px;
+        border: none;
+        background-color: @color-black;
+        cursor: pointer;
+        span{
+          display: block;
+          height: 2px;
+          margin-bottom: 5px;
+          background-color: @color-white;
+        }
+      }
+
+      /*折叠菜单栏*/
+      .mb-tab{
+        display: block;
+
+      }
+    }
   }
 }

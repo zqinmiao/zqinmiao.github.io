@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <%
   var title = page.title;
-
   if (is_archive()){
     title = __('archive_a');
 
@@ -19,6 +18,8 @@
     title = __('tag') + ': ' + page.tag;
   }else if(is_current('about')){
     title = __('about');
+  }else if(is_home()){
+	  title = __('home');
   }
   %>
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
