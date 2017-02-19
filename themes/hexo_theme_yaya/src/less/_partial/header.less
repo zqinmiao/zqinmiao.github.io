@@ -1,0 +1,166 @@
+.header {
+  background-color: @color-black;
+  z-index: 100;
+
+  /*@variable header-menu-hover-animation
+  ------------------------------------------------*/
+  //.header-menu-transition-show(@border-bottom1){
+  //  border-bottom: @border-bottom1 solid @color-white;
+  //  transition: border-bottom .5s ease-in;
+  //}
+  //.header-menu-transition-hide(@border-bottom2){
+  //  border-bottom: @border-bottom2 solid @color-white;
+  //  transition: border-bottom .5s ease-in;
+  //}
+
+  /*@variable menu-pc
+  ------------------------------------------------*/
+  .menu-pc-var(@font-size;@padding-width;) {
+    li {
+      float: left;
+      a {
+        height: 54px;
+        padding: 0 @padding-width;
+        font-size: @font-size;
+        color: @color-gray;
+        &:hover {
+          color: @color-white;
+          //.header-menu-transition-show(@border-bottom1);
+        }
+        //.header-menu-transition-hide(@border-bottom2);
+      }
+    }
+  }
+
+  /*@style header-wrapper
+  ------------------------------------------------*/
+  .header-wrap {
+    .default-width;
+    position: relative;
+    height: 54px;
+    line-height: 54px;
+
+    a {
+      display: block;
+      padding: 0 20px;
+    }
+
+    .brand {
+      a {
+        height: 54px;
+        color: @color-white;
+        font-size: 24px;
+      }
+    }
+
+    /*@style menu-pc*/
+    .menu-pc {
+      .menu-pc-var(16px; 20px;);
+    }
+
+    /*hide brand*/
+    .hide {
+      display: block;
+    }
+
+    /*@media menu-pc—screen>599px
+    ------------------------------------------------*/
+    @media all and(min-width: 600px) {
+      /*隐藏mb-tab、mb-btn*/
+      .menu-mb,
+      .menu-mb-btn {
+        display: none;
+      }
+    }
+
+    /*@media menu-mobile—screen<600px
+    ------------------------------------------------*/
+    @media all and(max-width: 599px) {
+      /*隐藏brand*/
+      .hide {
+        display: none;
+      }
+
+      .menu-pc {
+        .menu-pc-var(12px; 35px;);
+      }
+
+      /*@style menu cancel-float*/
+      .menu {
+        float: none;
+        margin: 0 auto;
+      }
+
+      /*@style menu-mb-btn
+      ------------------------------------------------*/
+      .menu-mb-btn {
+        display: block;
+        width: 30px;
+        height: 54px;
+        position: absolute;
+        top: 50%;
+        right: 35px;
+        margin-top: -27px;
+        border: none;
+        background-color: @color-black;
+        cursor: pointer;
+        span {
+          display: block;
+          height: 2px;
+          margin-bottom: 5px;
+          background-color: @color-white;
+        }
+      }
+
+      /*@style menu-mobile
+      ------------------------------------------------*/
+      .menu-mb {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        top: 37px;
+        right: 63px;
+      }
+    }
+  }
+
+  /*@style fixed-status
+  ------------------------------------------------*/
+  &.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, .9);
+    .header-wrap {
+      .brand {
+        a {
+          color: @color-light-black;
+        }
+      }
+      .menu-pc {
+        li {
+          a {
+            color: @color-gray;
+            &:hover {
+              color: @color-black;
+            }
+          }
+        }
+      }
+      .menu-mb-btn {
+        background-color: @color-white;
+        span {
+          background-color: @color-black;
+        }
+      }
+      .menu-mb {
+        background-color: @color-black;
+        a {
+          color: @color-white;
+        }
+      }
+    }
+  }
+}
+

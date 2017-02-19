@@ -6,7 +6,7 @@ menu:
 
 # Sidebar
 widgets:
-- category
-- tag
-- archive
+- categories
+- tags
+- archives
 - recent_posts
