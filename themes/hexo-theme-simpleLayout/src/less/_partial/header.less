@@ -1,0 +1,49 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: @color-black;
+  z-index: 100;
+  .header-wrap{
+    box-sizing: border-box;
+    .default-width;
+    height: 54px;
+    padding: 0 20px;
+    .brand{
+      height: 100%;
+      line-height: 54PX;
+      a{
+        font-size: 32px;
+        color: @color-light-gray;
+        &:hover{
+          color:@color-white;
+          text-decoration: none;
+        }
+      }
+    }
+    .menu{
+      height: 100%;
+      li{
+        height: 100%;
+        line-height:54px;
+        margin-left: 40px;
+        @media screen and(max-width: 499px){
+          display: none;
+          &.about{
+            display: block;
+          }
+        }
+        a{
+          font-size: 18px;
+          color: @color-light-gray;
+          &:hover{
+            color:@color-white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+

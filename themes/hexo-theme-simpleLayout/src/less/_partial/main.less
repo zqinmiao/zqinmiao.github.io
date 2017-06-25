@@ -1,0 +1,44 @@
+.main{
+  box-sizing: border-box;
+  .default-width;
+  min-height: 800px;
+  padding: 10px 10px;
+
+  .left-area{
+    float: left;
+    padding-top: 10px;
+    box-sizing: border-box;
+    width: 66%;
+    //媒体查询
+    @media screen and(min-width: 800px) and (max-width: 845px){
+      width: 64%;
+    }
+    @media screen and(min-width: 768px) and (max-width: 799px){
+      width: 62%;
+    }
+    @media screen and(max-width: 767px){
+      float: none;
+      width: 100%;;
+    }
+  }
+
+  .sidebar{
+    float: right;
+    width: 280px;
+    margin-top: 10px;
+    @media screen and(min-width: 500px) and(max-width: 767px){
+      float: none;
+      width: 100%;;
+      display: flex;
+      .widget{
+        flex: 1;
+      }
+    }
+    @media screen and(max-width: 499px){
+      float: none;
+      width: 100%;;
+      display: block;
+    }
+  }
+
+}

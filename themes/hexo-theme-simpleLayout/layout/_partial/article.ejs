@@ -1,0 +1,11 @@
+<div class="article-wrap">
+    <h2 class="article-title">
+        <a href="<%- config.root %><%- post.path %>"><%- post.title %></a>
+    </h2>
+    <div class="entry-meta">
+        <span class="bulid-date"><b>发表于：</b><%- post.date.format("YYYY-MM-DD") %></span>
+        <span class="update"><b>更新于：</b><%- post.updated.format("YYYY-MM-DD") %></span>
+    </div>
+    <div class="article-excerpt"><%- post.excerpt %></div>
+    <a class="read-more" href="<%- url_for(post.path)%>"><%= theme.excerpt_link%>—&gt;</a>
+</div>

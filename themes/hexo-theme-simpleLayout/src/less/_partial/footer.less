@@ -1,0 +1,50 @@
+.footer{
+  .default-width;
+  padding: 10px 0;
+  border-top:1px solid @color-black;
+  text-align: center;
+  .social{
+    padding-bottom: 10px;
+    text-align: center;
+    li{
+      display: inline-block;
+      box-sizing: border-box;
+      margin: 0 10px;
+      cursor: pointer;
+
+      a{
+        display: block;
+        width: 48px;
+        background-color: @color-black;
+        border-radius: 50%;
+        color: @color-white;
+        font-size: 32px;
+        text-decoration: none;
+        &:hover{
+          background-color: @color-blue;
+        }
+        //调整字体位置
+        i{
+          position: relative;
+          &.icon-weibo{
+            top: -2px;
+          }
+          &.icon-zhihu{
+            top: -1px;
+          }
+          &.icon-github{
+            left: -2px;
+          }
+        }
+      }
+    }
+
+  }
+  p{
+    font-size: 14px;
+    a{
+      color: @color-blue;
+      text-underline: none;
+    }
+  }
+}

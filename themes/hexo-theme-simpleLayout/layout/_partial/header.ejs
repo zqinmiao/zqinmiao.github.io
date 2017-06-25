@@ -1,0 +1,12 @@
+<div class="header">
+    <div class="header-wrap clearfix">
+        <!--brand log-->
+        <h1 class="brand fl"><a href="<%- url_for() %>"><%= config.title %></a></h1>
+        <!--menu-->
+        <ul class="menu fr clearfix">
+            <% for(var i in theme.menu){ %>
+            <li class="fl <%= i.toLowerCase()%>"><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+            <% } %>
+        </ul>
+    </div>
+</div>

@@ -5,38 +5,62 @@
 # Site
 title: reahink
 subtitle:
-description: xxx
+description: 博客、blog、技术、读、写、看
 author: reahink
 language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
+#-----------------------------------------
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://zqinmiao.github.io/
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:title/
 permalink_defaults:
 
 # Directory
+#-----------------------------------------
+#资源文件夹，这个文件夹用来存放内容
 source_dir: source
+#公共文件夹，这个文件夹用于存放生成的站点文件
 public_dir: public
+#标签文件夹
 tag_dir: tags
+#归档文件夹
 archive_dir: archives
+#分类文件夹
 category_dir: categories
+#Include code 文件夹
 code_dir: downloads/code
+#国际化（i18n）文件夹
 i18n_dir: :lang
+#跳过指定文件的渲染，您可使用 glob 表达式来匹配路径
 skip_render:
 
 # Writing
+#-----------------------------------------
+#新文章的文件名称
 new_post_name: :title.md # File name of new posts
+#预设布局
 default_layout: post
+#把标题转换为 title case
 titlecase: false # Transform title into titlecase
+#在新标签中打开链接
 external_link: true # Open external links in new tab
+#把文件名称转换为 (1) 小写或 (2) 大写
 filename_case: 0
+#显示草稿
 render_drafts: false
+
+#启动 Asset 文件夹==>资源（Asset）代表 source 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等
 post_asset_folder: true
+
+#把链接改为与根目录的相对位址
 relative_link: false
+#显示未来的文章
 future: true
+
+#代码块的设置
 highlight:
   enable: true
   line_number: true
@@ -44,11 +68,13 @@ highlight:
   tab_replace:
 
 # Category & Tag
+#-----------------------------------------
 default_category: uncategorized
 category_map:
 tag_map:
 
 # Date / Time format
+#-----------------------------------------
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
@@ -56,20 +82,27 @@ date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
 # Pagination
+#-----------------------------------------
 ## Set per_page to 0 to disable pagination
+#每页显示的文章量 (0 = 关闭分页功能)
 per_page: 10
+#分页目录
 pagination_dir: page
 
 # Extensions
+#-----------------------------------------
 ## Plugins: https://hexo.io/plugins/
 #RSS订阅
 plugin:
 - hexo-generator-feed
 
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-yaya
+#-----------------------------------------
+theme: hexo-theme-simpleLayout
+#theme: landscape
 
 # Deployment
+#-----------------------------------------
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
