@@ -1,0 +1,48 @@
+.about-wrap{
+  h2{
+    margin-bottom: 5px;
+    border-bottom: 1px solid @color-gray;
+    color: @color-blue;
+  }
+  p{
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .social{
+    padding-bottom: 10px;
+    text-align: center;
+    li{
+      display: inline-block;
+      box-sizing: border-box;
+      margin: 0 10px;
+      cursor: pointer;
+
+      a{
+        display: block;
+        width: 48px;
+        background-color: @color-black;
+        border-radius: 50%;
+        color: @color-white;
+        font-size: 32px;
+        text-decoration: none;
+        &:hover{
+          background-color: @color-blue;
+        }
+        //调整字体位置
+        i{
+          position: relative;
+          &.icon-weibo{
+            top: -2px;
+          }
+          &.icon-zhihu{
+            top: -1px;
+          }
+          &.icon-github{
+            left: -2px;
+          }
+        }
+      }
+    }
+
+  }
+}
