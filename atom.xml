@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zqinmiao.github.io/"/>
-  <updated>2017-06-26T06:28:14.000Z</updated>
+  <updated>2017-06-26T13:15:34.000Z</updated>
   <id>https://zqinmiao.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://zqinmiao.github.io/2017/01/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"/>
     <id>https://zqinmiao.github.io/2017/01/关于使用Hexo搭建博客的一些问题总结/</id>
     <published>2017-01-01T02:20:50.000Z</published>
-    <updated>2017-06-26T06:28:14.000Z</updated>
+    <updated>2017-06-26T13:15:34.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>闲来无事，就使用Hexo也搭建了一个博客。<br>浏览了许多漂亮的主题模版，但是总感觉自己不动手搞一个主题有违极客精神。<br>无奈审美能力有限，看来自己搞出来的主题真是不忍直视。<br>在使用Hexo的过程中遇到了一些问题，<br>通过搜索前人的总结得到了解决，现在将一些自己认为有用的点总结一下，<br>也算是对玩Hexo的一个记录。<br><a id="more"></a></p>
@@ -39,7 +39,9 @@
 64 bytes from 151.101.88.133: icmp_seq=5 ttl=53 time=44.221 ms
 </code></pre><p>ping出的ip就是：151.101.88.133</p>
 <p>然后在记录类型：CNAME中的记录值上填上仓库名：<code>zqinmiao.github.io.</code>这里注意：仓库名后面要加上一个点”.”</p>
-<h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3>]]></content>
+<h3 id="2-然后回到github的博客仓库"><a href="#2-然后回到github的博客仓库" class="headerlink" title="2.然后回到github的博客仓库"></a>2.然后回到github的博客仓库</h3><p>点击博客仓库的设置，找到如下图所示的选项：<br><img src="/2017/01/关于使用Hexo搭建博客的一些问题总结/3.jpeg" alt="Alt 域名解析"><br>将自定义的域名填入，保存即可。</p>
+<p>但是上面的方法有一些问题，每次写文章将博客部署后都要部署，比较麻烦。</p>
+]]></content>
     
     <summary type="html">
     
