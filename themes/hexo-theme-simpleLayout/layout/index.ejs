@@ -1,3 +1,4 @@
 <% site.posts.sort("date", "desc").each(function(post){ %>
 <%- partial("_partial/article", {post: post}) %>
 <% }) %>
+<%- partial("_partial/comment") %>

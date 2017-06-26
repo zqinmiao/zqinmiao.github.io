@@ -1,15 +1,25 @@
 .widget{
   padding: 0 10px 20px;
   font-family: @font-droid;
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
   >h1{
-    margin-bottom: 10px;
+    //margin-bottom: 10px;
+    margin: 0;
     font-size: 18px;
     font-weight: 500;
     color: @color-light-black;
-    border-bottom: 1px solid @color-gray;
+    //border-bottom: 1px solid @color-gray;
+  }
+  hr{
+    margin-top: 0;
+    margin-bottom: 10px;
   }
   a{
-    color: @color-black;
+    color: @color-gray;
     cursor: pointer;
     &:hover{
       color: @color-blue;

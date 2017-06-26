@@ -1,12 +1,44 @@
 .post-wrap{
-  .post-title{
-    margin-bottom: 10px;
-    font-size: 24px;
-    text-align: center;
+  font-size: 14px;
+  //文章渲染
+  pre{
+    overflow:scroll;
+  }
+  code{
+    display: block;
+    width: 80%;
+    padding: 5px 5px;
+    background-color: @color-light-black;
+    color: @color-white;
+    overflow: scroll;
   }
   p{
-    font-family: @font-droid;
-    font-size: 16px;
+    margin: 0;
+  }
+  a{
+    &:link,
+    &:visited{
+      color: @color-blue;
+    }
+  }
+  blockquote{
+    padding: 0 15px;
+    border-left: 5px solid @color-gray;
+    color: @color-gray;
+  }
+  p{
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .post-title{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
   }
   .share-warp{
     .bdsharebuttonbox{

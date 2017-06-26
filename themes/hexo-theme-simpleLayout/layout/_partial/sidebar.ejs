@@ -2,6 +2,7 @@
     <!--分类-->
     <div class="category-wrap widget">
         <h1>Category</h1>
+        <hr>
         <%if(site.categories.length>0){%>
         <%- list_categories({show_count: true}) %>
         <%}else {%>
@@ -11,6 +12,7 @@
     <!--标签云-->
     <div class="tag-wrap widget">
         <h1>Tags</h1>
+        <hr>
         <%if(site.tags.length>0){%>
         <%- tagcloud(site.tags,{color: false,min_font:14}) %>
         <%}else {%>
@@ -21,6 +23,7 @@
     <% if (site.posts.length>0){ %>
     <div class="archive-wrap widget">
         <h1>Archive</h1>
+        <hr>
         <%- list_archives({show_count: true, type: "monthly"}) %>
     </div>
     <% } %>

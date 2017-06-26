@@ -99,7 +99,6 @@ plugin:
 ## Themes: https://hexo.io/themes/
 #-----------------------------------------
 theme: hexo-theme-simpleLayout
-#theme: landscape
 
 # Deployment
 #-----------------------------------------

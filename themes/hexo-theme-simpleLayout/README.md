@@ -1,1 +1,1 @@
-#hexo-theme-yaya
+##hexo-theme-simpleLayout

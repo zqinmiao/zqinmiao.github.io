@@ -5,21 +5,25 @@
   }
   .article-title{
     margin-bottom: 5px;
-    border-bottom: 1px dashed @color-black;
     font-size: 18px;
+    font-weight: 600;
     a:hover{
       color: @color-blue;
     }
   }
   .entry-meta{
+    color: @color-gray;
     span{
       margin-right: 20px;
     }
   }
-  .read-more:hover{
-    border: 1px solid @color-blue;
-    border-radius: 2px;
-    background-color: @color-blue;
-    color: @color-white;
+  .read-more{
+    color: @color-blue;
+    &:hover{
+      border: 1px solid @color-blue;
+      border-radius: 2px;
+      background-color: @color-blue;
+      color: @color-white;
+    }
   }
 }
