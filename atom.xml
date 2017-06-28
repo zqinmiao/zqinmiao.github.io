@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zqinmiao.github.io/"/>
-  <updated>2017-06-26T14:03:06.000Z</updated>
+  <updated>2017-06-28T05:38:17.000Z</updated>
   <id>https://zqinmiao.github.io/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MVC、MVP、MVVM</title>
+    <link href="https://zqinmiao.github.io/2017/06/MVC%E3%80%81MVP%E3%80%81MVVM/"/>
+    <id>https://zqinmiao.github.io/2017/06/MVC、MVP、MVVM/</id>
+    <published>2017-06-28T05:30:12.000Z</published>
+    <updated>2017-06-28T05:38:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>看笔记发现收藏的三张关于介绍MVC、MVP、MVVM模式的三张图片，图片表示的简单明了，特此分享一下。具体来源不记得了，感谢原作者。<br><a id="more"></a></p>
+</blockquote>
+<p><img src="/2017/06/MVC、MVP、MVVM/MVC.png" alt="Alt MVC"></p>
+<p><img src="/2017/06/MVC、MVP、MVVM/MVP.png" alt="Alt MVP"></p>
+<p><img src="/2017/06/MVC、MVP、MVVM/MVVM.png" alt="Alt MVVM"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;看笔记发现收藏的三张关于介绍MVC、MVP、MVVM模式的三张图片，图片表示的简单明了，特此分享一下。具体来源不记得了，感谢原作者。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="框架" scheme="https://zqinmiao.github.io/categories/%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="mvc" scheme="https://zqinmiao.github.io/tags/mvc/"/>
+    
+      <category term="mvp" scheme="https://zqinmiao.github.io/tags/mvp/"/>
+    
+      <category term="mvvm" scheme="https://zqinmiao.github.io/tags/mvvm/"/>
+    
+  </entry>
   
   <entry>
     <title>关于使用Hexo搭建博客的一些问题总结</title>
