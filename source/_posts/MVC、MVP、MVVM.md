@@ -15,3 +15,5 @@ permalink:
 ![Alt MVP](/2017/06/MVC、MVP、MVVM/MVP.png)
 
 ![Alt MVVM](/2017/06/MVC、MVP、MVVM/MVVM.png)
+
+[这篇文章介绍的更加详细](https://github.com/livoras/blog/issues/11)
