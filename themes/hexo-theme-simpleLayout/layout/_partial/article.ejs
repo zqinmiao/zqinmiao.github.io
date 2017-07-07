@@ -4,7 +4,6 @@
     </h2>
     <div class="entry-meta">
         <span class="bulid-date">发表于 <%- post.date.format("YYYY-MM-DD") %></span>
-        <span class="update">更新于 <%- post.updated.format("YYYY-MM-DD") %></span>
     </div>
     <div class="article-excerpt"><%- post.excerpt %></div>
     <a class="read-more" href="<%- url_for(post.path)%>"><%= theme.excerpt_link %>...</a>
