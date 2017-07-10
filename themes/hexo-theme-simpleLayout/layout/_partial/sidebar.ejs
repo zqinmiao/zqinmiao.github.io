@@ -1,7 +1,7 @@
 <div class="sidebar">
     <!--分类-->
     <div class="category-wrap widget">
-        <h1>Category</h1>
+        <h1><%= theme.widgets.Category %></h1>
         <hr>
         <%if(site.categories.length>0){%>
         <%- list_categories({show_count: true}) %>
@@ -11,7 +11,7 @@
     </div>
     <!--标签云-->
     <div class="tag-wrap widget">
-        <h1>Tags</h1>
+        <h1><%= theme.widgets.Tag %></h1>
         <hr>
         <%if(site.tags.length>0){%>
         <%- tagcloud(site.tags,{color: false,min_font:14}) %>
@@ -22,7 +22,7 @@
     <!--归档-->
     <% if (site.posts.length>0){ %>
     <div class="archive-wrap widget">
-        <h1>Archive</h1>
+        <h1><%= theme.widgets.Archive %></h1>
         <hr>
         <%- list_archives({show_count: true, type: "monthly"}) %>
     </div>

@@ -1,0 +1,39 @@
+.paginator-wrap{
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: center;
+  .extend{
+    display: inline-block;
+    font-weight: 600;
+    &.prev{
+      float: left;
+    }
+
+    &.next{
+      float: right;
+    }
+
+    &:hover{
+      color: @color-blue;
+    }
+
+  }
+  .page-number{
+    display: inline-block;
+    width: 20px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: @color-light-black;
+    color: @color-white;
+    &:hover{
+      background-color: @color-blue;
+    }
+    &.current{
+      color: @color-light-black;
+      &:hover{
+        background-color: @color-light-black;
+      }
+    }
+  }
+}

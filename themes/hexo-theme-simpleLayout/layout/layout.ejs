@@ -5,7 +5,10 @@
 <div id="page">
 	<%- partial("_partial/header") %>
 	<div class="main clearfix">
-		<div class="left-area"><%- body %></div>
+		<div class="left-area">
+			<%- body %>
+            <%- partial("_partial/paginator") %>
+		</div>
         <%- partial("_partial/sidebar") %>
 	</div>
 	<%- partial("_partial/footer") %>
