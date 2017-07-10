@@ -13,6 +13,7 @@
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	
 	<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/monokai-sublime.css">
 </head>
 
 
@@ -43,30 +44,31 @@
 </blockquote>
 <h4 id="•-使用-chunkhash-时，Error！"><a href="#•-使用-chunkhash-时，Error！" class="headerlink" title="• 使用[chunkhash]时，Error！"></a>• 使用[chunkhash]时，Error！</h4><p>在webpack.config.js文件中，在output选项里使用{filename:’[name].[chunkhash].js’}时，如：</p>
 <pre><code>output: {
-    filename: &apos;[name].[chunkhash].js&apos;,
-    path: path.resolve(__dirname, &apos;dist&apos;)
+    filename: &#39;[name].[chunkhash].js&#39;,
+    path: path.resolve(__dirname, &#39;dist&#39;)
 }
 </code></pre><p>出现报错的情况：</p>
 <pre><code>ERROR in chunk vendor [entry]
 [name].[chunkhash].js
-Cannot use [chunkhash] for chunk in &apos;[name].[chunkhash].js&apos; (use [hash] instead)
+Cannot use [chunkhash] for chunk in &#39;[name].[chunkhash].js&#39; (use [hash] instead)
 </code></pre><p>是因为生产环境build时不能启用HMR，将HMR插件关闭即可。</p>
 <hr>
 <h4 id="•-关于CommonsChunkPlugin插件的一些疑惑"><a href="#•-关于CommonsChunkPlugin插件的一些疑惑" class="headerlink" title="• 关于CommonsChunkPlugin插件的一些疑惑"></a>• 关于CommonsChunkPlugin插件的一些疑惑</h4><p>官方文档解释说：CommonsChunkPlugin 插件，是一个可选的用于建立一个独立文件(又称作 chunk)的功能，这个文件包括多个入口 chunk 的公共模块。通过将公共模块拆出来，最终合成的文件能够在最开始的时候加载一次，便存起来到缓存中供后续使用。这个带来速度上的提升，因为浏览器会迅速将公共的代码从缓存中取出来，而不是每次访问一个新页面时，再去加载一个更大的文件。<br>做个测试：<br>先安装一个moment工具作为测试：</p>
 <pre><code>npm install moment
 </code></pre><p>在不使用CommonsChunkPlugin的情况下：</p>
 <p>在入口文件index.js中</p>
-<pre><code>import moment from &apos;moment&apos;;//导入模块moment
+<pre><code>import moment from &#39;moment&#39;;//导入模块moment
 console.log(moment().format());
 </code></pre><p>在webpack.config.js中</p>
-<pre><code>entry: {
-    main:[&apos;index.js&apos;]
+<pre><code class="js">entry: {
+    main:[&#39;index.js&#39;]
 },
 output: {
-    path: path.resolve(__dirname, &apos;dist&apos;),
-    filename:&apos;[name].js&apos;
+    path: path.resolve(__dirname, &#39;dist&#39;),
+    filename:&#39;[name].js&#39;
 }
 </code></pre>
+
     <div class="share-warp clearfix">
         <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
@@ -117,6 +119,7 @@ output: {
 
 </div>
 <script src="/lib/gitment.browser.js"></script>
+<script src="/lib/highlight.min.js"></script>
 <script src="/js/main.js"></script>
 </body>
 </html>
