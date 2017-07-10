@@ -43,12 +43,12 @@ permalink:
     console.log(moment().format());
 
 在webpack.config.js中
-
-    entry: {
-        main:['index.js']
-    },
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename:'[name].js'
-    }
-
+```js
+entry: {
+    main:['index.js']
+},
+output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename:'[name].js'
+}
+```

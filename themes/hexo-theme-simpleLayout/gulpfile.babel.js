@@ -8,14 +8,14 @@ import del from 'del';
 import sequence from 'gulp-sequence';
 
 // 清理目录
-gulp.task('clean', () => del(["./source/css"], {dot: true}));
+gulp.task('clean', () => del(["./source/css/style.css"], {dot: true}));
 
 //处理less
 gulp.task('less', ()=>gulp.src('./src/less/style.less')
     .pipe(less())
     .pipe(autoprefixer())
     .pipe(cleanCss())
-    .pipe(gulp.dest('./source/css'))
+    .pipe(gulp.dest('./source/css/'))
 );
 
 //处理js

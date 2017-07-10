@@ -62,9 +62,9 @@ future: true
 
 #代码块的设置
 highlight:
-  enable: true
+  enable: false
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
 
 # Category & Tag
