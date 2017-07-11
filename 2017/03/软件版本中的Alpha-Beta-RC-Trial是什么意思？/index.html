@@ -8,7 +8,7 @@
 	<meta name="keywords" content="博客,blog,javascript,web,nodejs"/>
 	<meta name="description" content="博客、blog、技术、读读、想想、写写">
 	
-	<title>使用Webpack时遇到的Error和一些疑惑 |reahink</title>
+	<title>软件版本中的Alpha,Beta,RC,Trial是什么意思？ |reahink</title>
 	
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	
@@ -38,21 +38,17 @@
 	<div class="main clearfix">
 		<div class="left-area">
 			<div class="post-wrap">
-    <h2 class="post-title">使用Webpack时遇到的Error和一些疑惑</h2>
+    <h2 class="post-title">软件版本中的Alpha,Beta,RC,Trial是什么意思？</h2>
     <blockquote>
-<p>在用Webpack时遇到了一些问题，和一些概念的疑惑，现总结一下。<br><a id="more"></a></p>
+<p>经常会看到一些软件有不同的版本，这些版本代表什么意思呢，搜了一下，转载一篇文章，科普一下<br><a id="more"></a></p>
 </blockquote>
-<h4 id="•-使用-chunkhash-时，Error！"><a href="#•-使用-chunkhash-时，Error！" class="headerlink" title="• 使用[chunkhash]时，Error！"></a>• 使用[chunkhash]时，Error！</h4><p>在webpack.config.js文件中，在output选项里使用{filename:’[name].[chunkhash].js’}时，如：</p>
-<pre><code>output: {
-    filename: &#39;[name].[chunkhash].js&#39;,
-    path: path.resolve(__dirname, &#39;dist&#39;)
-}
-</code></pre><p>出现报错的情况：</p>
-<pre><code>ERROR in chunk vendor [entry]
-[name].[chunkhash].js
-Cannot use [chunkhash] for chunk in &#39;[name].[chunkhash].js&#39; (use [hash] instead)
-</code></pre><p>是因为生产环境build时不能启用HMR，将HMR插件关闭即可。</p>
+<p>版本号：<br>V（Version）：即版本，通常用数字表示版本号。(如:EVEREST　Ultimate　v4.20.1188　Beta　)<br>Build：用数字或日期标示版本号的一种方式。(如:VeryCD　eMule　v0.48a　Build　071112)<br>SP：Service　Pack，升级包。(如:Windows　XP　SP　2/Vista　SP　1)<br>开发阶段划分：<br>α（Alpha）版：内测版，内部交流或者专业测试人员测试用。Bug较多，普通用户最好不要安装。<br>β（Beta）版：公测版，专业爱好者大规模测试用，存在一些缺陷，该版本也不适合一般用户安装。<br>γ（Gamma）版：相当成熟的测试版，与即将发行的正式版相差无几。<br>RC版：是　Release　Candidate　的缩写，意思是发布倒计时，候选版本，处于Gamma阶段，该版本已经完成全部功能并清除大部分的BUG。到了这个阶段只会除BUG，不会对软件做任何大的更改。从Alpha到Beta再到Gamma是改进的先后关系，但RC1、RC2往往是取舍关系。<br>Final：正式版。</p>
 <hr>
+<p>授权和功能划分：<br>Trial：试用版，通常都有时间限制，有些试用版软件还在功能上做了一定的限制。可注册或购买成为正式版。,<br>Unregistered：未注册版，通常没有时间限制，在功能上相对于正式版做了一定的限制。可注册或购买成为正式版。<br>Demo：演示版，仅仅集成了正式版中的几个功能，不能升级成正式版。<br>Lite：精简版。<br>Full　version：完整版，属于正式版。</p>
+<hr>
+<p>语言划分：<br>SC：Simplified　Chinese简体中文版。<br>CN　：　简体中文版<br>GBK：简体中文汉字内码扩展规范版。<br>TC：Traditional　Chinese繁体中文版。<br>CHT　：　繁体中文版<br>BIG5：繁体中文大五码版。<br>EN　：　英文版<br>Multilanguage　：　多语言版<br>UTF8：Unicode　Transformation　Format　8　bit，对现有的中文系统不是好的解决方案。</p>
+<hr>
+<p>其他版本<br>Enhance　：增强版或者加强版　属于正式版1<br>Free　：自由版<br>Release　：发行版　有时间限制<br>Upgrade　：升级版<br>Retail　　：零售版<br>Cardware　：属共享软件的一种，只要给作者回复一封电邮或明信片即可。（有的作者并由此提供注册码等），目前这种形式已不多见。/　S<br>Plus　：属增强版，不过这种大部分是在程序界面及多媒体功能上增强。<br>Preview　：预览版<br>Corporation　&amp;　Enterprise　：企业版<br>Standard　：标准版<br>Mini　：迷你版也叫精简版只有最基本的功能<br>Premium　：　贵价版<br>Professional　：　专业版<br>Express　：　简易版<br>Deluxe　：　豪华版<br>Regged　：　已注册版</p>
 
     <div class="share-warp clearfix">
         <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>

@@ -8,7 +8,7 @@
 	<meta name="keywords" content="博客,blog,javascript,web,nodejs"/>
 	<meta name="description" content="博客、blog、技术、读读、想想、写写">
 	
-	<title>2017/1 |reahink</title>
+	<title>mac开发环境之redis |reahink</title>
 	
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	
@@ -37,17 +37,31 @@
 </div>
 	<div class="main clearfix">
 		<div class="left-area">
-			
-<div class="article-wrap">
-    <h2 class="article-title">
-        <a href="/2017/01/关于使用Hexo搭建博客的一些问题总结/">关于使用Hexo搭建博客的一些问题总结</a>
-    </h2>
-    <div class="entry-meta">
-        <span class="bulid-date">发表于 2017-01-01</span>
+			<div class="post-wrap">
+    <h2 class="post-title">mac开发环境之redis</h2>
+    <h2 id="安装配置redis"><a href="#安装配置redis" class="headerlink" title="安装配置redis"></a>安装配置redis</h2><p>安装命令</p>
+<pre><code>brew install redis
+</code></pre><p>开机自动启动redis命令：</p>
+<pre><code>$ ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+</code></pre><p>You can use launchctl to start and stop redis</p>
+<pre><code>$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+$ launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+</code></pre><p>You can also more conveniently use brew to start, stop, and verify service status</p>
+<pre><code>$ brew services list | grep redis
+$ brew services start redis
+$ brew services stop redis
+</code></pre><p>检查是否启动：</p>
+<pre><code>redis-cli ping
+</code></pre><p>Notes:<br>The default plist provided by homebrew stores the redis configuration at /usr/local/etc/redis.conf.<br>For more about launchctl see:<br><a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/launchctl.1.html#//apple_ref/doc/man/1/launchctl" target="_blank" rel="external">https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/launchctl.1.html#//apple_ref/doc/man/1/launchctl</a><br><a href="http://launchd.info/" target="_blank" rel="external">http://launchd.info/</a></p>
+<h3 id="Note：安装redis-desktop-manager"><a href="#Note：安装redis-desktop-manager" class="headerlink" title="Note：安装redis desktop manager"></a>Note：安装redis desktop manager</h3><p>1、确保安装好了brew、brew-cask<br>2、然后终端输入：brew cask install rdm</p>
+
+    <div class="share-warp clearfix">
+        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
     </div>
-    <div class="article-excerpt"><blockquote>
-<p>闲来无事，就使用Hexo也搭建了一个博客。<br>浏览了许多漂亮的主题模版，但是总感觉自己不动手搞一个主题有违极客精神。<br>无奈审美能力有限，看来自己搞出来的主题真是不忍直视。<br>在使用Hexo的过程中遇到了一些问题，<br>通过搜索前人的总结得到了解决，现在将一些自己认为有用的点总结一下，<br>也算是对玩Hexo的一个记录。<br></div>
-    <a class="read-more" href="/2017/01/关于使用Hexo搭建博客的一些问题总结/">阅读全文...</a>
+    <div id="comment-wrap">
+
+</div>
 </div>
 
             

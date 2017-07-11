@@ -8,7 +8,7 @@
 	<meta name="keywords" content="博客,blog,javascript,web,nodejs"/>
 	<meta name="description" content="博客、blog、技术、读读、想想、写写">
 	
-	<title>使用Webpack时遇到的Error和一些疑惑 |reahink</title>
+	<title>mac开发环境之brew、brew-cask |reahink</title>
 	
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	
@@ -38,21 +38,48 @@
 	<div class="main clearfix">
 		<div class="left-area">
 			<div class="post-wrap">
-    <h2 class="post-title">使用Webpack时遇到的Error和一些疑惑</h2>
+    <h2 class="post-title">mac开发环境之brew、brew-cask</h2>
     <blockquote>
-<p>在用Webpack时遇到了一些问题，和一些概念的疑惑，现总结一下。<br><a id="more"></a></p>
+<p>包管理工具可以让你安装和更新程序变得更方便，目前在 OS X 系统中最受欢迎的包管理工具是 Homebrew.<br><a id="more"></a></p>
 </blockquote>
-<h4 id="•-使用-chunkhash-时，Error！"><a href="#•-使用-chunkhash-时，Error！" class="headerlink" title="• 使用[chunkhash]时，Error！"></a>• 使用[chunkhash]时，Error！</h4><p>在webpack.config.js文件中，在output选项里使用{filename:’[name].[chunkhash].js’}时，如：</p>
-<pre><code>output: {
-    filename: &#39;[name].[chunkhash].js&#39;,
-    path: path.resolve(__dirname, &#39;dist&#39;)
-}
-</code></pre><p>出现报错的情况：</p>
-<pre><code>ERROR in chunk vendor [entry]
-[name].[chunkhash].js
-Cannot use [chunkhash] for chunk in &#39;[name].[chunkhash].js&#39; (use [hash] instead)
-</code></pre><p>是因为生产环境build时不能启用HMR，将HMR插件关闭即可。</p>
-<hr>
+<h2 id="安装brew"><a href="#安装brew" class="headerlink" title="安装brew"></a>安装brew</h2><p>包管理工具可以让你安装和更新程序变得更方便，目前在 OS X 系统中最受欢迎的包管理工具是 Homebrew.</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在安装 Homebrew 之前，需要将 Xcode Command Line Tools 安装完成，这样你就可以使用基于 Xcode Command Line Tools 编译的 Homebrew。<br>在 terminal 中复制以下命令（不包括 $），跟随指引，将完成 Hombrew 安装。</p>
+<pre><code>$ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre><p>紧接着，我们需要做一件事让通过 Homebrew 安装的程序的启动链接 (在 /usr/local/bin中）可以直接运行，无需将完整路径写出。通过以下命令将 /usr/local/bin 添加至 $PATH 环境变量中:</p>
+<pre><code>$ echo &#39;export PATH=&quot;/usr/local/bin:$PATH&quot;&#39; &gt;&gt; ~/.bash_profile
+</code></pre><p>Cmd+T 打开一个新的 terminal 标签页，运行以下命令，确保 brew 运行正常。</p>
+<pre><code>$ brew doctor
+</code></pre><p>译注：<br>安装完成后，Homebrew 会将本地 /usr/local 初始化为 git 的工作树，并将目录所有者变更为当前所操作的用户，将来 brew 的相关操作不需要 sudo 。</p>
+<h3 id="Homebrew基本使用"><a href="#Homebrew基本使用" class="headerlink" title="Homebrew基本使用"></a>Homebrew基本使用</h3><p>安装一个包，可以简单的运行：</p>
+<pre><code>$ brew install &lt;package_name&gt;
+</code></pre><p>更新 Homebrew 在服务器端上的包目录：</p>
+<pre><code>$ brew update
+</code></pre><p>查看你的包是否需要更新：</p>
+<pre><code>$ brew outdated
+</code></pre><p>更新包：</p>
+<pre><code>$ brew upgrade &lt;package_name&gt;
+</code></pre><p>Homebrew 将会把老版本的包缓存下来，以便当你想回滚至旧版本时使用。但这是比较少使用的情况，当你想清理旧版本的包缓存时，可以运行：</p>
+<pre><code>$ brew cleanup
+</code></pre><p>查看你安装过的包列表（包括版本号）：</p>
+<pre><code>$ brew list --versions
+</code></pre><hr>
+<h2 id="安装brew-cask"><a href="#安装brew-cask" class="headerlink" title="安装brew-cask"></a>安装brew-cask</h2><p>通过Homebrew Cask 优雅、简单、快速的安装和管理 OS X 图形界面程序，比如 Google Chrome 和 Dropbox。</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>安装 Homebrew-cask 是如此的简单直接，运行以下命令即可完成：</p>
+<pre><code>$ brew install caskroom/cask/brew-cask
+$ brew cask install google-chrome // 安装 Google 浏览器
+$ brew update &amp;&amp; brew upgrade brew-cask &amp;&amp; brew cleanup // 更新
+</code></pre><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>如果你想查看 cask 上是否存在你需要的 app，可以到 caskroom.io 进行搜索。</p>
+<h3 id="文件预览插件"><a href="#文件预览插件" class="headerlink" title="文件预览插件"></a>文件预览插件</h3><p>有些 插件 可以让 Mac 上的文件预览更有效，比如语法高亮、markdown 渲染、json 预览等等。</p>
+<pre><code>$ brew cask install qlcolorcode
+$ brew cask install qlstephen
+$ brew cask install qlmarkdown
+$ brew cask install quicklook-json
+$ brew cask install qlprettypatch
+$ brew cask install quicklook-csv
+$ brew cask install betterzipql
+$ brew cask install webpquicklook
+$ brew cask install suspicious-package
+</code></pre><h3 id="OS-X-图形界面程序"><a href="#OS-X-图形界面程序" class="headerlink" title="OS X 图形界面程序"></a>OS X 图形界面程序</h3><p>```<br>$ brew cask install alfred<br>$ brew cask install appcleaner<br>$ brew cask install cheatsheet<br>$ brew cask install dropbox<br>$ brew cask install google-chrome<br>$ brew cask install onepassword<br>$ brew cask install sublime-text<br>$ brew cask install totalfinder</p>
 
     <div class="share-warp clearfix">
         <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
