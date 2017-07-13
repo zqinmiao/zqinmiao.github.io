@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zqinmiao.github.io/"/>
-  <updated>2017-07-11T01:04:57.000Z</updated>
+  <updated>2017-07-13T08:36:02.000Z</updated>
   <id>https://zqinmiao.github.io/</id>
   
   <author>
@@ -16,14 +16,97 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vue之vuex概念-Modules</title>
+    <link href="https://zqinmiao.github.io/2017/07/Vue%E4%B9%8Bvuex%E6%A6%82%E5%BF%B5-Modules/"/>
+    <id>https://zqinmiao.github.io/2017/07/Vue之vuex概念-Modules/</id>
+    <published>2017-07-13T08:08:47.000Z</published>
+    <updated>2017-07-13T08:36:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>代码演示vuex中嵌套Modules是如何执行的<br><a id="more"></a></p>
+</blockquote>
+<p><a href="https://vuex.vuejs.org/zh-cn/modules.html" target="_blank" rel="external">参考文档</a></p>
+<pre><code class="js">import Vue from &#39;vue&#39;;
+import Vuex from &#39;vuex&#39;;
+Vue.use(Vuex);
+
+const store = new Vuex.Store({
+    modules:{
+        a:{
+            namespaced: true,
+            state:{
+                msg:&#39;msg&#39;;
+            },
+            mutations:{
+                increment(state){
+                    let m = state.msg+&#39;aa&#39;;
+                    console.log(m);
+                }
+            },
+
+            //嵌套模块
+            modules:{
+                b:{
+                    state:{
+                        msg2:&#39;inner-msg&#39;;
+                    },
+                    mutations:{
+                        test(state){
+                            console.log(state.msg2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+});
+/*
+* 情况1: 想要执行模块a中的mutations-&gt;increment()：如果模块a中的namespaced:true;那么methods中increment中的写法为this.$store.commit(&#39;a/increment&#39;);
+* 情况2: 想要执行模块b中的mutations-&gt;test()：如果模块a中的namespaced:true;模块b中的namespaced:false;或者不设置，那么methods中increment中的写法为this.$store.commit(&#39;a/test&#39;);
+* 情况3: 想要执行模块b中的mutations-&gt;test()：如果模块a中的namespaced:true;模块b中的namespaced:true;，那么methods中increment中的写法为this.$store.commit(&#39;a/b/test&#39;);
+* */
+const app = new Vue({
+   el:&#39;#app&#39;,
+    store,
+    methods:{
+        increment(){
+            this.$store.commit(&#39;a/increment&#39;);//情况1  ,log: msgaa
+            this.$store.commit(&#39;a/test&#39;);//情况2  ,log: inner-msg
+            this.$store.commit(&#39;a/b/test&#39;);//情况3  ,log: inner-msg
+        }
+    },
+    template: `
+            &lt;div class=&quot;app2&quot;&gt;
+              &lt;button v-on:click=&quot;increment&quot;&gt;按钮&lt;/button&gt;
+            &lt;/div&gt;
+          `
+});
+</code></pre>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;代码演示vuex中嵌套Modules是如何执行的&lt;br&gt;
+    
+    </summary>
+    
+      <category term="框架" scheme="https://zqinmiao.github.io/categories/%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="Vue" scheme="https://zqinmiao.github.io/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用Webpack时遇到的Error和一些疑惑</title>
     <link href="https://zqinmiao.github.io/2017/07/%E4%BD%BF%E7%94%A8Webpack%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84Error%E5%92%8C%E4%B8%80%E4%BA%9B%E7%96%91%E6%83%91/"/>
     <id>https://zqinmiao.github.io/2017/07/使用Webpack时遇到的Error和一些疑惑/</id>
     <published>2017-07-06T14:07:29.000Z</published>
-    <updated>2017-07-11T01:04:57.000Z</updated>
+    <updated>2017-07-13T08:06:47.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>在用Webpack时遇到了一些问题，和一些概念的疑惑，现总结一下。<br><a id="more"></a></p>
+<p>在用Webpack时遇到了一些问题，和一些概念的疑惑，持续更新…<br><a id="more"></a></p>
 </blockquote>
 <h4 id="•-使用-chunkhash-时，Error！"><a href="#•-使用-chunkhash-时，Error！" class="headerlink" title="• 使用[chunkhash]时，Error！"></a>• 使用[chunkhash]时，Error！</h4><p>在webpack.config.js文件中，在output选项里使用{filename:’[name].[chunkhash].js’}时，如：</p>
 <pre><code>output: {
@@ -41,7 +124,7 @@ Cannot use [chunkhash] for chunk in &#39;[name].[chunkhash].js&#39; (use [hash] 
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;在用Webpack时遇到了一些问题，和一些概念的疑惑，现总结一下。&lt;br&gt;
+&lt;p&gt;在用Webpack时遇到了一些问题，和一些概念的疑惑，持续更新…&lt;br&gt;
     
     </summary>
     
