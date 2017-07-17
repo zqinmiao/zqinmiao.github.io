@@ -7,7 +7,7 @@ tags: Webpack
 categories: 工具
 permalink:
 ---
->在用Webpack时遇到了一些问题，和一些概念的疑惑，现总结一下。
+>在用Webpack时遇到了一些问题，和一些概念的疑惑，持续更新...
 <!--more-->
 
 #### • 使用[chunkhash]时，Error！
