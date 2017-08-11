@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zqinmiao.github.io/"/>
-  <updated>2017-07-13T08:36:02.000Z</updated>
+  <updated>2017-08-11T15:54:37.000Z</updated>
   <id>https://zqinmiao.github.io/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git全局/本地配置用户名和邮箱</title>
+    <link href="https://zqinmiao.github.io/2017/08/git%E5%85%A8%E5%B1%80-%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E9%82%AE%E7%AE%B1/"/>
+    <id>https://zqinmiao.github.io/2017/08/git全局-本地配置用户名和邮箱/</id>
+    <published>2017-08-11T15:41:20.000Z</published>
+    <updated>2017-08-11T15:54:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="查看用户名和地址"><a href="#查看用户名和地址" class="headerlink" title="查看用户名和地址"></a>查看用户名和地址</h2><h3 id="查看本地的用户名和邮箱"><a href="#查看本地的用户名和邮箱" class="headerlink" title="查看本地的用户名和邮箱"></a>查看本地的用户名和邮箱</h3><pre><code>$ git config user.name
+$ git config user.email
+</code></pre><h3 id="查看全局的命令"><a href="#查看全局的命令" class="headerlink" title="查看全局的命令"></a>查看全局的命令</h3><pre><code>$ git config --global user.name
+$ git config --global user.email
+</code></pre><h2 id="修改用户名和地址"><a href="#修改用户名和地址" class="headerlink" title="修改用户名和地址"></a>修改用户名和地址</h2><h3 id="全局"><a href="#全局" class="headerlink" title="全局"></a>全局</h3><pre><code>$ git config --global user.name &quot;your name&quot;
+$ git config --global user.email &quot;your email&quot;
+</code></pre><h3 id="本地"><a href="#本地" class="headerlink" title="本地"></a>本地</h3><p>进入项目文件夹，.git文件夹是隐藏的</p>
+<pre><code>$ cd .git
+$ git config --global user.name &quot;your name&quot;
+$ git config --global user.email &quot;your email&quot;
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;查看用户名和地址&quot;&gt;&lt;a href=&quot;#查看用户名和地址&quot; class=&quot;headerlink&quot; title=&quot;查看用户名和地址&quot;&gt;&lt;/a&gt;查看用户名和地址&lt;/h2&gt;&lt;h3 id=&quot;查看本地的用户名和邮箱&quot;&gt;&lt;a href=&quot;#查看本地的用户名和邮箱&quot; class
+    
+    </summary>
+    
+      <category term="工具" scheme="https://zqinmiao.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Git" scheme="https://zqinmiao.github.io/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue之vuex概念-Modules</title>
