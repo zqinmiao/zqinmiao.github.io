@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zqinmiao.github.io/"/>
-  <updated>2017-08-13T08:41:20.000Z</updated>
+  <updated>2017-08-13T08:43:40.000Z</updated>
   <id>https://zqinmiao.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://zqinmiao.github.io/2017/08/vim%E5%B8%B8%E7%94%A8/"/>
     <id>https://zqinmiao.github.io/2017/08/vim常用/</id>
     <published>2017-08-13T08:37:08.000Z</published>
-    <updated>2017-08-13T08:41:20.000Z</updated>
+    <updated>2017-08-13T08:43:40.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>据说用vim是一个很好的装逼方式之一。即便是不能精通，但是为了能够在某个时刻偶尔装下逼，那么掌握一下常用的一些命令还是挺不错的，嘎嘎<br><a id="more"></a></p>
@@ -61,7 +61,8 @@ u   复原前一个动作
 :wq 保存文件并退出
 :set nu 显示行号
 :set nonu 取消显示行号
-</code></pre>]]></content>
+</code></pre><p><a href="http://www.runoob.com/linux/linux-vim.html" target="_blank" rel="external">参考文档</a></p>
+]]></content>
     
     <summary type="html">
     
