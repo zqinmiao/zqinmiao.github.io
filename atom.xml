@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zqinmiao.github.io/"/>
-  <updated>2017-08-11T15:54:37.000Z</updated>
+  <updated>2017-08-13T08:41:20.000Z</updated>
   <id>https://zqinmiao.github.io/</id>
   
   <author>
@@ -14,6 +14,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vim常用命令</title>
+    <link href="https://zqinmiao.github.io/2017/08/vim%E5%B8%B8%E7%94%A8/"/>
+    <id>https://zqinmiao.github.io/2017/08/vim常用/</id>
+    <published>2017-08-13T08:37:08.000Z</published>
+    <updated>2017-08-13T08:41:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>据说用vim是一个很好的装逼方式之一。即便是不能精通，但是为了能够在某个时刻偶尔装下逼，那么掌握一下常用的一些命令还是挺不错的，嘎嘎<br><a id="more"></a></p>
+</blockquote>
+<h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><pre><code>vi filename
+</code></pre><h3 id="按-i-进入编辑模式，此时终端下面会显示"><a href="#按-i-进入编辑模式，此时终端下面会显示" class="headerlink" title="按 i 进入编辑模式，此时终端下面会显示"></a>按 i 进入编辑模式，此时终端下面会显示</h3><pre><code>-- INSERT --
+</code></pre><p>此时就是进入编辑模式了<br>进入插入模式的其他方式：</p>
+<pre><code>i／I        i 为 [从目前光标所在处插入]， I 为[在目前所在行的第一个非空格符处开始插入]
+a／A     a 为[从目前光标所在的下一个字符处开始插入]， A 为[从光标所在行的最后一个字符处开始插入]
+o／O     这是英文字母 o 的大小写。o 为[在目前光标所在的下一行处插入新的一行]； O 为[在目前光标所在处的上一行插入新的一行]
+r／R        进入取代模式(Replace mode)：
+</code></pre><h3 id="按-esc-退出编辑模式，进入命令模式"><a href="#按-esc-退出编辑模式，进入命令模式" class="headerlink" title="按 esc 退出编辑模式，进入命令模式"></a>按 esc 退出编辑模式，进入命令模式</h3><h3 id="命令模式的命令："><a href="#命令模式的命令：" class="headerlink" title="命令模式的命令："></a>命令模式的命令：</h3><pre><code>i   切换到插入模式，以输入字符。
+x   删除当前光标所在处的字符。
+:   切换到底线命令模式，以在最底一行输入命令。
+[Ctrl] + [f]    屏幕『向下』移动一页，相当于 [Page Down]按键
+[Ctrl] + [b]    屏幕『向上』移动一页，相当于 [Page Up] 按键
+[Ctrl] + [d]    屏幕『向下』移动半页
+[Ctrl] + [u]    屏幕『向上』移动半页
++    光标移动到非空格符的下一行
+-    光标移动到非空格符的上一行
+n + [空格键]   n 表示数字。按下数字后再按空格键，光标会向右移动这一行的 n 个字符
+n + [&lt;Enter]    n 为数字。光标向下移动 n 行
+0   移动到这一行的最前面字符处
+$   移动到这一行的最后面字符处
+/word   向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可
+?word    向光标之上寻找一个字符串名称为 word 的字符串
+nx  n 为数字，连续向后删除 n 个字符。举例来说，我要连续删除 10 个字符，10x。
+dd  删除游标所在的那一整行
+ndd n为数字。删除光标所在的向下 n 行，例如 20dd 则是删除 20 行
+yy    复制游标所在的那一行
+nyy n为数字。复制光标所在的向下 n 行，例如 20yy 则是复制 20 行
+p/P p为将已复制的数据在光标下一行贴上，P 则为贴在游标上一行
+u   复原前一个动作
+[Ctrl] + r  重做上一个动作
+</code></pre><h3 id="输入-进入底线命令模式，回车退出底线命令模式进入命令模式"><a href="#输入-进入底线命令模式，回车退出底线命令模式进入命令模式" class="headerlink" title="输入 : 进入底线命令模式，回车退出底线命令模式进入命令模式"></a>输入 : 进入底线命令模式，回车退出底线命令模式进入命令模式</h3><h3 id="底线模式命令："><a href="#底线模式命令：" class="headerlink" title="底线模式命令："></a>底线模式命令：</h3><pre><code>:q 离开vim
+:q! 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案
+:w 保存文件
+:wq 保存文件并退出
+:set nu 显示行号
+:set nonu 取消显示行号
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;据说用vim是一个很好的装逼方式之一。即便是不能精通，但是为了能够在某个时刻偶尔装下逼，那么掌握一下常用的一些命令还是挺不错的，嘎嘎&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>git全局/本地配置用户名和邮箱</title>

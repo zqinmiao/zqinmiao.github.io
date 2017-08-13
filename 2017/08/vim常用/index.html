@@ -8,7 +8,7 @@
 	<meta name="keywords" content="博客,blog,javascript,web,nodejs"/>
 	<meta name="description" content="博客、blog、技术、读读、想想、写写">
 	
-	<title>Vue之vuex概念-Modules |reahink</title>
+	<title>vim常用命令 |reahink</title>
 	
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	
@@ -47,68 +47,47 @@
 	<div class="main clearfix">
 		<div class="left-area">
 			<div class="post-wrap">
-    <h2 class="post-title">Vue之vuex概念-Modules</h2>
+    <h2 class="post-title">vim常用命令</h2>
     <blockquote>
-<p>代码演示vuex中嵌套Modules是如何执行的<br><a id="more"></a></p>
+<p>据说用vim是一个很好的装逼方式之一。即便是不能精通，但是为了能够在某个时刻偶尔装下逼，那么掌握一下常用的一些命令还是挺不错的，嘎嘎<br><a id="more"></a></p>
 </blockquote>
-<p><a href="https://vuex.vuejs.org/zh-cn/modules.html" target="_blank" rel="external">参考文档</a></p>
-<pre><code class="js">import Vue from &#39;vue&#39;;
-import Vuex from &#39;vuex&#39;;
-Vue.use(Vuex);
-
-const store = new Vuex.Store({
-    modules:{
-        a:{
-            namespaced: true,
-            state:{
-                msg:&#39;msg&#39;;
-            },
-            mutations:{
-                increment(state){
-                    let m = state.msg+&#39;aa&#39;;
-                    console.log(m);
-                }
-            },
-
-            //嵌套模块
-            modules:{
-                b:{
-                    state:{
-                        msg2:&#39;inner-msg&#39;;
-                    },
-                    mutations:{
-                        test(state){
-                            console.log(state.msg2);
-                        }
-                    }
-                }
-            }
-        }
-    }
-});
-/*
-* 情况1: 想要执行模块a中的mutations-&gt;increment()：如果模块a中的namespaced:true;那么methods中increment中的写法为this.$store.commit(&#39;a/increment&#39;);
-* 情况2: 想要执行模块b中的mutations-&gt;test()：如果模块a中的namespaced:true;模块b中的namespaced:false;或者不设置，那么methods中increment中的写法为this.$store.commit(&#39;a/test&#39;);
-* 情况3: 想要执行模块b中的mutations-&gt;test()：如果模块a中的namespaced:true;模块b中的namespaced:true;，那么methods中increment中的写法为this.$store.commit(&#39;a/b/test&#39;);
-* */
-const app = new Vue({
-   el:&#39;#app&#39;,
-    store,
-    methods:{
-        increment(){
-            this.$store.commit(&#39;a/increment&#39;);//情况1  ,log: msgaa
-            this.$store.commit(&#39;a/test&#39;);//情况2  ,log: inner-msg
-            this.$store.commit(&#39;a/b/test&#39;);//情况3  ,log: inner-msg
-        }
-    },
-    template: `
-            &lt;div class=&quot;app2&quot;&gt;
-              &lt;button v-on:click=&quot;increment&quot;&gt;按钮&lt;/button&gt;
-            &lt;/div&gt;
-          `
-});
+<h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><pre><code>vi filename
+</code></pre><h3 id="按-i-进入编辑模式，此时终端下面会显示"><a href="#按-i-进入编辑模式，此时终端下面会显示" class="headerlink" title="按 i 进入编辑模式，此时终端下面会显示"></a>按 i 进入编辑模式，此时终端下面会显示</h3><pre><code>-- INSERT --
+</code></pre><p>此时就是进入编辑模式了<br>进入插入模式的其他方式：</p>
+<pre><code>i／I        i 为 [从目前光标所在处插入]， I 为[在目前所在行的第一个非空格符处开始插入]
+a／A     a 为[从目前光标所在的下一个字符处开始插入]， A 为[从光标所在行的最后一个字符处开始插入]
+o／O     这是英文字母 o 的大小写。o 为[在目前光标所在的下一行处插入新的一行]； O 为[在目前光标所在处的上一行插入新的一行]
+r／R        进入取代模式(Replace mode)：
+</code></pre><h3 id="按-esc-退出编辑模式，进入命令模式"><a href="#按-esc-退出编辑模式，进入命令模式" class="headerlink" title="按 esc 退出编辑模式，进入命令模式"></a>按 esc 退出编辑模式，进入命令模式</h3><h3 id="命令模式的命令："><a href="#命令模式的命令：" class="headerlink" title="命令模式的命令："></a>命令模式的命令：</h3><pre><code>i   切换到插入模式，以输入字符。
+x   删除当前光标所在处的字符。
+:   切换到底线命令模式，以在最底一行输入命令。
+[Ctrl] + [f]    屏幕『向下』移动一页，相当于 [Page Down]按键
+[Ctrl] + [b]    屏幕『向上』移动一页，相当于 [Page Up] 按键
+[Ctrl] + [d]    屏幕『向下』移动半页
+[Ctrl] + [u]    屏幕『向上』移动半页
++    光标移动到非空格符的下一行
+-    光标移动到非空格符的上一行
+n + [空格键]   n 表示数字。按下数字后再按空格键，光标会向右移动这一行的 n 个字符
+n + [&lt;Enter]    n 为数字。光标向下移动 n 行
+0   移动到这一行的最前面字符处
+$   移动到这一行的最后面字符处
+/word   向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可
+?word    向光标之上寻找一个字符串名称为 word 的字符串
+nx  n 为数字，连续向后删除 n 个字符。举例来说，我要连续删除 10 个字符，10x。
+dd  删除游标所在的那一整行
+ndd n为数字。删除光标所在的向下 n 行，例如 20dd 则是删除 20 行
+yy    复制游标所在的那一行
+nyy n为数字。复制光标所在的向下 n 行，例如 20yy 则是复制 20 行
+p/P p为将已复制的数据在光标下一行贴上，P 则为贴在游标上一行
+u   复原前一个动作
+[Ctrl] + r  重做上一个动作
+</code></pre><h3 id="输入-进入底线命令模式，回车退出底线命令模式进入命令模式"><a href="#输入-进入底线命令模式，回车退出底线命令模式进入命令模式" class="headerlink" title="输入 : 进入底线命令模式，回车退出底线命令模式进入命令模式"></a>输入 : 进入底线命令模式，回车退出底线命令模式进入命令模式</h3><h3 id="底线模式命令："><a href="#底线模式命令：" class="headerlink" title="底线模式命令："></a>底线模式命令：</h3><pre><code>:q 离开vim
+:q! 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案
+:w 保存文件
+:wq 保存文件并退出
+:set nu 显示行号
+:set nonu 取消显示行号
 </code></pre>
-
     <div class="share-warp clearfix">
         <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
