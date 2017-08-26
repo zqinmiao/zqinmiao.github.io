@@ -29,6 +29,6 @@ $ git config --global user.email "your email"
 进入项目文件夹，.git文件夹是隐藏的
 ```
 $ cd .git
-$ git config --global user.name "your name"
-$ git config --global user.email "your email"
+$ git config user.name "your name"
+$ git config user.email "your email"
 ```
