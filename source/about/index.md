@@ -19,3 +19,7 @@ zqinmiao@gmail.com
 ## 关于reahink
 
 reahink = read + think ，保持阅读，保持思考。
+
+## 关于yayajiu.com
+
+请叫 "呀呀啾" ，嗯，没毛病
