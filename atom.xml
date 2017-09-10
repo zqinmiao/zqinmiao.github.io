@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zqinmiao.github.io/"/>
-  <updated>2017-08-26T14:43:27.000Z</updated>
+  <updated>2017-09-10T03:28:17.000Z</updated>
   <id>https://zqinmiao.github.io/</id>
   
   <author>
@@ -14,6 +14,94 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>页面布局，body子元素设置固定宽度后溢出body的处理</title>
+    <link href="https://zqinmiao.github.io/2017/09/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%EF%BC%8Cbody%E5%AD%90%E5%85%83%E7%B4%A0%E8%AE%BE%E7%BD%AE%E5%9B%BA%E5%AE%9A%E5%AE%BD%E5%BA%A6%E5%90%8E%E6%BA%A2%E5%87%BAbody%E7%9A%84%E5%A4%84%E7%90%86/"/>
+    <id>https://zqinmiao.github.io/2017/09/页面布局，body子元素设置固定宽度后溢出body的处理/</id>
+    <published>2017-09-10T03:18:28.000Z</published>
+    <updated>2017-09-10T03:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>前段时间只用VUE+UI框架来做后台管理系统了，不用框架写页面竟然突然感到手生的厉害，甚至连布局的不灵便了…….<br><a id="more"></a></p>
+</blockquote>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在布局的时候遇到了body里面的元素溢出的问题。按照常理body中的块级元素是会把body自然撑开的</p>
+<hr>
+<p>比如将body中的div子元素的宽度设为1000px，那么当屏幕宽度小于1000时，div并不能将body撑开到1000</p>
+<hr>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;box&quot; style=&quot;width: 1000px;height: 100%;background-color: black&quot;&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="/2017/09/页面布局，body子元素设置固定宽度后溢出body的处理/1.png" alt="Alt 图片"></p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h3><hr>
+<p>解决这种现象：在设置宽的div元素外再增加一个div元素作为父级元素,并设置style=”height:100%;overflow:auto;”</p>
+<hr>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!--新增父级div--&gt;
+&lt;div style=&quot;height:100%;overflow:auto;&quot;&gt;
+    &lt;div class=&quot;box&quot; style=&quot;width: 1000px;height: 100%;background-color: black&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h3><p><img src="/2017/09/页面布局，body子元素设置固定宽度后溢出body的处理/2.png" alt="Alt 图片"></p>
+<h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><p><strong><em>在html,body上都设置上style=”overflow:auto;”</em></strong></p>
+<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow:auto;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;box&quot; style=&quot;width: 1000px;height: 100%;background-color: black&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;前段时间只用VUE+UI框架来做后台管理系统了，不用框架写页面竟然突然感到手生的厉害，甚至连布局的不灵便了…….&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>喝点小茶，给我这个行走的红烧肉去去油腻</title>
