@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="博客,blog,javascript,web,nodejs"/>
+	<meta name="description" content="博客、blog、技术、读读、想想、写写">
+	
+	<title>使用vue开发项目梳理及需要掌握的知识点 |reahink</title>
+	
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	
+	<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/monokai-sublime.css">
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?2a05102c590f33c9479010fb626665c1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+	</script>
+</head>
+
+
+<body>
+<div id="page">
+	<div class="header" style="background-color: null">
+    <div class="header-wrap clearfix">
+        <!--brand log-->
+        <h1 class="brand fl"><a href="/">reahink</a></h1>
+        <!--menu-->
+        <ul class="menu fr clearfix">
+            
+            <li class="fl home"><a href="/">HOME</a></li>
+            
+            <li class="fl about"><a href="/about">ABOUT</a></li>
+            
+            <li class="fl rss"><a href="/atom.xml">RSS</a></li>
+            
+        </ul>
+    </div>
+</div>
+	<div class="main clearfix">
+		<div class="left-area">
+			<div class="post-wrap">
+    <h2 class="post-title">使用vue开发项目梳理及需要掌握的知识点</h2>
+    <div>
+        <blockquote>
+<p>需要在部门内部做一个关于vue的培训，所以也就写了一个文档，来梳理一下vue的开发，及一些知识点<br>
+    </div>
+    
+    <div class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、开发环境搭建"><span class="toc-text">一、开发环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装node-js"><span class="toc-text">1.安装node.js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cnpm使用说明"><span class="toc-text">cnpm使用说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装vue-cli"><span class="toc-text">2.安装vue-cli</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、相关知识点-不是必须"><span class="toc-text">二、相关知识点(不是必须)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-模式"><span class="toc-text">1.模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MVC模式"><span class="toc-text">MVC模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MVVM"><span class="toc-text">MVVM</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-前端模块化"><span class="toc-text">2.前端模块化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Sea-js"><span class="toc-text">1.Sea.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-RequireJS"><span class="toc-text">2.RequireJS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-CommonJS-规范"><span class="toc-text">3.CommonJS 规范</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-webpack（最好了解下）"><span class="toc-text">5.webpack（最好了解下）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-语法-amp-node-模块"><span class="toc-text">3.语法 & node/模块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-es2015（都什么年代了，还是熟练起来吧）"><span class="toc-text">1. es2015（都什么年代了，还是熟练起来吧）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-babel（咋回事总该要知道吧）"><span class="toc-text">2. babel（咋回事总该要知道吧）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-node-API"><span class="toc-text">3. node API</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-express（这个可以不看）"><span class="toc-text">4. express（这个可以不看）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-request（看看也没什么，很简单）"><span class="toc-text">5. request（看看也没什么，很简单）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、Vue"><span class="toc-text">三、Vue</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-vue官方介绍-官网"><span class="toc-text">1. vue官方介绍 官网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-什么是Virtual-虚拟-DOM"><span class="toc-text">2.什么是Virtual(虚拟) DOM ?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-流行的vue库"><span class="toc-text">3.流行的vue库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、实战"><span class="toc-text">四、实战</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-使用vue脚手架来搭建一个基于webpack模版的项目"><span class="toc-text">1.使用vue脚手架来搭建一个基于webpack模版的项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-上面我们已经将项目生成了，下面我们写一个简单的页面"><span class="toc-text">2.上面我们已经将项目生成了，下面我们写一个简单的页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-更改生产代码输出目录"><span class="toc-text">3.更改生产代码输出目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-开发环境下与测试环境接口进行数据交互"><span class="toc-text">4.开发环境下与测试环境接口进行数据交互</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-使用axios进行AJAX请求"><span class="toc-text">5.使用axios进行AJAX请求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目地址"><span class="toc-text">项目地址</span></a></li></ol>
+    </div>
+    
+    </p>
+</blockquote>
+<h2 id="一、开发环境搭建"><a href="#一、开发环境搭建" class="headerlink" title="一、开发环境搭建"></a>一、开发环境搭建</h2><h3 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h3><p><a href="https://nodejs.org/zh-cn/">下载node.js</a></p>
+<p>安装—&gt;一路next—&gt;完成</p>
+<p>winows下打开cmd（mac下打开终端）,输入以下命令，输出后都能输出版本号，既是安装成功</p>
+<pre><code>$ node -v
+v6.11.3
+
+$ npm -v
+3.10.10
+</code></pre><p><strong>由于npm服务器在国外，国内使用时会比较卡，所以我们需要使用<a href="https://npm.taobao.org/">cnpm(淘宝 NPM 镜像)</a>来代替npm</strong></p>
+<h4 id="cnpm使用说明"><a href="#cnpm使用说明" class="headerlink" title="cnpm使用说明"></a>cnpm使用说明</h4><p>使用定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
+<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+# 安装成功后就可以使用cnpm命令来安装模块了
+$ cnpm install [name]
+</code></pre><h3 id="2-安装vue-cli"><a href="#2-安装vue-cli" class="headerlink" title="2.安装vue-cli"></a>2.安装vue-cli</h3><pre><code># 安装 vue-cli
+$ npm install --global vue-cli
+$ vue --version
+2.8.2
+</code></pre><hr>
+<h2 id="二、相关知识点-不是必须"><a href="#二、相关知识点-不是必须" class="headerlink" title="二、相关知识点(不是必须)"></a>二、相关知识点(不是必须)</h2><h3 id="1-模式"><a href="#1-模式" class="headerlink" title="1.模式"></a>1.模式</h3><h4 id="MVC模式"><a href="#MVC模式" class="headerlink" title="MVC模式"></a>MVC模式</h4><p>代表：<a href="http://backbonejs.org/">backbone.js</a><br><img src="/2017/09/使用vue开发项目梳理及需要掌握的知识点/MVC.png" alt="MVC"></p>
+<h4 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h4><p>代表：<a href="https://angular.cn/">AngularJs</a>、<a href="https://facebook.github.io/react/">React</a>、<a href="https://vuefe.cn/v2/guide/">Vue</a><br><img src="/2017/09/使用vue开发项目梳理及需要掌握的知识点/MVVM.png" alt="MVVM"></p>
+<h3 id="2-前端模块化"><a href="#2-前端模块化" class="headerlink" title="2.前端模块化"></a>2.前端模块化</h3><h4 id="1-Sea-js"><a href="#1-Sea-js" class="headerlink" title="1.Sea.js"></a>1.<a href="https://github.com/seajs/seajs">Sea.js</a></h4><p>在 Sea.js 中，所有 JavaScript 模块都遵循 CMD（Common Module Definition） 模块定义规范。</p>
+<p>在 CMD 规范中，一个模块就是一个文件。</p>
+<h4 id="2-RequireJS"><a href="#2-RequireJS" class="headerlink" title="2.RequireJS"></a>2.<a href="http://requirejs.org/">RequireJS</a></h4><p>RequireJS 遵循 AMD（异步模块定义）规范</p>
+<p><strong><a href="http://requirejs.org/">RequireJS 和 Sea.js的差异</a></strong></p>
+<h4 id="3-CommonJS-规范"><a href="#3-CommonJS-规范" class="headerlink" title="3.CommonJS 规范"></a>3.<a href="http://zhaoda.net/webpack-handbook/commonjs.html">CommonJS 规范</a></h4><p>node采用的就是这种规范</p>
+<p>CommonJS 规范是为了解决 JavaScript 的作用域问题而定义的模块形式，可以使每个模块它自身的命名空间中执行。该规范的主要内容是，模块必须通过 module.exports 导出对外的变量或接口，通过 require() 来导入其他模块的输出到当前模块作用域中。</p>
+<h4 id="5-webpack（最好了解下）"><a href="#5-webpack（最好了解下）" class="headerlink" title="5.webpack（最好了解下）"></a>5.<a href="https://doc.webpack-china.org/concepts/">webpack</a>（最好了解下）</h4><p><a href="https://github.com/dwqs/blog/issues/21">参考文章：详解前端模块化工具-Webpack</a></p>
+<p>Webpack具有requireJs和<a href="http://browserify.org/">browserify</a>的功能，但仍有很多自己的新特性：</p>
+<ol>
+<li>对 CommonJS 、 AMD 、ES6的语法做了兼容</li>
+<li>对js、css、图片等资源文件都支持打包</li>
+<li>串联式模块加载器以及插件机制，让其具有更好的灵活性和扩展性，例如提供对CoffeeScript、ES6的支持</li>
+<li>有独立的配置文件webpack.config.js</li>
+<li>可以将代码切割成不同的chunk，实现按需加载，降低了初始化时间</li>
+<li>支持 SourceUrls 和 SourceMaps，易于调试</li>
+<li>具有强大的Plugin接口，大多是内部插件，使用起来比较灵活</li>
+<li>webpack 使用异步 IO 并具有多级缓存。这使得 webpack 很快且在增量编译上更加快</li>
+</ol>
+<h3 id="3-语法-amp-node-模块"><a href="#3-语法-amp-node-模块" class="headerlink" title="3.语法 &amp; node/模块"></a>3.语法 &amp; node/模块</h3><h4 id="1-es2015（都什么年代了，还是熟练起来吧）"><a href="#1-es2015（都什么年代了，还是熟练起来吧）" class="headerlink" title="1. es2015（都什么年代了，还是熟练起来吧）"></a>1. <a href="http://es6.ruanyifeng.com/">es2015</a>（都什么年代了，还是熟练起来吧）</h4><p><a href="http://es6.ruanyifeng.com/#docs/style">编程风格的改变</a></p>
+<h4 id="2-babel（咋回事总该要知道吧）"><a href="#2-babel（咋回事总该要知道吧）" class="headerlink" title="2. babel（咋回事总该要知道吧）"></a>2. <a href="http://babeljs.cn/">babel</a>（咋回事总该要知道吧）</h4><p>Babel 是一个 JavaScript 编译器</p>
+<h4 id="3-node-API"><a href="#3-node-API" class="headerlink" title="3. node API"></a>3. <a href="http://nodejs.cn/api/">node API</a></h4><p><a href="http://nodejs.cn/api/path.html">path (路径)</a>webpack中会遇到像：<code>path.resolve(__dirname, &#39;...&#39;)</code>这样的语法</p>
+<h4 id="4-express（这个可以不看）"><a href="#4-express（这个可以不看）" class="headerlink" title="4. express（这个可以不看）"></a>4. <a href="http://expressjs.com/zh-cn/4x/api.html">express</a>（这个可以不看）</h4><h4 id="5-request（看看也没什么，很简单）"><a href="#5-request（看看也没什么，很简单）" class="headerlink" title="5. request（看看也没什么，很简单）"></a>5. <a href="https://www.npmjs.com/package/request">request</a>（看看也没什么，很简单）</h4><hr>
+<h2 id="三、Vue"><a href="#三、Vue" class="headerlink" title="三、Vue"></a>三、Vue</h2><h3 id="1-vue官方介绍-官网"><a href="#1-vue官方介绍-官网" class="headerlink" title="1. vue官方介绍 官网"></a>1. vue官方介绍 <a href="https://vuefe.cn/v2/guide/">官网</a></h3><p>Vue.js（读音 /vjuː/，类似于 view 的读音）是一套构建用户界面(user interface)的渐进式框架。与其他重量级框架不同的是，Vue 从根本上采用最小成本、渐进增量(incrementally adoptable)的设计。Vue 的核心库只专注于视图层，并且很容易与其他第三方库或现有项目集成。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue 也完全能够为复杂的单页应用程序提供有力驱动。</p>
+<p>总结就是：</p>
+<ol>
+<li>良好的生态系统：<a href="https://github.com/vuejs/awesome-vue#components--libraries">生态系统支持的库</a></li>
+<li>MVVM的模式，数据的双向绑定</li>
+<li>使用Virtual(虚拟) DOM</li>
+<li>将注意力集中保持在核心库，同时也关注路由和负责处理全局状态管理的辅助库</li>
+<li>提供了响应式(reactive)和可组合的视图组件(composable view component)。</li>
+<li>使用<a href="https://vuefe.cn/v2/guide/single-file-components.html">单文件组件</a>，结合webpack+<a href="https://vue-loader.vuejs.org/zh-cn/">vue-loader</a>将vue组件转换为JavaScript 模块</li>
+<li>结合webpack,可使用最新的JS语法或TypeScript</li>
+</ol>
+<p><strong>想要了解更多，请查看：<a href="https://vuefe.cn/v2/guide/comparison.html">对比其他框架</a></strong></p>
+<h3 id="2-什么是Virtual-虚拟-DOM"><a href="#2-什么是Virtual-虚拟-DOM" class="headerlink" title="2.什么是Virtual(虚拟) DOM ?"></a>2.什么是Virtual(虚拟) DOM ?</h3><p><a href="https://www.zhihu.com/question/29504639/answer/73607810">参考知乎问题：如何理解虚拟DOM?</a></p>
+<p>首先，DOM是很慢的。</p>
+<p>相对于 DOM 对象，原生的 JavaScript 对象处理起来更快，而且更简单。DOM 树上的结构、属性信息我们都可以很容易地用 JavaScript 对象表示出来：</p>
+<pre><code>var element = {
+  tagName: &#39;ul&#39;, // 节点标签名
+  props: { // DOM的属性，用一个对象存储键值对
+    id: &#39;list&#39;
+  },
+  children: [ // 该节点的子节点
+    {tagName: &#39;li&#39;, props: {class: &#39;item&#39;}, children: [&quot;Item 1&quot;]},
+    {tagName: &#39;li&#39;, props: {class: &#39;item&#39;}, children: [&quot;Item 2&quot;]},
+    {tagName: &#39;li&#39;, props: {class: &#39;item&#39;}, children: [&quot;Item 3&quot;]},
+  ]
+}
+</code></pre><p>上面对应的HTML写法是：</p>
+<pre><code>&lt;ul id=&#39;list&#39;&gt;
+  &lt;li class=&#39;item&#39;&gt;Item 1&lt;/li&gt;
+  &lt;li class=&#39;item&#39;&gt;Item 2&lt;/li&gt;
+  &lt;li class=&#39;item&#39;&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><p><strong>Virtual DOM 算法包括几个步骤：</strong></p>
+<ol>
+<li>用 JavaScript 对象结构表示 DOM 树的结构；然后用这个树构建一个真正的 DOM 树，插到文档当中</li>
+<li>当状态变更的时候，重新构造一棵新的对象树。然后用新的树和旧的树进行比较，记录两棵树差异</li>
+<li>把2所记录的差异应用到步骤1所构建的真正的DOM树上，视图就更新了</li>
+<li>Virtual DOM 本质上就是在 JS 和 DOM 之间做了一个缓存。可以类比 CPU 和硬盘，既然硬盘这么慢，我们就在它们之间加个缓存：既然 DOM 这么慢，我们就在它们 JS 和 DOM 之间加个缓存。CPU（JS）只操作内存（Virtual DOM），最后的时候再把变更写入硬盘（DOM）。</li>
+</ol>
+<h3 id="3-流行的vue库"><a href="#3-流行的vue库" class="headerlink" title="3.流行的vue库"></a>3.流行的vue库</h3><p><a href="https://router.vuejs.org/zh-cn/">vue-router（vue路由）</a></p>
+<p><a href="https://vuex.vuejs.org/zh-cn/">vuex（vue状态管理）</a></p>
+<p><a href="https://github.com/mzabriskie/axios">axios（基于Promise的http请求库）</a></p>
+<p>UI框架：</p>
+<p><a href="http://element.eleme.io/#/zh-CN">element ui</a></p>
+<p><a href="https://www.iviewui.com/">iView</a></p>
+<p><a href="https://vux.li/#/zh-CN/README">vux</a></p>
+<p><a href="http://mint-ui.github.io/#!/zh-cn">Mint UI</a></p>
+<hr>
+<h2 id="四、实战"><a href="#四、实战" class="headerlink" title="四、实战"></a>四、实战</h2><h3 id="1-使用vue脚手架来搭建一个基于webpack模版的项目"><a href="#1-使用vue脚手架来搭建一个基于webpack模版的项目" class="headerlink" title="1.使用vue脚手架来搭建一个基于webpack模版的项目"></a>1.使用vue脚手架来搭建一个基于webpack模版的项目</h3><pre><code># 安装 vue-cli
+$ npm install --global vue-cli
+# 使用 &quot;webpack&quot; 模板创建一个名为“Vue-webpack”的新项目
+$ vue init webpack Vue-Admin    //执行
+? Project name (Vue-webpack) vue-webpack   //回车
+$ 如果出现以下信息，意思是，项目名称不能有大写字母
+&gt;&gt; Sorry, name can no longer contain capital letters.
+? Project description (A Vue.js project)  //输入项目描述，回车
+? Author (xxx &lt;xxxxxxx@gmail.com&gt;)     //回车
+# 出现下面的提示，回车
+? Vue build (Use arrow keys)
+❯ Runtime + Compiler: recommended for most users
+  Runtime-only: about 6KB lighter min+gzip, but templates (or any Vue-specific HTML) are ONLY allowed in .vue files - render functions are required elsewhere
+
+? Install vue-router? (Y/n) y     //输入 y,回车
+? Use ESLint to lint your code? (Y/n) n //输入 n,回车
+? Setup unit tests with Karma + Mocha? (Y/n) n  //输入 n,回车
+? Setup e2e tests with Nightwatch? (Y/n) n  //输入 n,回车
+初始化一个基于vue的前端项目完成
+# 安装依赖，然后开始！
+$ cd vue-webpack
+$ npm install
+$ npm run dev
+</code></pre><h3 id="2-上面我们已经将项目生成了，下面我们写一个简单的页面"><a href="#2-上面我们已经将项目生成了，下面我们写一个简单的页面" class="headerlink" title="2.上面我们已经将项目生成了，下面我们写一个简单的页面"></a>2.上面我们已经将项目生成了，下面我们写一个简单的页面</h3><p><strong>vue项目目录结构</strong></p>
+<pre><code>    vue-webpack                vue项目
+        │
+        ├──build                webpack配置文件夹
+        │   │
+        │   ├──build.js                 生产环境构建
+        │   ├──check-versions.js        检查node、npm版本
+        │   ├──dev-client.js            开发模式下用到的工具，如：热重载
+        │   ├──dev-server.js            开发模式下，构建本地服务
+        │   ├──utils.js                 构建工具相关，封装了webpack模块用到的方法
+        │   ├──vue-loader.conf.js       .vue单文件加载配置
+        │   ├──webpack.base.conf.js     webpack基础配置
+        │   ├──webpack.dev.conf.js      webpack开发环境配置
+        │   ├──webpack.prod.conf.js     webpack生产环境配置
+        │
+        ├──config                webpack配置所用变量
+        │   ├──dev.env.js                开发环境
+        │   ├──index.js                    webpack配置文件
+        │   ├──prod.env.js                生产环境
+        │
+        ├──src                     源文件夹
+        ├──static                 静态文件夹
+        ├──.babelrc                babel编译配置
+        ├──.editorconfig        在IDE中提供代码一致性
+        ├──.postcssrc.js        通过JS插件装换样式的工具
+        ├──index.html            webpack插件HtmlWebpackPlugin生成html所用的模版
+        ├──package.json            项目信息及依赖
+</code></pre><p>默认情况下：</p>
+<pre><code># 构建生产代码
+$ npm run build
+</code></pre><p>vue-webpack目录下会生成<code>dist</code>文件夹</p>
+<h3 id="3-更改生产代码输出目录"><a href="#3-更改生产代码输出目录" class="headerlink" title="3.更改生产代码输出目录"></a>3.更改生产代码输出目录</h3><p>更改在<code>config</code>文件夹下的<code>index.js</code></p>
+<pre><code>index: path.resolve(__dirname, &#39;../../myapp/dist/index.html&#39;),
+assetsRoot: path.resolve(__dirname, &#39;../../myapp/dist&#39;),
+</code></pre><p>最终代码输出目录为：</p>
+<pre><code>     test-project
+        │
+        ├──vue-webpack            vue项目
+        │   │
+        │
+        ├──myapp
+        │   │
+        │   ├──dist
+        │   │   ├──index.html
+        │   │   ├──static
+</code></pre><p>这个时候：</p>
+<pre><code>$ cd myapp
+$ npm install
+# 启动node服务
+$ node bin/www
+</code></pre><p>在浏览器中访问：<a href="http://localhost:3000/">http://localhost:3000/</a></p>
+<h3 id="4-开发环境下与测试环境接口进行数据交互"><a href="#4-开发环境下与测试环境接口进行数据交互" class="headerlink" title="4.开发环境下与测试环境接口进行数据交互"></a>4.开发环境下与测试环境接口进行数据交互</h3><p>在<code>vue-webpack</code>下安装以下模块</p>
+<pre><code>$ npm i cookie-parser -D
+$ npm i body-parser -D
+$ npm i request -D
+</code></pre><p>在build文件夹下将安装的模块引入<code>dev-server.js</code></p>
+<pre><code>var cookieParser = require(&#39;cookie-parser&#39;);
+var bodyParser = require(&#39;body-parser&#39;);
+var request = require(&#39;request&#39;);
+
+//找到下面的两个所在的位置
+var app = express()
+var compiler = webpack(webpackConfig)
+
+//在上面的下面引入以下
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+app.all(&#39;/路由地址/*&#39;,function (req, res, next) {
+  //测试环境地址
+  var path = &#39;http://vue.rndmed.com&#39;+req.path;
+  let params =req.body;
+  console.log(params);
+  console.log(path);
+  request({
+    url: path,
+    method: &quot;POST&quot;,
+    json: true,
+    body: params
+  }, function (error, response, body) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(typeof body);
+      res.send(body)
+    }
+  });
+
+})
+</code></pre><h3 id="5-使用axios进行AJAX请求"><a href="#5-使用axios进行AJAX请求" class="headerlink" title="5.使用axios进行AJAX请求"></a>5.使用<a href="https://github.com/mzabriskie/axios">axios</a>进行AJAX请求</h3><p>安装</p>
+<pre><code>$ npm i axios -D
+</code></pre><p>写法：</p>
+<pre><code>axios.post(&#39;接口地址&#39;, {键值对对象})
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+</code></pre><h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a><a href="https://github.com/zqinmiao/vue-practice">项目地址</a></h2>
+    <div class="share-warp clearfix">
+        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+    </div>
+    <div id="comment-wrap">
+
+</div>
+</div>
+
+            
+		</div>
+        <div class="sidebar">
+    <!--分类-->
+    <div class="category-wrap widget">
+        <h1>Category</h1>
+        <hr>
+        
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/其他/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/">框架</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">1</span></li></ul>
+        
+    </div>
+    <!--标签云-->
+    <div class="tag-wrap widget">
+        <h1>Tags</h1>
+        <hr>
+        
+        <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Gulp/" style="font-size: 14px;">Gulp</a> <a href="/tags/Hexo/" style="font-size: 14px;">Hexo</a> <a href="/tags/Vue/" style="font-size: 17px;">Vue</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/brew/" style="font-size: 14px;">brew</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/mvc/" style="font-size: 14px;">mvc</a> <a href="/tags/mvp/" style="font-size: 14px;">mvp</a> <a href="/tags/mvvm/" style="font-size: 14px;">mvvm</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/redis/" style="font-size: 14px;">redis</a> <a href="/tags/概念/" style="font-size: 17px;">概念</a> <a href="/tags/茶/" style="font-size: 14px;">茶</a>
+        
+    </div>
+    <!--归档-->
+    
+    <div class="archive-wrap widget">
+        <h1>Archive</h1>
+        <hr>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+    
+</div>
+	</div>
+	<div class="footer">
+    <!--<ul class="social">-->
+        <!--<li><a href="http://weibo.com/abcde6789ooo/" target="_blank"><i class="icon icon-weibo"></i></a></li>-->
+        <!--<li><a href="https://www.zhihu.com/people/reahink" target="_blank"><i class="icon icon-zhihu"></i></a></li>-->
+        <!--<li><a href="https://github.com/zqinmiao" target="_blank"><i class="icon icon-github"></i></a></li>-->
+    <!--</ul>-->
+    <p class="copyright">&copy; 2016 - 2017 <a href="/">reahink</a></p>
+    <p class="powered-by">Powered by <a href="https://hexo.io/">Hexo</a> | Theme by <a href="https://github.com/zqinmiao/hexo-theme-simpleLayout">simpleLayout</a></p>
+</div>
+
+</div>
+<script src="/lib/gitment.browser.js"></script>
+<script src="/lib/highlight.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -48,14 +48,19 @@
 		<div class="left-area">
 			<div class="post-wrap">
     <h2 class="post-title">[实战]gulp构建前端自动化</h2>
-    <blockquote>
-<p>新公司前端技术栈还停留在jquery + plugin，像前端自动化、模块化、Vue/Angular/React都不曾涉猎。<br>而且，由于公司的外包性质，所以后端有时也要写前端，为了统一前端的开发模式，有必要写一些文档，供公司同事查看并理解前端的一些新计数、开发模式<br>本篇为多篇文档中的其中一篇，主要讲使用gulp简单实现前端自动化构建<br><a id="more"></a></p>
+    <div>
+        <blockquote>
+<p>需要给部门前端组写一个关于使用gulp的文档，所以就写了一个<br>
+    </div>
+    
+    </p>
 </blockquote>
-<h2 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h2><p><a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">Gulp中文网</a> - 如何开始使用 gulp</p>
-<p><a href="http://www.gulpjs.com.cn/docs/getting-started/" target="_blank" rel="external">入门指南</a> - 学习 gulp 的输入和输出方式</p>
-<p><a href="https://gulpjs.com/plugins/" target="_blank" rel="external">搜索 gulp 插件</a></p>
-<p><a href="https://www.npmjs.com/browse/keyword/gulpplugin" target="_blank" rel="external">在 npm 查看所有插件</a></p>
-<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><pre><code>{
+<h2 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h2><p><a href="http://www.gulpjs.com.cn/">Gulp中文网</a> - 如何开始使用 gulp</p>
+<p><a href="http://www.gulpjs.com.cn/docs/getting-started/">入门指南</a> - 学习 gulp 的输入和输出方式</p>
+<p><a href="https://gulpjs.com/plugins/">搜索 gulp 插件</a></p>
+<p><a href="https://www.npmjs.com/browse/keyword/gulpplugin">在 npm 查看所有插件</a></p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p><a href="https://github.com/zqinmiao/gulp-practice">实战项目地址</a></p>
+<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><pre><code>{
   &quot;name&quot;: &quot;gulp-practice&quot;,
   &quot;version&quot;: &quot;0.1.0&quot;,
   &quot;description&quot;: &quot;A gulp practice project&quot;,
@@ -244,7 +249,7 @@ $ npm install
 $ gulp dev        开发模式
 或者
 $ gulp            build
-</code></pre><h3 id="实战项目地址"><a href="#实战项目地址" class="headerlink" title="实战项目地址"></a><a href="https://github.com/zqinmiao/gulp-practice" target="_blank" rel="external">实战项目地址</a></h3>
+</code></pre>
     <div class="share-warp clearfix">
         <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
@@ -262,7 +267,7 @@ $ gulp            build
         <h1>Category</h1>
         <hr>
         
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/">框架</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">1</span></li></ul>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/其他/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/">框架</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">1</span></li></ul>
         
     </div>
     <!--标签云-->
@@ -270,7 +275,7 @@ $ gulp            build
         <h1>Tags</h1>
         <hr>
         
-        <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Gulp/" style="font-size: 14px;">Gulp</a> <a href="/tags/Hexo/" style="font-size: 14px;">Hexo</a> <a href="/tags/Vue/" style="font-size: 14px;">Vue</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/brew/" style="font-size: 14px;">brew</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/mvc/" style="font-size: 14px;">mvc</a> <a href="/tags/mvp/" style="font-size: 14px;">mvp</a> <a href="/tags/mvvm/" style="font-size: 14px;">mvvm</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/redis/" style="font-size: 14px;">redis</a> <a href="/tags/概念/" style="font-size: 17px;">概念</a> <a href="/tags/茶/" style="font-size: 14px;">茶</a>
+        <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Gulp/" style="font-size: 14px;">Gulp</a> <a href="/tags/Hexo/" style="font-size: 14px;">Hexo</a> <a href="/tags/Vue/" style="font-size: 17px;">Vue</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/brew/" style="font-size: 14px;">brew</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/mvc/" style="font-size: 14px;">mvc</a> <a href="/tags/mvp/" style="font-size: 14px;">mvp</a> <a href="/tags/mvvm/" style="font-size: 14px;">mvvm</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/redis/" style="font-size: 14px;">redis</a> <a href="/tags/概念/" style="font-size: 17px;">概念</a> <a href="/tags/茶/" style="font-size: 14px;">茶</a>
         
     </div>
     <!--归档-->
@@ -278,7 +283,7 @@ $ gulp            build
     <div class="archive-wrap widget">
         <h1>Archive</h1>
         <hr>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li></ul>
     </div>
     
 </div>
