@@ -1,6 +1,17 @@
 <div class="post-wrap">
     <h2 class="post-title"><%- page.title %></h2>
-    <%- page.content %>
+    <div>
+        <%- page.excerpt %>
+    </div>
+    <% if(page.toc){%>
+    <div class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        <%- toc(page.content,{
+            list_number:false
+        }) %>
+    </div>
+    <% }%>
+    <%- page.more %>
     <div class="share-warp clearfix">
         <%- partial("_partial/share") %>
     </div>

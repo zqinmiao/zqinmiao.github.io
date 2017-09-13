@@ -1,7 +1,7 @@
 ---
 title: 使用Webpack时遇到的Error和一些疑惑
 date: 2017-07-06 22:07:29
-update:
+update: 2017-09-13
 comments:
 tags: Webpack
 categories: 工具
@@ -10,7 +10,9 @@ permalink:
 >在用Webpack时遇到了一些问题，和一些概念的疑惑，持续更新...
 <!--more-->
 
-#### • 使用[chunkhash]时，Error！
+__webpack版本：2.6.1__
+
+# 使用[chunkhash]时，Error！
 在webpack.config.js文件中，在output选项里使用{filename:'[name].[chunkhash].js'}时，如：
 
     output: {
@@ -26,5 +28,8 @@ permalink:
 
 是因为生产环境build时不能启用HMR，将HMR插件关闭即可。
 
--------------
+### [详解Webpack2的那些路径](http://www.qinshenxue.com/article/20170315092242.html)
+
+### [搜罗一切webpack的好文章好工具](https://github.com/webpack-china/awesome-webpack-cn/blob/master/README.md)
+
 

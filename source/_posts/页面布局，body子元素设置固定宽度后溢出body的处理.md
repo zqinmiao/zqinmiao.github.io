@@ -4,7 +4,7 @@ date: 2017-09-10 11:18:28
 update:
 comments:
 tags:
-categories:
+categories: 其他
 permalink:
 ---
 >前段时间只用VUE+UI框架来做后台管理系统了，不用框架写页面竟然突然感到手生的厉害，甚至连布局的不灵便了.......
