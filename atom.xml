@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zqinmiao.github.io/"/>
-  <updated>2017-09-13T09:18:15.000Z</updated>
+  <updated>2017-09-14T02:10:30.000Z</updated>
   <id>https://zqinmiao.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://zqinmiao.github.io/2017/09/%E4%BD%BF%E7%94%A8vue%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE%E6%A2%B3%E7%90%86%E5%8F%8A%E9%9C%80%E8%A6%81%E6%8E%8C%E6%8F%A1%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     <id>https://zqinmiao.github.io/2017/09/使用vue开发项目梳理及需要掌握的知识点/</id>
     <published>2017-09-13T06:57:14.000Z</published>
-    <updated>2017-09-13T09:18:15.000Z</updated>
+    <updated>2017-09-14T02:10:30.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>需要在部门内部做一个关于vue的培训，所以也就写了一个文档，来梳理一下vue的开发，及一些知识点<br><a id="more"></a></p>
@@ -190,7 +190,7 @@ $ npm install
 # 启动node服务
 $ node bin/www
 </code></pre><p>在浏览器中访问：<a href="http://localhost:3000/" target="_blank" rel="external">http://localhost:3000/</a></p>
-<h3 id="4-开发环境下与测试环境接口进行数据交互"><a href="#4-开发环境下与测试环境接口进行数据交互" class="headerlink" title="4.开发环境下与测试环境接口进行数据交互"></a>4.开发环境下与测试环境接口进行数据交互</h3><p>在<code>vue-webpack</code>下安装以下模块</p>
+<h3 id="4-开发环境下与测试接口进行数据交互"><a href="#4-开发环境下与测试接口进行数据交互" class="headerlink" title="4.开发环境下与测试接口进行数据交互"></a>4.开发环境下与测试接口进行数据交互</h3><p>在<code>vue-webpack</code>下安装以下模块</p>
 <pre><code>$ npm i cookie-parser -D
 $ npm i body-parser -D
 $ npm i request -D
@@ -209,8 +209,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.all(&#39;/路由地址/*&#39;,function (req, res, next) {
-  //测试环境地址
-  var path = &#39;http://vue.rndmed.com&#39;+req.path;
+  //测试接口地址
+  var path = &#39;http://xxx.xxx.com&#39;+req.path;
   let params =req.body;
   console.log(params);
   console.log(path);
