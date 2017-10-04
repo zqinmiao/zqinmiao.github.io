@@ -269,7 +269,7 @@ assetsRoot: path.resolve(__dirname, '../../myapp/dist'),
 最终代码输出目录为：
 
 ```
-	 test-project
+	 vue-practice
         │
         ├──vue-webpack			vue项目
         │   │
@@ -290,7 +290,7 @@ $ node bin/www
 ```
 在浏览器中访问：http://localhost:3000/
 
-### 4.开发环境下与测试环境接口进行数据交互
+### 4.开发环境下与测试接口进行数据交互
 
 在```vue-webpack```下安装以下模块
 
@@ -317,8 +317,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.all('/路由地址/*',function (req, res, next) {
-  //测试环境地址
-  var path = 'http://vue.rndmed.com'+req.path;
+  //测试接口地址
+  var path = 'http://xxx.xxx.com'+req.path;
   let params =req.body;
   console.log(params);
   console.log(path);
