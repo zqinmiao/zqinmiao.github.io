@@ -15,5 +15,17 @@
     <div class="share-warp clearfix">
         <%- partial("_partial/share") %>
     </div>
+    <% if(page.prev){%>
+    <div class="page-prev">
+        <span>上一篇：</span>
+        <a href="<%- page.prev.permalink%>"><%- page.prev.slug%></a>
+    </div>
+    <% }%>
+    <% if(page.next){%>
+    <div class="page-prev">
+        <span>下一篇：</span>
+        <a href="<%- page.next.permalink%>"><%- page.next.slug%></a>
+    </div>
+    <% }%>
     <%- partial("_partial/comment") %>
 </div>

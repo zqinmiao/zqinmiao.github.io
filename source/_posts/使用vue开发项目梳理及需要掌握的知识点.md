@@ -75,7 +75,7 @@ $ vue --version
 
 RequireJS 遵循 AMD（异步模块定义）规范
 
-__[RequireJS 和 Sea.js的差异](http://requirejs.org/)__
+__[RequireJS 和 Sea.js的差异](https://github.com/seajs/seajs/issues/277)__
 
 #### 3.[CommonJS 规范](http://zhaoda.net/webpack-handbook/commonjs.html)
 
