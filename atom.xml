@@ -55,7 +55,7 @@
     <link href="https://zqinmiao.github.io/2017/09/%E4%BD%BF%E7%94%A8vue%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE%E6%A2%B3%E7%90%86%E5%8F%8A%E9%9C%80%E8%A6%81%E6%8E%8C%E6%8F%A1%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     <id>https://zqinmiao.github.io/2017/09/使用vue开发项目梳理及需要掌握的知识点/</id>
     <published>2017-09-13T06:57:14.000Z</published>
-    <updated>2017-09-14T02:10:30.000Z</updated>
+    <updated>2017-10-05T09:32:57.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>需要在部门内部做一个关于vue的培训，所以也就写了一个文档，来梳理一下vue的开发，及一些知识点<br><a id="more"></a></p>
@@ -84,7 +84,7 @@ $ vue --version
 <h3 id="2-前端模块化"><a href="#2-前端模块化" class="headerlink" title="2.前端模块化"></a>2.前端模块化</h3><h4 id="1-Sea-js"><a href="#1-Sea-js" class="headerlink" title="1.Sea.js"></a>1.<a href="https://github.com/seajs/seajs" target="_blank" rel="external">Sea.js</a></h4><p>在 Sea.js 中，所有 JavaScript 模块都遵循 CMD（Common Module Definition） 模块定义规范。</p>
 <p>在 CMD 规范中，一个模块就是一个文件。</p>
 <h4 id="2-RequireJS"><a href="#2-RequireJS" class="headerlink" title="2.RequireJS"></a>2.<a href="http://requirejs.org/" target="_blank" rel="external">RequireJS</a></h4><p>RequireJS 遵循 AMD（异步模块定义）规范</p>
-<p><strong><a href="http://requirejs.org/" target="_blank" rel="external">RequireJS 和 Sea.js的差异</a></strong></p>
+<p><strong><a href="https://github.com/seajs/seajs/issues/277" target="_blank" rel="external">RequireJS 和 Sea.js的差异</a></strong></p>
 <h4 id="3-CommonJS-规范"><a href="#3-CommonJS-规范" class="headerlink" title="3.CommonJS 规范"></a>3.<a href="http://zhaoda.net/webpack-handbook/commonjs.html" target="_blank" rel="external">CommonJS 规范</a></h4><p>node采用的就是这种规范</p>
 <p>CommonJS 规范是为了解决 JavaScript 的作用域问题而定义的模块形式，可以使每个模块它自身的命名空间中执行。该规范的主要内容是，模块必须通过 module.exports 导出对外的变量或接口，通过 require() 来导入其他模块的输出到当前模块作用域中。</p>
 <h4 id="5-webpack（最好了解下）"><a href="#5-webpack（最好了解下）" class="headerlink" title="5.webpack（最好了解下）"></a>5.<a href="https://doc.webpack-china.org/concepts/" target="_blank" rel="external">webpack</a>（最好了解下）</h4><p><a href="https://github.com/dwqs/blog/issues/21" target="_blank" rel="external">参考文章：详解前端模块化工具-Webpack</a></p>
