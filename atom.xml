@@ -295,7 +295,7 @@ app.all(&#39;/路由地址/*&#39;,function (req, res, next) {
     <link href="https://zqinmiao.github.io/2017/09/%E5%AE%9E%E6%88%98-gulp%E6%9E%84%E5%BB%BA%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     <id>https://zqinmiao.github.io/2017/09/实战-gulp构建前端自动化/</id>
     <published>2017-09-12T03:38:32.000Z</published>
-    <updated>2017-09-13T07:00:52.000Z</updated>
+    <updated>2017-11-07T03:26:24.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>需要给部门前端组写一个关于使用gulp的文档，所以就写了一个<br><a id="more"></a></p>
@@ -304,6 +304,7 @@ app.all(&#39;/路由地址/*&#39;,function (req, res, next) {
 <p><a href="http://www.gulpjs.com.cn/docs/getting-started/" target="_blank" rel="external">入门指南</a> - 学习 gulp 的输入和输出方式</p>
 <p><a href="https://gulpjs.com/plugins/" target="_blank" rel="external">搜索 gulp 插件</a></p>
 <p><a href="https://www.npmjs.com/browse/keyword/gulpplugin" target="_blank" rel="external">在 npm 查看所有插件</a></p>
+<p><a href="http://www.browsersync.cn/docs/gulp/" target="_blank" rel="external">Browsersync / 说明文档</a></p>
 <h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p><a href="https://github.com/zqinmiao/gulp-practice" target="_blank" rel="external">实战项目地址</a></p>
 <h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><pre><code>{
   &quot;name&quot;: &quot;gulp-practice&quot;,
@@ -322,6 +323,9 @@ app.all(&#39;/路由地址/*&#39;,function (req, res, next) {
   },
   &quot;homepage&quot;: &quot;&quot;,
   &quot;devDependencies&quot;: {
+    &quot;babel-preset-env&quot;: &quot;^1.6.0&quot;,
+    &quot;browser-sync&quot;: &quot;^2.18.13&quot;,
+    &quot;gulp-babel&quot;: &quot;^7.0.0&quot;,
     &quot;gulp-ejs&quot;: &quot;^3.0.1&quot;,
     &quot;gulp-imagemin&quot;: &quot;^3.3.0&quot;,
     &quot;gulp-load-plugins&quot;: &quot;^1.5.0&quot;,
@@ -367,10 +371,7 @@ app.all(&#39;/路由地址/*&#39;,function (req, res, next) {
   ]
 }
 </code></pre><h3 id="gulpfile-babel-js"><a href="#gulpfile-babel-js" class="headerlink" title="gulpfile.babel.js"></a>gulpfile.babel.js</h3><p>正常情况下此文件的名称是<code>gulpfile.js</code>，由于我们使用了<code>babel</code>来实现在gulpfile.js里使用<strong>es2015</strong>语法，所以要将<code>gulpfile.js</code>改为<code>gulpfile.babel.js</code></p>
-<pre><code>/**
- * Created by Mark Zhang on 2017/9/06.
- */
-//导入gulp
+<pre><code>//导入gulp
 import gulp from &#39;gulp&#39;;
 //压缩js
 import uglify from &#39;gulp-uglify&#39;;
@@ -400,23 +401,25 @@ import ejs from &#39;gulp-ejs&#39;;
 import rev from &#39;gulp-rev&#39;;
 //关联html中，引入资源的版本号
 import revCollector from &#39;gulp-rev-collector&#39;;
+//将es6语法编译成es5语法
+import babel from &#39;gulp-babel&#39;
+//浏览器同步工具
+import browserSync from &#39;browser-sync&#39;
 
 // 清理目录
 gulp.task(&#39;clean&#39;, () =&gt; del([&#39;./dist/*&#39;,&#39;./src/views/*&#39;], {dot: true}));
 
-//复制文件
+//copy 复制文件
 gulp.task(&#39;copy&#39;, () =&gt; gulp.src([&#39;./src/js/lib/jquery.min.js&#39;])
     .pipe(concat(&#39;lib.js&#39;))
     .pipe(gulp.dest(&#39;./dist/js&#39;))
 );
 
-//压缩图片
+//image 压缩图片
 gulp.task(&#39;image&#39;, () =&gt; gulp.src(&#39;./src/images/**/*&#39;)
     .pipe(imagemin({
-        //类型：Boolean 默认：false 无损压缩jpg图片
-        progressive: true,
-        //类型：Number  默认：3  取值范围：0-7（优化等级）
-        optimizationLevel: 3,
+        progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
+        optimizationLevel: 3, //类型：Number  默认：3  取值范围：0-7（优化等级）
         use: [pngquant()]
     }))
     .pipe(gulp.dest(&#39;./dist/images&#39;))
@@ -428,7 +431,7 @@ gulp.task(&#39;postejs&#39;, () =&gt; gulp.src([&#39;./src/views/*.ejs&#39;])
     .pipe(gulp.dest(&#39;./dist/&#39;))
 );
 
-//处理less
+//css 处理less
 gulp.task(&#39;postcss&#39;, function () {
     return gulp.src(&#39;./src/css/style.less&#39;)
         .pipe(less())
@@ -450,9 +453,12 @@ gulp.task(&#39;postcss&#39;, function () {
         .pipe(gulp.dest(&#39;rev/css&#39;))
 });
 
-//压缩js
+//uglifyjs 压缩js
 gulp.task(&#39;uglifyjs&#39;, () =&gt; gulp.src(&#39;./src/js/*.js&#39;)
     .pipe(sourcemaps.init())
+    .pipe(babel({
+        presets: [&#39;env&#39;]
+    }))
     .pipe(uglify())
     .pipe(rev())
     .pipe(sourcemaps.write())
@@ -469,16 +475,23 @@ gulp.task(&#39;rev&#39;,() =&gt;gulp.src([&#39;rev/**/*.json&#39;,&#39;./src/tem
     .pipe(gulp.dest(&#39;./src/views&#39;))
 )
 
-//执行watch
+/*
+* 执行watch
+* */
 gulp.task(&#39;execEjs&#39;,(cb) =&gt; sequence(&#39;rev&#39;,&#39;postejs&#39;,cb))
 gulp.task(&#39;execCss&#39;,(cb) =&gt; sequence(&#39;postcss&#39;,&#39;execEjs&#39;,cb))
 gulp.task(&#39;execJs&#39;,(cb) =&gt; sequence(&#39;uglifyjs&#39;,&#39;execEjs&#39;,cb))
 
-//watch 监控
+// watch 监控
 gulp.task(&#39;watch&#39;, () =&gt; {
+    browserSync.init({
+        server: &quot;./dist&quot;
+    });
     gulp.watch(&#39;./src/templates/**/*.ejs&#39;,[&#39;execEjs&#39;]);
     gulp.watch(&#39;./src/css/**/*.less&#39;,[&#39;execCss&#39;]);
     gulp.watch(&#39;./src/js/*.js&#39;,[&#39;execJs&#39;]);
+    gulp.watch(&#39;./src/images/**/*&#39;,[&#39;image&#39;]);
+    gulp.watch(&quot;dist/*.html&quot;).on(&#39;change&#39;, browserSync.reload);
 });
 
 //build
@@ -493,7 +506,7 @@ gulp.task(&#39;dev&#39;, [&#39;build&#39;, &#39;watch&#39;], (cb) =&gt; (cb));
 $ npm install
 $ gulp dev        开发模式
 或者
-$ gulp            build
+$ gulp            build模式
 </code></pre>]]></content>
     
     <summary type="html">
