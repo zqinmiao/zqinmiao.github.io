@@ -6,7 +6,7 @@ layout: about
 
 ## 关于我
 
-张秦苗(Mark Zhang)
+张秦苗
 
 男
 
