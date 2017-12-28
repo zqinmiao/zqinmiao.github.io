@@ -672,7 +672,7 @@ $ gulp            build模式
     <link href="https://zqinmiao.github.io/2017/08/vim%E5%B8%B8%E7%94%A8/"/>
     <id>https://zqinmiao.github.io/2017/08/vim常用/</id>
     <published>2017-08-13T08:37:08.000Z</published>
-    <updated>2017-08-13T08:43:40.000Z</updated>
+    <updated>2017-12-28T02:02:13.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>据说用vim是一个很好的装逼方式之一。即便是不能精通，但是为了能够在某个时刻偶尔装下逼，那么掌握一下常用的一些命令还是挺不错的，嘎嘎<br><a id="more"></a></p>
@@ -723,6 +723,10 @@ u   复原前一个动作
     
     </summary>
     
+      <category term="工具" scheme="https://zqinmiao.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="vim" scheme="https://zqinmiao.github.io/tags/vim/"/>
     
   </entry>
   
