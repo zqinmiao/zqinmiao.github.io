@@ -3,8 +3,8 @@ title: vim常用命令
 date: 2017-08-13 16:37:08
 update:
 comments:
-tags:
-categories:
+tags: vim
+categories: 工具
 permalink:
 ---
 
