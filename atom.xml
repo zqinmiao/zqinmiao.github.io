@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zqinmiao.github.io/"/>
-  <updated>2018-03-01T04:08:23.000Z</updated>
+  <updated>2018-03-01T03:26:52.000Z</updated>
   <id>https://zqinmiao.github.io/</id>
   
   <author>
@@ -14,281 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>ritafea</title>
-    <link href="https://zqinmiao.github.io/2018/03/ritafea/"/>
-    <id>https://zqinmiao.github.io/2018/03/ritafea/</id>
-    <published>2018-03-01T04:08:13.000Z</published>
-    <updated>2018-03-01T04:08:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>啦啦啦啦啦</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;啦啦啦啦啦&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>啦啦啦啦</title>
-    <link href="https://zqinmiao.github.io/2018/03/%E5%95%A6%E5%95%A6%E5%95%A6%E5%95%A6/"/>
-    <id>https://zqinmiao.github.io/2018/03/啦啦啦啦/</id>
-    <published>2018-03-01T03:44:37.000Z</published>
-    <updated>2018-03-01T03:44:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>啦啦啦啦</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;啦啦啦啦&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>哈哈哈哈</title>
-    <link href="https://zqinmiao.github.io/2018/03/%E5%93%88%E5%93%88%E5%93%88%E5%93%88/"/>
-    <id>https://zqinmiao.github.io/2018/03/哈哈哈哈/</id>
-    <published>2018-03-01T03:40:03.000Z</published>
-    <updated>2018-03-01T03:40:13.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>哈哈哈</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;哈哈哈&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="https://zqinmiao.github.io/2018/03/test/"/>
-    <id>https://zqinmiao.github.io/2018/03/test/</id>
-    <published>2018-03-01T03:36:22.000Z</published>
-    <updated>2018-03-01T03:36:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>test</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;test&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>React官方文档知识点归纳</title>
-    <link href="https://zqinmiao.github.io/2018/03/React%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E5%BD%92%E7%BA%B3/"/>
-    <id>https://zqinmiao.github.io/2018/03/React官方文档知识点归纳/</id>
-    <published>2018-03-01T03:36:01.000Z</published>
-    <updated>2018-03-01T03:36:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>test</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;test&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>React官方文档知识点归纳（QUICK-START）</title>
-    <link href="https://zqinmiao.github.io/2018/02/React%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E5%BD%92%E7%BA%B3%EF%BC%88QUICK-START%EF%BC%89/"/>
-    <id>https://zqinmiao.github.io/2018/02/React官方文档知识点归纳（QUICK-START）/</id>
-    <published>2018-02-08T02:14:52.000Z</published>
-    <updated>2018-03-01T03:20:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>阅读了一下React的官方文档，翻译并归纳了一些知识点。这只是QUICK START部分<br><a id="more"></a></p>
-</blockquote>
-<h2 id="JSX语法："><a href="#JSX语法：" class="headerlink" title="JSX语法："></a>JSX语法：</h2><h3 id="元素属性名命名规则"><a href="#元素属性名命名规则" class="headerlink" title="元素属性名命名规则"></a>元素属性名命名规则</h3><ul>
-<li><strong>属性名采用camelCase命名法，比如，类（class）就叫：’className’，tabindex就叫：’tabIndex’。<a href="https://reactjs.org/docs/introducing-jsx.html#specifying-attributes-with-jsx" target="_blank" rel="external">引用</a></strong></li>
-</ul>
-<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><ul>
-<li><strong>命名规则：始终以大写字母开头。<a href="https://reactjs.org/docs/components-and-props.html#rendering-a-component" target="_blank" rel="external">引用</a></strong></li>
-<li><font color="red"><strong><a href="https://reactjs.org/docs/components-and-props.html#props-are-read-only" target="_blank" rel="external">React is pretty flexible but it has a single strict rule :</a></strong> <strong>All React components must act like pure functions with respect to their props.</strong></font>
-
-</li>
-</ul>
-<h3 id="组件状态（state）"><a href="#组件状态（state）" class="headerlink" title="组件状态（state）"></a>组件状态（state）</h3><ul>
-<li><strong>不要直接修改状态</strong></li>
-</ul>
-<pre><code>// 错误的
-this.state.comment = &#39;Hello&#39;;
-</code></pre><pre><code>// 正确的
-this.setState({comment: &#39;Hello&#39;});
-</code></pre><p><strong>唯一可以指定this.state的地方是构造函数。</strong></p>
-<ul>
-<li><strong>因为this.props和this.state可能会异步更新，所以不应该依赖它们的值来计算下一个状态。</strong></li>
-</ul>
-<pre><code>// 错误
-this.setState({
-  counter: this.state.counter + this.props.increment,
-});
-</code></pre><pre><code>// 正确
-this.setState((prevState, props) =&gt; ({
-  counter: prevState.counter + props.increment
-}));
-</code></pre><pre><code>// 正确
-this.setState(function(prevState, props) {
-  return {
-    counter: prevState.counter + props.increment
-  };
-});
-</code></pre><ul>
-<li>This is commonly called a “top-down” or “unidirectional” data flow. Any state is always owned by some specific component, and any data or UI derived from that state can only affect components “below” them in the tree.</li>
-</ul>
-<h2 id="状态与生命周期（State-and-Lifecycle）"><a href="#状态与生命周期（State-and-Lifecycle）" class="headerlink" title="状态与生命周期（State and Lifecycle）"></a><a href="https://reactjs.org/docs/state-and-lifecycle.html" target="_blank" rel="external">状态与生命周期（State and Lifecycle）</a></h2><ul>
-<li><strong>componentDidMount()</strong></li>
-<li><strong>componentWillUnmount()</strong></li>
-</ul>
-<h2 id="处理事件（Handling-Events）"><a href="#处理事件（Handling-Events）" class="headerlink" title="处理事件（Handling Events）"></a>处理事件（Handling Events）</h2><ul>
-<li><strong><a href="https://reactjs.org/docs/handling-events.html" target="_blank" rel="external">React事件使用camelCase命名，而不是小写。</a></strong></li>
-<li><strong><a href="https://reactjs.org/docs/handling-events.html" target="_blank" rel="external">使用JSX，您将传递一个函数作为事件处理程序，而不是字符串。</a></strong></li>
-</ul>
-<p>For example, the HTML:</p>
-<pre><code>&lt;button onclick=&quot;activateLasers()&quot;&gt;
-  Activate Lasers
-&lt;/button&gt;
-</code></pre><p>in React:</p>
-<pre><code>&lt;button onClick={activateLasers}&gt;
-  Activate Lasers
-&lt;/button&gt;
-</code></pre><ul>
-<li><strong>另一个区别是你不能返回false来防止React中的默认行为。您必须显式调用preventDefault。例如，对于纯HTML，为了防止打开新页面的默认链接行为，可以这样写：</strong></li>
-</ul>
-<pre><code>&lt;a href=&quot;#&quot; onclick=&quot;console.log(&#39;The link was clicked.&#39;); return false&quot;&gt;
-  Click me
-&lt;/a&gt;
-</code></pre><p>in React:</p>
-<pre><code>function ActionLink() {
-  function handleClick(e) {
-    e.preventDefault();
-    console.log(&#39;The link was clicked.&#39;);
-  }
-
-  return (
-    &lt;a href=&quot;#&quot; onClick={handleClick}&gt;
-      Click me
-    &lt;/a&gt;
-  );
-}
-</code></pre><h2 id="条件渲染（Conditional-Rendering）"><a href="#条件渲染（Conditional-Rendering）" class="headerlink" title="条件渲染（Conditional Rendering）"></a><a href="https://reactjs.org/docs/conditional-rendering.html" target="_blank" rel="external">条件渲染（Conditional Rendering）</a></h2><h2 id="列表和键（Lists-and-Keys）"><a href="#列表和键（Lists-and-Keys）" class="headerlink" title="列表和键（Lists and Keys）"></a><a href="https://reactjs.org/docs/lists-and-keys.html" target="_blank" rel="external">列表和键（Lists and Keys）</a></h2><ul>
-<li><strong>关于列表中的key的添加的正确用法</strong></li>
-</ul>
-<pre><code>//错误的写法
-function ListItem(props) {
-  const value = props.value;
-  return (
-    // Wrong! There is no need to specify the key here:
-    &lt;li key={value.toString()}&gt;
-      {value}
-    &lt;/li&gt;
-  );
-}
-
-function NumberList(props) {
-  const numbers = props.numbers;
-  const listItems = numbers.map((number) =&gt;
-    // Wrong! The key should have been specified here:
-    &lt;ListItem value={number} /&gt;
-  );
-  return (
-    &lt;ul&gt;
-      {listItems}
-    &lt;/ul&gt;
-  );
-}
-
-const numbers = [1, 2, 3, 4, 5];
-ReactDOM.render(
-  &lt;NumberList numbers={numbers} /&gt;,
-  document.getElementById(&#39;root&#39;)
-);
-</code></pre><pre><code>//正确的写法
-function ListItem(props) {
-  // Correct! There is no need to specify the key here:
-  return &lt;li&gt;{props.value}&lt;/li&gt;;
-}
-
-function NumberList(props) {
-  const numbers = props.numbers;
-  const listItems = numbers.map((number) =&gt;
-    // Correct! Key should be specified inside the array.
-    &lt;ListItem key={number.toString()}
-              value={number} /&gt;
-
-  );
-  return (
-    &lt;ul&gt;
-      {listItems}
-    &lt;/ul&gt;
-  );
-}
-
-const numbers = [1, 2, 3, 4, 5];
-ReactDOM.render(
-  &lt;NumberList numbers={numbers} /&gt;,
-  document.getElementById(&#39;root&#39;)
-);
-</code></pre><ul>
-<li><p><strong>key在兄弟元素之间必须是唯一的</strong></p>
-</li>
-<li><p><strong>在JSX中插入map()</strong></p>
-</li>
-</ul>
-<pre><code>function NumberList(props) {
-  const numbers = props.numbers;
-  const listItems = numbers.map((number) =&gt;
-    &lt;ListItem key={number.toString()}
-              value={number} /&gt;
-
-  );
-  return (
-    &lt;ul&gt;
-      {listItems}
-    &lt;/ul&gt;
-  );
-}
-</code></pre><h2 id="表单（Forms）"><a href="#表单（Forms）" class="headerlink" title="表单（Forms）"></a><a href="https://reactjs.org/docs/forms.html" target="_blank" rel="external">表单（Forms）</a></h2><h2 id="状态提升（Lifting-State-Up）"><a href="#状态提升（Lifting-State-Up）" class="headerlink" title="状态提升（Lifting State Up）"></a><a href="https://reactjs.org/docs/forms.html" target="_blank" rel="external"><font color="red">状态提升（Lifting State Up）</font></a></h2><h2 id="构成与继承（Composition-vs-Inheritance））"><a href="#构成与继承（Composition-vs-Inheritance））" class="headerlink" title="构成与继承（Composition vs Inheritance））"></a><a href="https://reactjs.org/docs/composition-vs-inheritance.html" target="_blank" rel="external">构成与继承（Composition vs Inheritance））</a></h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;阅读了一下React的官方文档，翻译并归纳了一些知识点。这只是QUICK START部分&lt;br&gt;
-    
-    </summary>
-    
-      <category term="框架" scheme="https://zqinmiao.github.io/categories/%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="React" scheme="https://zqinmiao.github.io/tags/React/"/>
-    
-  </entry>
   
   <entry>
     <title>React官方文档知识点归纳-1</title>
@@ -1490,6 +1215,268 @@ $ brew services stop redis
       <category term="mac" scheme="https://zqinmiao.github.io/tags/mac/"/>
     
       <category term="redis" scheme="https://zqinmiao.github.io/tags/redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac开发环境之brew、brew-cask</title>
+    <link href="https://zqinmiao.github.io/2017/03/mac%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B9%8Bbrew%E3%80%81brew-cask/"/>
+    <id>https://zqinmiao.github.io/2017/03/mac开发环境之brew、brew-cask/</id>
+    <published>2017-03-05T02:23:50.000Z</published>
+    <updated>2017-07-11T02:32:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>包管理工具可以让你安装和更新程序变得更方便，目前在 OS X 系统中最受欢迎的包管理工具是 Homebrew.<br><a id="more"></a></p>
+</blockquote>
+<h2 id="安装brew"><a href="#安装brew" class="headerlink" title="安装brew"></a>安装brew</h2><p>包管理工具可以让你安装和更新程序变得更方便，目前在 OS X 系统中最受欢迎的包管理工具是 Homebrew.</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在安装 Homebrew 之前，需要将 Xcode Command Line Tools 安装完成，这样你就可以使用基于 Xcode Command Line Tools 编译的 Homebrew。<br>在 terminal 中复制以下命令（不包括 $），跟随指引，将完成 Hombrew 安装。</p>
+<pre><code>$ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre><p>紧接着，我们需要做一件事让通过 Homebrew 安装的程序的启动链接 (在 /usr/local/bin中）可以直接运行，无需将完整路径写出。通过以下命令将 /usr/local/bin 添加至 $PATH 环境变量中:</p>
+<pre><code>$ echo &#39;export PATH=&quot;/usr/local/bin:$PATH&quot;&#39; &gt;&gt; ~/.bash_profile
+</code></pre><p>Cmd+T 打开一个新的 terminal 标签页，运行以下命令，确保 brew 运行正常。</p>
+<pre><code>$ brew doctor
+</code></pre><p>译注：<br>安装完成后，Homebrew 会将本地 /usr/local 初始化为 git 的工作树，并将目录所有者变更为当前所操作的用户，将来 brew 的相关操作不需要 sudo 。</p>
+<h3 id="Homebrew基本使用"><a href="#Homebrew基本使用" class="headerlink" title="Homebrew基本使用"></a>Homebrew基本使用</h3><p>安装一个包，可以简单的运行：</p>
+<pre><code>$ brew install &lt;package_name&gt;
+</code></pre><p>更新 Homebrew 在服务器端上的包目录：</p>
+<pre><code>$ brew update
+</code></pre><p>查看你的包是否需要更新：</p>
+<pre><code>$ brew outdated
+</code></pre><p>更新包：</p>
+<pre><code>$ brew upgrade &lt;package_name&gt;
+</code></pre><p>Homebrew 将会把老版本的包缓存下来，以便当你想回滚至旧版本时使用。但这是比较少使用的情况，当你想清理旧版本的包缓存时，可以运行：</p>
+<pre><code>$ brew cleanup
+</code></pre><p>查看你安装过的包列表（包括版本号）：</p>
+<pre><code>$ brew list --versions
+</code></pre><hr>
+<h2 id="安装brew-cask"><a href="#安装brew-cask" class="headerlink" title="安装brew-cask"></a>安装brew-cask</h2><p>通过Homebrew Cask 优雅、简单、快速的安装和管理 OS X 图形界面程序，比如 Google Chrome 和 Dropbox。</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>安装 Homebrew-cask 是如此的简单直接，运行以下命令即可完成：</p>
+<pre><code>$ brew install caskroom/cask/brew-cask
+$ brew cask install google-chrome // 安装 Google 浏览器
+$ brew update &amp;&amp; brew upgrade brew-cask &amp;&amp; brew cleanup // 更新
+</code></pre><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>如果你想查看 cask 上是否存在你需要的 app，可以到 caskroom.io 进行搜索。</p>
+<h3 id="文件预览插件"><a href="#文件预览插件" class="headerlink" title="文件预览插件"></a>文件预览插件</h3><p>有些 插件 可以让 Mac 上的文件预览更有效，比如语法高亮、markdown 渲染、json 预览等等。</p>
+<pre><code>$ brew cask install qlcolorcode
+$ brew cask install qlstephen
+$ brew cask install qlmarkdown
+$ brew cask install quicklook-json
+$ brew cask install qlprettypatch
+$ brew cask install quicklook-csv
+$ brew cask install betterzipql
+$ brew cask install webpquicklook
+$ brew cask install suspicious-package
+</code></pre><h3 id="OS-X-图形界面程序"><a href="#OS-X-图形界面程序" class="headerlink" title="OS X 图形界面程序"></a>OS X 图形界面程序</h3><p>```<br>$ brew cask install alfred<br>$ brew cask install appcleaner<br>$ brew cask install cheatsheet<br>$ brew cask install dropbox<br>$ brew cask install google-chrome<br>$ brew cask install onepassword<br>$ brew cask install sublime-text<br>$ brew cask install totalfinder</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;包管理工具可以让你安装和更新程序变得更方便，目前在 OS X 系统中最受欢迎的包管理工具是 Homebrew.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="https://zqinmiao.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="mac" scheme="https://zqinmiao.github.io/tags/mac/"/>
+    
+      <category term="brew" scheme="https://zqinmiao.github.io/tags/brew/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件版本中的Alpha,Beta,RC,Trial是什么意思？</title>
+    <link href="https://zqinmiao.github.io/2017/03/%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC%E4%B8%AD%E7%9A%84Alpha-Beta-RC-Trial%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9F/"/>
+    <id>https://zqinmiao.github.io/2017/03/软件版本中的Alpha-Beta-RC-Trial是什么意思？/</id>
+    <published>2017-03-05T01:30:00.000Z</published>
+    <updated>2017-07-11T01:34:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>经常会看到一些软件有不同的版本，这些版本代表什么意思呢，搜了一下，转载一篇文章，科普一下<br><a id="more"></a></p>
+</blockquote>
+<p>版本号：<br>V（Version）：即版本，通常用数字表示版本号。(如:EVEREST　Ultimate　v4.20.1188　Beta　)<br>Build：用数字或日期标示版本号的一种方式。(如:VeryCD　eMule　v0.48a　Build　071112)<br>SP：Service　Pack，升级包。(如:Windows　XP　SP　2/Vista　SP　1)<br>开发阶段划分：<br>α（Alpha）版：内测版，内部交流或者专业测试人员测试用。Bug较多，普通用户最好不要安装。<br>β（Beta）版：公测版，专业爱好者大规模测试用，存在一些缺陷，该版本也不适合一般用户安装。<br>γ（Gamma）版：相当成熟的测试版，与即将发行的正式版相差无几。<br>RC版：是　Release　Candidate　的缩写，意思是发布倒计时，候选版本，处于Gamma阶段，该版本已经完成全部功能并清除大部分的BUG。到了这个阶段只会除BUG，不会对软件做任何大的更改。从Alpha到Beta再到Gamma是改进的先后关系，但RC1、RC2往往是取舍关系。<br>Final：正式版。</p>
+<hr>
+<p>授权和功能划分：<br>Trial：试用版，通常都有时间限制，有些试用版软件还在功能上做了一定的限制。可注册或购买成为正式版。,<br>Unregistered：未注册版，通常没有时间限制，在功能上相对于正式版做了一定的限制。可注册或购买成为正式版。<br>Demo：演示版，仅仅集成了正式版中的几个功能，不能升级成正式版。<br>Lite：精简版。<br>Full　version：完整版，属于正式版。</p>
+<hr>
+<p>语言划分：<br>SC：Simplified　Chinese简体中文版。<br>CN　：　简体中文版<br>GBK：简体中文汉字内码扩展规范版。<br>TC：Traditional　Chinese繁体中文版。<br>CHT　：　繁体中文版<br>BIG5：繁体中文大五码版。<br>EN　：　英文版<br>Multilanguage　：　多语言版<br>UTF8：Unicode　Transformation　Format　8　bit，对现有的中文系统不是好的解决方案。</p>
+<hr>
+<p>其他版本<br>Enhance　：增强版或者加强版　属于正式版1<br>Free　：自由版<br>Release　：发行版　有时间限制<br>Upgrade　：升级版<br>Retail　　：零售版<br>Cardware　：属共享软件的一种，只要给作者回复一封电邮或明信片即可。（有的作者并由此提供注册码等），目前这种形式已不多见。/　S<br>Plus　：属增强版，不过这种大部分是在程序界面及多媒体功能上增强。<br>Preview　：预览版<br>Corporation　&amp;　Enterprise　：企业版<br>Standard　：标准版<br>Mini　：迷你版也叫精简版只有最基本的功能<br>Premium　：　贵价版<br>Professional　：　专业版<br>Express　：　简易版<br>Deluxe　：　豪华版<br>Regged　：　已注册版</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;经常会看到一些软件有不同的版本，这些版本代表什么意思呢，搜了一下，转载一篇文章，科普一下&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="概念" scheme="https://zqinmiao.github.io/tags/%E6%A6%82%E5%BF%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac开发环境之MySQL</title>
+    <link href="https://zqinmiao.github.io/2017/03/mac%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B9%8BMySQL/"/>
+    <id>https://zqinmiao.github.io/2017/03/mac开发环境之MySQL/</id>
+    <published>2017-03-03T02:29:16.000Z</published>
+    <updated>2017-07-11T02:31:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装配置mysql"><a href="#安装配置mysql" class="headerlink" title="安装配置mysql"></a>安装配置mysql</h2><h3 id="安装包安装："><a href="#安装包安装：" class="headerlink" title="安装包安装："></a>安装包安装：</h3><p>1、下载安装包，安装完后<br>2:配置环境变量<br>打开终端,输入： cd ~<br>会进入~文件夹<br>然后输入：</p>
+<pre><code>touch .bash_profile
+</code></pre><p>回车执行后，再输入：</p>
+<pre><code>open -e .bash_profile
+</code></pre><p>打开文件后添加：PATH=$PATH:/usr/local/mysql/bin<br>或者：<br>Try adding the following line to your .bash_profile file.</p>
+<pre><code>export PATH=&quot;/usr/local/mysql/bin:$PATH&quot;
+</code></pre><p>You can do this easily with the following command, which will append the line if the file already exists or create a new file with the line if it doesn’t.</p>
+<pre><code>echo &#39;export PATH=&quot;/usr/local/mysql/bin:$PATH&quot;&#39; &gt;&gt; ~/.bash_profile
+</code></pre><h3 id="安装-MySQL"><a href="#安装-MySQL" class="headerlink" title="安装 MySQL:"></a>安装 MySQL:</h3><pre><code>$ brew update # 这是一个好习惯
+$ brew install mysql
+</code></pre><p>在使用 MySQL 前，我们需要做一些设置：</p>
+<pre><code>$ unset TMPDIR
+$ mkdir /usr/local/var
+$ mysql_install_db --verbose --user=`whoami` --basedir=&quot;$(brew --prefix mysql)&quot; --datadir=/usr/local/var/mysql --tmpdir=/tmp
+</code></pre><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>启动 MySQL 服务，运行 mysql.server</p>
+<pre><code>$ mysql.server start
+</code></pre><p>关闭 MySQL，运行：</p>
+<pre><code>$ mysql.server stop
+</code></pre><p>你可以了解更多 mysql.server 的命令，运行：</p>
+<pre><code>$ mysql.server --help
+</code></pre><p>登录 MySQL, 运行:</p>
+<pre><code>$ mysql -uroot
+</code></pre><p>Note: 默认情况下，MySQL 用户 root 没有密码，这对本地开发没有关系，但如果你希望修改密码，你可以运行:</p>
+<pre><code>$ mysqladmin -u root password &#39;new-password&#39;
+</code></pre><p>退出mysql服务：</p>
+<pre><code>mysql &gt; quit
+</code></pre><p>quit不需要分号。</p>
+<p>重启服务：</p>
+<pre><code>mysql.server restart
+</code></pre><p>Note：如果已经设置过密码，需要修改密码的话：</p>
+<pre><code>mysql -u root -p
+mysql&gt; SET PASSWORD FOR &#39;root&#39;@&#39;localhost&#39; = PASSWORD(&#39;newpass’);
+</code></pre><h3 id="如使用brew安装：brew-uninstall-mysql-或者-brew-remove-mysql"><a href="#如使用brew安装：brew-uninstall-mysql-或者-brew-remove-mysql" class="headerlink" title="如使用brew安装：brew uninstall mysql 或者 brew remove mysql"></a>如使用brew安装：brew uninstall mysql 或者 brew remove mysql</h3><p>但是又有点怕某些东西没有卸载完全影响到下一次的安装（我第一次重装就是这样的��）以下是完整一点的手动卸载：</p>
+<ul>
+<li>sudo rm /usr/local/mysql</li>
+<li>sudo rm -rf /usr/local/mysql*</li>
+<li>sudo rm -rf /Library/StartupItems/MySQLCOM</li>
+<li>sudo rm -rf /Library/PreferencePanes/My*</li>
+<li>rm -rf ~/Library/PreferencePanes/My*</li>
+<li>sudo rm -rf /Library/Receipts/mysql*</li>
+<li>sudo rm -rf /Library/Receipts/MySQL*</li>
+<li>sudo rm -rf /var/db/receipts/com.mysql.*</li>
+</ul>
+<h3 id="添加修改mysql配置"><a href="#添加修改mysql配置" class="headerlink" title="添加修改mysql配置"></a>添加修改mysql配置</h3><pre><code>mysqld --help --verbose | more (查看帮助, 按空格下翻)
+</code></pre><p>你会看到开始的这一行(表示配置文件默认读取顺序)</p>
+<pre><code>Default options are read from the following files in the given order: /etc/my.cnf /etc/mysql/my.cnf /usr/local/etc/my.cnf ~/.my.cnf
+</code></pre><p>通常这些位置是没有配置文件的, 所以要自己建一个</p>
+<pre><code>ls $(brew --prefix mysql)/support-files/my-* (用这个可以找到样例.cnf)
+cp /usr/local/opt/mysql/support-files/my-default.cnf /etc/my.cnf (拷贝到第一个默认读取目录)
+</code></pre><p>按需修改my.cnf</p>
+<h3 id="错误相关："><a href="#错误相关：" class="headerlink" title="错误相关："></a>错误相关：</h3><h4 id="1、ERROR-2002-HY000-Can’t-connect-to-local-MySQL-server-through-socket-‘-tmp-mysql-sock’-61"><a href="#1、ERROR-2002-HY000-Can’t-connect-to-local-MySQL-server-through-socket-‘-tmp-mysql-sock’-61" class="headerlink" title="1、ERROR 2002 (HY000): Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (61)"></a>1、ERROR 2002 (HY000): Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (61)</h4><p>解决方法：</p>
+<pre><code>sudo /usr/local/mysql/support-files/mysql.server start
+</code></pre><h4 id="2、Error-Command-failed-bin-sh-mysql-command-not-found"><a href="#2、Error-Command-failed-bin-sh-mysql-command-not-found" class="headerlink" title="2、Error: Command failed:  /bin/sh: mysql: command not found"></a>2、Error: Command failed:  /bin/sh: mysql: command not found</h4><p>解决方法：<br>有可能是/user/local/bin目录下缺失mysql导致，需要以下方法来解决：把MYSQLPATH/bin/mysql映射到/usr/local/bin目录下：</p>
+<pre><code>$ cd /usr/local/bin$ ln -fs /MYAQLPATH/bin/mysql mysql
+</code></pre><p>注意：这里的MYAQLPATH要替换成/usr/local/mysql-5.7.16-osx10.11-x86_64/，即base Directory中的路径</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;安装配置mysql&quot;&gt;&lt;a href=&quot;#安装配置mysql&quot; class=&quot;headerlink&quot; title=&quot;安装配置mysql&quot;&gt;&lt;/a&gt;安装配置mysql&lt;/h2&gt;&lt;h3 id=&quot;安装包安装：&quot;&gt;&lt;a href=&quot;#安装包安装：&quot; class=&quot;head
+    
+    </summary>
+    
+      <category term="工具" scheme="https://zqinmiao.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="mac" scheme="https://zqinmiao.github.io/tags/mac/"/>
+    
+      <category term="mysql" scheme="https://zqinmiao.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>polyfil和shim</title>
+    <link href="https://zqinmiao.github.io/2017/03/polyfil%E5%92%8Cshim/"/>
+    <id>https://zqinmiao.github.io/2017/03/polyfil和shim/</id>
+    <published>2017-03-01T03:41:57.000Z</published>
+    <updated>2017-07-07T08:19:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>polyfill 是 shim 的一种。</p>
+<p>shim 是将不同 api 封装成一种，比如 jQuery 的 $.ajax 封装了 XMLHttpRequest 和 IE 用 ActiveXObject 方式创建 xhr 对象；</p>
+<p>polyfill 特指 shim 成的 api 是遵循标准的，其典型做法是在IE浏览器中增加 window.XMLHttpRequest ，内部实现使用 ActiveXObject。</p>
+<p>在实际中为了方便做对比，会特指 shim 的 api 不是遵循标准的，而是自己设计的。</p>
+<p><a href="https://www.zhihu.com/question/22129715/answer/21242550" target="_blank" rel="external">原文链接</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;polyfill 是 shim 的一种。&lt;/p&gt;
+&lt;p&gt;shim 是将不同 api 封装成一种，比如 jQuery 的 $.ajax 封装了 XMLHttpRequest 和 IE 用 ActiveXObject 方式创建 xhr 对象；&lt;/p&gt;
+&lt;p&gt;polyfill 特
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://zqinmiao.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="概念" scheme="https://zqinmiao.github.io/tags/%E6%A6%82%E5%BF%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于使用Hexo搭建博客的一些问题总结</title>
+    <link href="https://zqinmiao.github.io/2017/01/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"/>
+    <id>https://zqinmiao.github.io/2017/01/关于使用Hexo搭建博客的一些问题总结/</id>
+    <published>2017-01-01T02:20:50.000Z</published>
+    <updated>2018-03-01T03:35:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>闲来无事，就使用Hexo也搭建了一个博客。<br>浏览了许多漂亮的主题模版，但是总感觉自己不动手搞一个主题有违极客精神。<br>无奈审美能力有限，看来自己搞出来的主题真是不忍直视。<br>在使用Hexo的过程中遇到了一些问题，<br>通过搜索前人的总结得到了解决，现在将一些自己认为有用的点总结一下，<br>也算是对玩Hexo的一个记录。<br><a id="more"></a></p>
+</blockquote>
+<h1 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h1><blockquote>
+<p><a href="#博客网址使用自定义域名">博客网址使用自定义域名</a><br><a href="#设置文章摘要">设置文章摘要</a><br><a href="#添加文章分享功能">添加文章分享功能</a><br><a href="#添加文章评论功能">添加文章评论功能</a></p>
+</blockquote>
+<h2 id="博客网址使用自定义域名">• 博客网址使用自定义域名</h2>
+
+<h3 id="1-先去域名服务商处购买个喜欢的域名"><a href="#1-先去域名服务商处购买个喜欢的域名" class="headerlink" title="1. 先去域名服务商处购买个喜欢的域名"></a>1. 先去域名服务商处购买个喜欢的域名</h3><p>我是用万网买的域名。买过域名之后在后台找到，如下：<br><img src="/2017/01/关于使用Hexo搭建博客的一些问题总结/1.jpeg" alt="Alt 万网域名"></p>
+<p>点击解析，并添加两条解析，如下图所示：<br><img src="/2017/01/关于使用Hexo搭建博客的一些问题总结/2.jpeg" alt="Alt 域名解析"><br>其中A记录的记录值的ip的获取方法，你可以ping一下github上博客仓库的名字，我的仓库名称是：zqinmiao.github.io，所以：</p>
+<pre><code>PING github.map.fastly.net (151.101.88.133): 56 data bytes
+64 bytes from 151.101.88.133: icmp_seq=0 ttl=53 time=43.529 ms
+64 bytes from 151.101.88.133: icmp_seq=1 ttl=53 time=43.714 ms
+64 bytes from 151.101.88.133: icmp_seq=2 ttl=53 time=43.568 ms
+64 bytes from 151.101.88.133: icmp_seq=3 ttl=53 time=44.236 ms
+64 bytes from 151.101.88.133: icmp_seq=4 ttl=53 time=44.104 ms
+64 bytes from 151.101.88.133: icmp_seq=5 ttl=53 time=44.221 ms
+</code></pre><p>ping出的ip就是：151.101.88.133</p>
+<p>然后在记录类型：CNAME中的记录值上填上仓库名：<code>zqinmiao.github.io.</code>这里注意：仓库名后面要加上一个点”.”</p>
+<h3 id="2-然后回到github的博客仓库"><a href="#2-然后回到github的博客仓库" class="headerlink" title="2.然后回到github的博客仓库"></a>2.然后回到github的博客仓库</h3><p>点击博客仓库的设置，找到如下图所示的选项：<br><img src="/2017/01/关于使用Hexo搭建博客的一些问题总结/3.jpeg" alt="Alt 域名"></p>
+<h5 id="将自定义的域名填入，保存即可。"><a href="#将自定义的域名填入，保存即可。" class="headerlink" title="将自定义的域名填入，保存即可。"></a>将自定义的域名填入，保存即可。</h5><p>但是上面的方法有一些问题，每次写文章将博客部署后都要部署，比较麻烦。<br>我们可以在主题文件夹下的source文件夹里建一个名字为CNAME的文档，内容是我们的域名，比如我的域名是：yayajiu.com，那么文档的内容就填：yayajiu.com<br>文档所在位置如下：<br><img src="/2017/01/关于使用Hexo搭建博客的一些问题总结/4.jpeg" alt="Alt 文件夹位置"><br>这样，每次部署的时候仓库里就会存在一个CNAME的文档，就不用每次到设置里再设置了。</p>
+<h2 id="设置文章摘要">• 设置文章摘要</h2>
+
+<p>在文章中使用</p>
+<pre><code>&lt;!--more--&gt;
+</code></pre><p>more上面的就是文章的摘要<br>如下：<br><img src="/2017/01/关于使用Hexo搭建博客的一些问题总结/5.jpeg" alt="Alt 摘要"></p>
+<h2 id="添加文章分享功能">• 添加文章分享功能</h2>
+
+<p>文章的分享功能我使用的是百度的一个分享插件，只需增加一段代码即可。<br>还有开发版，可以自己定制，很简单。<a href="http://share.baidu.com/code" target="_blank" rel="external">官网链接</a></p>
+<h2 id="添加文章评论功能">• 添加文章评论功能</h2>
+
+<p>我使用的评论插件，<a href="https://imsun.net/posts/gitment-introduction/#more" target="_blank" rel="external">这是插件作者的教程，很详细</a></p>
+<p>如果想使用其他的评论插件，可以参考知乎<a href="https://www.zhihu.com/question/57426274" target="_blank" rel="external">如何评价“多说”即将关闭？有什么替代方案？</a>下的回答</p>
+<hr>
+<h4 id="感觉也没什么要总结了，关于Hexo的用法，官方文档看一遍应该就手到擒来了。"><a href="#感觉也没什么要总结了，关于Hexo的用法，官方文档看一遍应该就手到擒来了。" class="headerlink" title="感觉也没什么要总结了，关于Hexo的用法，官方文档看一遍应该就手到擒来了。"></a>感觉也没什么要总结了，关于Hexo的用法，<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官方文档</a>看一遍应该就手到擒来了。</h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;闲来无事，就使用Hexo也搭建了一个博客。&lt;br&gt;浏览了许多漂亮的主题模版，但是总感觉自己不动手搞一个主题有违极客精神。&lt;br&gt;无奈审美能力有限，看来自己搞出来的主题真是不忍直视。&lt;br&gt;在使用Hexo的过程中遇到了一些问题，&lt;br&gt;通过搜索前人的总结得到了解决，现在将一些自己认为有用的点总结一下，&lt;br&gt;也算是对玩Hexo的一个记录。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://zqinmiao.github.io/categories/Hexo/"/>
+    
+    
+      <category term="hexo" scheme="https://zqinmiao.github.io/tags/hexo/"/>
     
   </entry>
   
