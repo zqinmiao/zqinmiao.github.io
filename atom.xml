@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zqinmiao.github.io/"/>
-  <updated>2018-03-01T03:26:52.000Z</updated>
+  <updated>2018-03-01T03:36:36.000Z</updated>
   <id>https://zqinmiao.github.io/</id>
   
   <author>
@@ -16,11 +16,51 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>React官方文档知识点归纳-1</title>
-    <link href="https://zqinmiao.github.io/2018/02/React%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E5%BD%92%E7%BA%B3-1/"/>
-    <id>https://zqinmiao.github.io/2018/02/React官方文档知识点归纳-1/</id>
+    <title>test</title>
+    <link href="https://zqinmiao.github.io/2018/03/test/"/>
+    <id>https://zqinmiao.github.io/2018/03/test/</id>
+    <published>2018-03-01T03:36:22.000Z</published>
+    <updated>2018-03-01T03:36:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>test</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;test&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>React官方文档知识点归纳</title>
+    <link href="https://zqinmiao.github.io/2018/03/React%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E5%BD%92%E7%BA%B3/"/>
+    <id>https://zqinmiao.github.io/2018/03/React官方文档知识点归纳/</id>
+    <published>2018-03-01T03:36:01.000Z</published>
+    <updated>2018-03-01T03:36:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>test</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;test&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>React官方文档知识点归纳（QUICK-START）</title>
+    <link href="https://zqinmiao.github.io/2018/02/React%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E5%BD%92%E7%BA%B3%EF%BC%88QUICK-START%EF%BC%89/"/>
+    <id>https://zqinmiao.github.io/2018/02/React官方文档知识点归纳（QUICK-START）/</id>
     <published>2018-02-08T02:14:52.000Z</published>
-    <updated>2018-03-01T03:26:52.000Z</updated>
+    <updated>2018-03-01T03:20:28.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>阅读了一下React的官方文档，翻译并归纳了一些知识点。这只是QUICK START部分<br><a id="more"></a></p>
@@ -191,11 +231,11 @@ ReactDOM.render(
   </entry>
   
   <entry>
-    <title>React官方文档知识点归纳（QUICK-START）</title>
-    <link href="https://zqinmiao.github.io/2018/02/React%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E5%BD%92%E7%BA%B3%EF%BC%88QUICK-START%EF%BC%89/"/>
-    <id>https://zqinmiao.github.io/2018/02/React官方文档知识点归纳（QUICK-START）/</id>
+    <title>React官方文档知识点归纳-1</title>
+    <link href="https://zqinmiao.github.io/2018/02/React%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E5%BD%92%E7%BA%B3-1/"/>
+    <id>https://zqinmiao.github.io/2018/02/React官方文档知识点归纳-1/</id>
     <published>2018-02-08T02:14:52.000Z</published>
-    <updated>2018-03-01T03:20:28.000Z</updated>
+    <updated>2018-03-01T03:26:52.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>阅读了一下React的官方文档，翻译并归纳了一些知识点。这只是QUICK START部分<br><a id="more"></a></p>
@@ -1200,7 +1240,7 @@ const app = new Vue({
     <link href="https://zqinmiao.github.io/2017/07/%E4%BD%BF%E7%94%A8Webpack%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84Error%E5%92%8C%E4%B8%80%E4%BA%9B%E7%96%91%E6%83%91/"/>
     <id>https://zqinmiao.github.io/2017/07/使用Webpack时遇到的Error和一些疑惑/</id>
     <published>2017-07-06T14:07:29.000Z</published>
-    <updated>2018-03-01T03:27:41.000Z</updated>
+    <updated>2018-03-01T03:34:51.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>在用Webpack时遇到了一些问题，和一些概念的疑惑，持续更新…<br><a id="more"></a></p>
@@ -1228,7 +1268,7 @@ Cannot use [chunkhash] for chunk in &#39;[name].[chunkhash].js&#39; (use [hash] 
       <category term="工具" scheme="https://zqinmiao.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="webpack" scheme="https://zqinmiao.github.io/tags/webpack/"/>
+      <category term="Webpack" scheme="https://zqinmiao.github.io/tags/Webpack/"/>
     
   </entry>
   
@@ -1566,92 +1606,6 @@ cp /usr/local/opt/mysql/support-files/my-default.cnf /etc/my.cnf (拷贝到第�
       <category term="mac" scheme="https://zqinmiao.github.io/tags/mac/"/>
     
       <category term="mysql" scheme="https://zqinmiao.github.io/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>polyfil和shim</title>
-    <link href="https://zqinmiao.github.io/2017/03/polyfil%E5%92%8Cshim/"/>
-    <id>https://zqinmiao.github.io/2017/03/polyfil和shim/</id>
-    <published>2017-03-01T03:41:57.000Z</published>
-    <updated>2017-07-07T08:19:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>polyfill 是 shim 的一种。</p>
-<p>shim 是将不同 api 封装成一种，比如 jQuery 的 $.ajax 封装了 XMLHttpRequest 和 IE 用 ActiveXObject 方式创建 xhr 对象；</p>
-<p>polyfill 特指 shim 成的 api 是遵循标准的，其典型做法是在IE浏览器中增加 window.XMLHttpRequest ，内部实现使用 ActiveXObject。</p>
-<p>在实际中为了方便做对比，会特指 shim 的 api 不是遵循标准的，而是自己设计的。</p>
-<p><a href="https://www.zhihu.com/question/22129715/answer/21242550" target="_blank" rel="external">原文链接</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;polyfill 是 shim 的一种。&lt;/p&gt;
-&lt;p&gt;shim 是将不同 api 封装成一种，比如 jQuery 的 $.ajax 封装了 XMLHttpRequest 和 IE 用 ActiveXObject 方式创建 xhr 对象；&lt;/p&gt;
-&lt;p&gt;polyfill 特
-    
-    </summary>
-    
-      <category term="笔记" scheme="https://zqinmiao.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="概念" scheme="https://zqinmiao.github.io/tags/%E6%A6%82%E5%BF%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于使用Hexo搭建博客的一些问题总结</title>
-    <link href="https://zqinmiao.github.io/2017/01/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"/>
-    <id>https://zqinmiao.github.io/2017/01/关于使用Hexo搭建博客的一些问题总结/</id>
-    <published>2017-01-01T02:20:50.000Z</published>
-    <updated>2018-03-01T03:28:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>闲来无事，就使用Hexo也搭建了一个博客。<br>浏览了许多漂亮的主题模版，但是总感觉自己不动手搞一个主题有违极客精神。<br>无奈审美能力有限，看来自己搞出来的主题真是不忍直视。<br>在使用Hexo的过程中遇到了一些问题，<br>通过搜索前人的总结得到了解决，现在将一些自己认为有用的点总结一下，<br>也算是对玩Hexo的一个记录。<br><a id="more"></a></p>
-</blockquote>
-<h1 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h1><blockquote>
-<p><a href="#博客网址使用自定义域名">博客网址使用自定义域名</a><br><a href="#设置文章摘要">设置文章摘要</a><br><a href="#添加文章分享功能">添加文章分享功能</a><br><a href="#添加文章评论功能">添加文章评论功能</a></p>
-</blockquote>
-<h2 id="博客网址使用自定义域名">• 博客网址使用自定义域名</h2>
-
-<h3 id="1-先去域名服务商处购买个喜欢的域名"><a href="#1-先去域名服务商处购买个喜欢的域名" class="headerlink" title="1. 先去域名服务商处购买个喜欢的域名"></a>1. 先去域名服务商处购买个喜欢的域名</h3><p>我是用万网买的域名。买过域名之后在后台找到，如下：<br><img src="/2017/01/关于使用Hexo搭建博客的一些问题总结/1.jpeg" alt="Alt 万网域名"></p>
-<p>点击解析，并添加两条解析，如下图所示：<br><img src="/2017/01/关于使用Hexo搭建博客的一些问题总结/2.jpeg" alt="Alt 域名解析"><br>其中A记录的记录值的ip的获取方法，你可以ping一下github上博客仓库的名字，我的仓库名称是：zqinmiao.github.io，所以：</p>
-<pre><code>PING github.map.fastly.net (151.101.88.133): 56 data bytes
-64 bytes from 151.101.88.133: icmp_seq=0 ttl=53 time=43.529 ms
-64 bytes from 151.101.88.133: icmp_seq=1 ttl=53 time=43.714 ms
-64 bytes from 151.101.88.133: icmp_seq=2 ttl=53 time=43.568 ms
-64 bytes from 151.101.88.133: icmp_seq=3 ttl=53 time=44.236 ms
-64 bytes from 151.101.88.133: icmp_seq=4 ttl=53 time=44.104 ms
-64 bytes from 151.101.88.133: icmp_seq=5 ttl=53 time=44.221 ms
-</code></pre><p>ping出的ip就是：151.101.88.133</p>
-<p>然后在记录类型：CNAME中的记录值上填上仓库名：<code>zqinmiao.github.io.</code>这里注意：仓库名后面要加上一个点”.”</p>
-<h3 id="2-然后回到github的博客仓库"><a href="#2-然后回到github的博客仓库" class="headerlink" title="2.然后回到github的博客仓库"></a>2.然后回到github的博客仓库</h3><p>点击博客仓库的设置，找到如下图所示的选项：<br><img src="/2017/01/关于使用Hexo搭建博客的一些问题总结/3.jpeg" alt="Alt 域名"></p>
-<h5 id="将自定义的域名填入，保存即可。"><a href="#将自定义的域名填入，保存即可。" class="headerlink" title="将自定义的域名填入，保存即可。"></a>将自定义的域名填入，保存即可。</h5><p>但是上面的方法有一些问题，每次写文章将博客部署后都要部署，比较麻烦。<br>我们可以在主题文件夹下的source文件夹里建一个名字为CNAME的文档，内容是我们的域名，比如我的域名是：yayajiu.com，那么文档的内容就填：yayajiu.com<br>文档所在位置如下：<br><img src="/2017/01/关于使用Hexo搭建博客的一些问题总结/4.jpeg" alt="Alt 文件夹位置"><br>这样，每次部署的时候仓库里就会存在一个CNAME的文档，就不用每次到设置里再设置了。</p>
-<h2 id="设置文章摘要">• 设置文章摘要</h2>
-
-<p>在文章中使用</p>
-<pre><code>&lt;!--more--&gt;
-</code></pre><p>more上面的就是文章的摘要<br>如下：<br><img src="/2017/01/关于使用Hexo搭建博客的一些问题总结/5.jpeg" alt="Alt 摘要"></p>
-<h2 id="添加文章分享功能">• 添加文章分享功能</h2>
-
-<p>文章的分享功能我使用的是百度的一个分享插件，只需增加一段代码即可。<br>还有开发版，可以自己定制，很简单。<a href="http://share.baidu.com/code" target="_blank" rel="external">官网链接</a></p>
-<h2 id="添加文章评论功能">• 添加文章评论功能</h2>
-
-<p>我使用的评论插件，<a href="https://imsun.net/posts/gitment-introduction/#more" target="_blank" rel="external">这是插件作者的教程，很详细</a></p>
-<p>如果想使用其他的评论插件，可以参考知乎<a href="https://www.zhihu.com/question/57426274" target="_blank" rel="external">如何评价“多说”即将关闭？有什么替代方案？</a>下的回答</p>
-<hr>
-<h4 id="感觉也没什么要总结了，关于Hexo的用法，官方文档看一遍应该就手到擒来了。"><a href="#感觉也没什么要总结了，关于Hexo的用法，官方文档看一遍应该就手到擒来了。" class="headerlink" title="感觉也没什么要总结了，关于Hexo的用法，官方文档看一遍应该就手到擒来了。"></a>感觉也没什么要总结了，关于Hexo的用法，<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官方文档</a>看一遍应该就手到擒来了。</h4>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;闲来无事，就使用Hexo也搭建了一个博客。&lt;br&gt;浏览了许多漂亮的主题模版，但是总感觉自己不动手搞一个主题有违极客精神。&lt;br&gt;无奈审美能力有限，看来自己搞出来的主题真是不忍直视。&lt;br&gt;在使用Hexo的过程中遇到了一些问题，&lt;br&gt;通过搜索前人的总结得到了解决，现在将一些自己认为有用的点总结一下，&lt;br&gt;也算是对玩Hexo的一个记录。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Hexo" scheme="https://zqinmiao.github.io/categories/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="https://zqinmiao.github.io/tags/Hexo/"/>
     
   </entry>
   
