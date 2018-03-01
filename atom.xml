@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zqinmiao.github.io/"/>
-  <updated>2018-03-01T02:20:37.000Z</updated>
+  <updated>2018-03-01T03:06:13.000Z</updated>
   <id>https://zqinmiao.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>React官方文档知识点归纳(QUICK START)</title>
-    <link href="https://zqinmiao.github.io/2018/02/React%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E5%BD%92%E7%BA%B3(QUICK%20START)/"/>
-    <id>https://zqinmiao.github.io/2018/02/React官方文档知识点归纳(QUICK START)/</id>
+    <title>React官方文档知识点归纳(QUICK-START)</title>
+    <link href="https://zqinmiao.github.io/2018/02/React%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E5%BD%92%E7%BA%B3(QUICK-START)/"/>
+    <id>https://zqinmiao.github.io/2018/02/React官方文档知识点归纳(QUICK-START)/</id>
     <published>2018-02-08T02:14:52.000Z</published>
-    <updated>2018-03-01T02:20:37.000Z</updated>
+    <updated>2018-03-01T03:06:13.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>阅读了一下React的官方文档，翻译并归纳了一些知识点<br><a id="more"></a></p>
@@ -230,7 +230,7 @@ ReactDOM.render(
     <link href="https://zqinmiao.github.io/2017/09/%E4%BD%BF%E7%94%A8vue%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE%E6%A2%B3%E7%90%86%E5%8F%8A%E9%9C%80%E8%A6%81%E6%8E%8C%E6%8F%A1%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     <id>https://zqinmiao.github.io/2017/09/使用vue开发项目梳理及需要掌握的知识点/</id>
     <published>2017-09-13T06:57:14.000Z</published>
-    <updated>2018-03-01T02:19:20.000Z</updated>
+    <updated>2018-03-01T03:06:13.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>需要在部门内部做一个关于vue的培训，所以也就写了一个文档，来梳理一下vue的开发，及一些知识点<br><a id="more"></a></p>
@@ -461,7 +461,7 @@ app.all(&#39;/路由地址/*&#39;,function (req, res, next) {
       <category term="框架" scheme="https://zqinmiao.github.io/categories/%E6%A1%86%E6%9E%B6/"/>
     
     
-      <category term="vue" scheme="https://zqinmiao.github.io/tags/vue/"/>
+      <category term="Vue.js" scheme="https://zqinmiao.github.io/tags/Vue-js/"/>
     
   </entry>
   
@@ -942,7 +942,7 @@ $ git config user.email &quot;your email&quot;
     <link href="https://zqinmiao.github.io/2017/07/Vue%E4%B9%8Bvuex%E6%A6%82%E5%BF%B5-Modules/"/>
     <id>https://zqinmiao.github.io/2017/07/Vue之vuex概念-Modules/</id>
     <published>2017-07-13T08:08:47.000Z</published>
-    <updated>2018-03-01T02:19:20.000Z</updated>
+    <updated>2018-03-01T03:06:13.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>代码演示vuex中嵌套Modules是如何执行的<br><a id="more"></a></p>
@@ -1016,7 +1016,7 @@ const app = new Vue({
       <category term="框架" scheme="https://zqinmiao.github.io/categories/%E6%A1%86%E6%9E%B6/"/>
     
     
-      <category term="vue" scheme="https://zqinmiao.github.io/tags/vue/"/>
+      <category term="Vue.js" scheme="https://zqinmiao.github.io/tags/Vue-js/"/>
     
   </entry>
   
