@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zqinmiao.github.io/"/>
-  <updated>2018-03-01T03:44:49.000Z</updated>
+  <updated>2018-03-01T04:08:23.000Z</updated>
   <id>https://zqinmiao.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ritafea</title>
+    <link href="https://zqinmiao.github.io/2018/03/ritafea/"/>
+    <id>https://zqinmiao.github.io/2018/03/ritafea/</id>
+    <published>2018-03-01T04:08:13.000Z</published>
+    <updated>2018-03-01T04:08:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>啦啦啦啦啦</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;啦啦啦啦啦&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>啦啦啦啦</title>
@@ -1470,72 +1490,6 @@ $ brew services stop redis
       <category term="mac" scheme="https://zqinmiao.github.io/tags/mac/"/>
     
       <category term="redis" scheme="https://zqinmiao.github.io/tags/redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac开发环境之brew、brew-cask</title>
-    <link href="https://zqinmiao.github.io/2017/03/mac%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B9%8Bbrew%E3%80%81brew-cask/"/>
-    <id>https://zqinmiao.github.io/2017/03/mac开发环境之brew、brew-cask/</id>
-    <published>2017-03-05T02:23:50.000Z</published>
-    <updated>2017-07-11T02:32:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>包管理工具可以让你安装和更新程序变得更方便，目前在 OS X 系统中最受欢迎的包管理工具是 Homebrew.<br><a id="more"></a></p>
-</blockquote>
-<h2 id="安装brew"><a href="#安装brew" class="headerlink" title="安装brew"></a>安装brew</h2><p>包管理工具可以让你安装和更新程序变得更方便，目前在 OS X 系统中最受欢迎的包管理工具是 Homebrew.</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在安装 Homebrew 之前，需要将 Xcode Command Line Tools 安装完成，这样你就可以使用基于 Xcode Command Line Tools 编译的 Homebrew。<br>在 terminal 中复制以下命令（不包括 $），跟随指引，将完成 Hombrew 安装。</p>
-<pre><code>$ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-</code></pre><p>紧接着，我们需要做一件事让通过 Homebrew 安装的程序的启动链接 (在 /usr/local/bin中）可以直接运行，无需将完整路径写出。通过以下命令将 /usr/local/bin 添加至 $PATH 环境变量中:</p>
-<pre><code>$ echo &#39;export PATH=&quot;/usr/local/bin:$PATH&quot;&#39; &gt;&gt; ~/.bash_profile
-</code></pre><p>Cmd+T 打开一个新的 terminal 标签页，运行以下命令，确保 brew 运行正常。</p>
-<pre><code>$ brew doctor
-</code></pre><p>译注：<br>安装完成后，Homebrew 会将本地 /usr/local 初始化为 git 的工作树，并将目录所有者变更为当前所操作的用户，将来 brew 的相关操作不需要 sudo 。</p>
-<h3 id="Homebrew基本使用"><a href="#Homebrew基本使用" class="headerlink" title="Homebrew基本使用"></a>Homebrew基本使用</h3><p>安装一个包，可以简单的运行：</p>
-<pre><code>$ brew install &lt;package_name&gt;
-</code></pre><p>更新 Homebrew 在服务器端上的包目录：</p>
-<pre><code>$ brew update
-</code></pre><p>查看你的包是否需要更新：</p>
-<pre><code>$ brew outdated
-</code></pre><p>更新包：</p>
-<pre><code>$ brew upgrade &lt;package_name&gt;
-</code></pre><p>Homebrew 将会把老版本的包缓存下来，以便当你想回滚至旧版本时使用。但这是比较少使用的情况，当你想清理旧版本的包缓存时，可以运行：</p>
-<pre><code>$ brew cleanup
-</code></pre><p>查看你安装过的包列表（包括版本号）：</p>
-<pre><code>$ brew list --versions
-</code></pre><hr>
-<h2 id="安装brew-cask"><a href="#安装brew-cask" class="headerlink" title="安装brew-cask"></a>安装brew-cask</h2><p>通过Homebrew Cask 优雅、简单、快速的安装和管理 OS X 图形界面程序，比如 Google Chrome 和 Dropbox。</p>
-<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>安装 Homebrew-cask 是如此的简单直接，运行以下命令即可完成：</p>
-<pre><code>$ brew install caskroom/cask/brew-cask
-$ brew cask install google-chrome // 安装 Google 浏览器
-$ brew update &amp;&amp; brew upgrade brew-cask &amp;&amp; brew cleanup // 更新
-</code></pre><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>如果你想查看 cask 上是否存在你需要的 app，可以到 caskroom.io 进行搜索。</p>
-<h3 id="文件预览插件"><a href="#文件预览插件" class="headerlink" title="文件预览插件"></a>文件预览插件</h3><p>有些 插件 可以让 Mac 上的文件预览更有效，比如语法高亮、markdown 渲染、json 预览等等。</p>
-<pre><code>$ brew cask install qlcolorcode
-$ brew cask install qlstephen
-$ brew cask install qlmarkdown
-$ brew cask install quicklook-json
-$ brew cask install qlprettypatch
-$ brew cask install quicklook-csv
-$ brew cask install betterzipql
-$ brew cask install webpquicklook
-$ brew cask install suspicious-package
-</code></pre><h3 id="OS-X-图形界面程序"><a href="#OS-X-图形界面程序" class="headerlink" title="OS X 图形界面程序"></a>OS X 图形界面程序</h3><p>```<br>$ brew cask install alfred<br>$ brew cask install appcleaner<br>$ brew cask install cheatsheet<br>$ brew cask install dropbox<br>$ brew cask install google-chrome<br>$ brew cask install onepassword<br>$ brew cask install sublime-text<br>$ brew cask install totalfinder</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;包管理工具可以让你安装和更新程序变得更方便，目前在 OS X 系统中最受欢迎的包管理工具是 Homebrew.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="https://zqinmiao.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="mac" scheme="https://zqinmiao.github.io/tags/mac/"/>
-    
-      <category term="brew" scheme="https://zqinmiao.github.io/tags/brew/"/>
     
   </entry>
   
