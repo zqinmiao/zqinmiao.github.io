@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zqinmiao.github.io/"/>
-  <updated>2017-10-04T02:50:42.000Z</updated>
+  <updated>2018-03-01T02:20:37.000Z</updated>
   <id>https://zqinmiao.github.io/</id>
   
   <author>
@@ -14,6 +14,181 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React官方文档知识点归纳(QUICK START)</title>
+    <link href="https://zqinmiao.github.io/2018/02/React%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E5%BD%92%E7%BA%B3(QUICK%20START)/"/>
+    <id>https://zqinmiao.github.io/2018/02/React官方文档知识点归纳(QUICK START)/</id>
+    <published>2018-02-08T02:14:52.000Z</published>
+    <updated>2018-03-01T02:20:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>阅读了一下React的官方文档，翻译并归纳了一些知识点<br><a id="more"></a></p>
+</blockquote>
+<h2 id="JSX语法："><a href="#JSX语法：" class="headerlink" title="JSX语法："></a>JSX语法：</h2><h3 id="元素属性名命名规则"><a href="#元素属性名命名规则" class="headerlink" title="元素属性名命名规则"></a>元素属性名命名规则</h3><ul>
+<li><strong>属性名采用camelCase命名法，比如，类（class）就叫：’className’，tabindex就叫：’tabIndex’。<a href="https://reactjs.org/docs/introducing-jsx.html#specifying-attributes-with-jsx" target="_blank" rel="external">引用</a></strong></li>
+</ul>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><ul>
+<li><strong>命名规则：始终以大写字母开头。<a href="https://reactjs.org/docs/components-and-props.html#rendering-a-component" target="_blank" rel="external">引用</a></strong></li>
+<li><font color="red"><strong><a href="https://reactjs.org/docs/components-and-props.html#props-are-read-only" target="_blank" rel="external">React is pretty flexible but it has a single strict rule :</a></strong> <strong>All React components must act like pure functions with respect to their props.</strong></font>
+
+</li>
+</ul>
+<h3 id="组件状态（state）"><a href="#组件状态（state）" class="headerlink" title="组件状态（state）"></a>组件状态（state）</h3><ul>
+<li><strong>不要直接修改状态</strong></li>
+</ul>
+<pre><code>// 错误的
+this.state.comment = &#39;Hello&#39;;
+</code></pre><pre><code>// 正确的
+this.setState({comment: &#39;Hello&#39;});
+</code></pre><p><strong>唯一可以指定this.state的地方是构造函数。</strong></p>
+<ul>
+<li><strong>因为this.props和this.state可能会异步更新，所以不应该依赖它们的值来计算下一个状态。</strong></li>
+</ul>
+<pre><code>// 错误
+this.setState({
+  counter: this.state.counter + this.props.increment,
+});
+</code></pre><pre><code>// 正确
+this.setState((prevState, props) =&gt; ({
+  counter: prevState.counter + props.increment
+}));
+</code></pre><pre><code>// 正确
+this.setState(function(prevState, props) {
+  return {
+    counter: prevState.counter + props.increment
+  };
+});
+</code></pre><ul>
+<li>This is commonly called a “top-down” or “unidirectional” data flow. Any state is always owned by some specific component, and any data or UI derived from that state can only affect components “below” them in the tree.</li>
+</ul>
+<h2 id="状态与生命周期（State-and-Lifecycle）"><a href="#状态与生命周期（State-and-Lifecycle）" class="headerlink" title="状态与生命周期（State and Lifecycle）"></a><a href="https://reactjs.org/docs/state-and-lifecycle.html" target="_blank" rel="external">状态与生命周期（State and Lifecycle）</a></h2><ul>
+<li><strong>componentDidMount()</strong></li>
+<li><strong>componentWillUnmount()</strong></li>
+</ul>
+<h2 id="处理事件（Handling-Events）"><a href="#处理事件（Handling-Events）" class="headerlink" title="处理事件（Handling Events）"></a>处理事件（Handling Events）</h2><ul>
+<li><strong><a href="https://reactjs.org/docs/handling-events.html" target="_blank" rel="external">React事件使用camelCase命名，而不是小写。</a></strong></li>
+<li><strong><a href="https://reactjs.org/docs/handling-events.html" target="_blank" rel="external">使用JSX，您将传递一个函数作为事件处理程序，而不是字符串。</a></strong></li>
+</ul>
+<p>For example, the HTML:</p>
+<pre><code>&lt;button onclick=&quot;activateLasers()&quot;&gt;
+  Activate Lasers
+&lt;/button&gt;
+</code></pre><p>in React:</p>
+<pre><code>&lt;button onClick={activateLasers}&gt;
+  Activate Lasers
+&lt;/button&gt;
+</code></pre><ul>
+<li><strong>另一个区别是你不能返回false来防止React中的默认行为。您必须显式调用preventDefault。例如，对于纯HTML，为了防止打开新页面的默认链接行为，可以这样写：</strong></li>
+</ul>
+<pre><code>&lt;a href=&quot;#&quot; onclick=&quot;console.log(&#39;The link was clicked.&#39;); return false&quot;&gt;
+  Click me
+&lt;/a&gt;
+</code></pre><p>in React:</p>
+<pre><code>function ActionLink() {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log(&#39;The link was clicked.&#39;);
+  }
+
+  return (
+    &lt;a href=&quot;#&quot; onClick={handleClick}&gt;
+      Click me
+    &lt;/a&gt;
+  );
+}
+</code></pre><h2 id="条件渲染（Conditional-Rendering）"><a href="#条件渲染（Conditional-Rendering）" class="headerlink" title="条件渲染（Conditional Rendering）"></a><a href="https://reactjs.org/docs/conditional-rendering.html" target="_blank" rel="external">条件渲染（Conditional Rendering）</a></h2><h2 id="列表和键（Lists-and-Keys）"><a href="#列表和键（Lists-and-Keys）" class="headerlink" title="列表和键（Lists and Keys）"></a><a href="https://reactjs.org/docs/lists-and-keys.html" target="_blank" rel="external">列表和键（Lists and Keys）</a></h2><ul>
+<li><strong>关于列表中的key的添加的正确用法</strong></li>
+</ul>
+<pre><code>//错误的写法
+function ListItem(props) {
+  const value = props.value;
+  return (
+    // Wrong! There is no need to specify the key here:
+    &lt;li key={value.toString()}&gt;
+      {value}
+    &lt;/li&gt;
+  );
+}
+
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =&gt;
+    // Wrong! The key should have been specified here:
+    &lt;ListItem value={number} /&gt;
+  );
+  return (
+    &lt;ul&gt;
+      {listItems}
+    &lt;/ul&gt;
+  );
+}
+
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+  &lt;NumberList numbers={numbers} /&gt;,
+  document.getElementById(&#39;root&#39;)
+);
+</code></pre><pre><code>//正确的写法
+function ListItem(props) {
+  // Correct! There is no need to specify the key here:
+  return &lt;li&gt;{props.value}&lt;/li&gt;;
+}
+
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =&gt;
+    // Correct! Key should be specified inside the array.
+    &lt;ListItem key={number.toString()}
+              value={number} /&gt;
+
+  );
+  return (
+    &lt;ul&gt;
+      {listItems}
+    &lt;/ul&gt;
+  );
+}
+
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+  &lt;NumberList numbers={numbers} /&gt;,
+  document.getElementById(&#39;root&#39;)
+);
+</code></pre><ul>
+<li><p><strong>key在兄弟元素之间必须是唯一的</strong></p>
+</li>
+<li><p><strong>在JSX中插入map()</strong></p>
+</li>
+</ul>
+<pre><code>function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =&gt;
+    &lt;ListItem key={number.toString()}
+              value={number} /&gt;
+
+  );
+  return (
+    &lt;ul&gt;
+      {listItems}
+    &lt;/ul&gt;
+  );
+}
+</code></pre><h2 id="表单（Forms）"><a href="#表单（Forms）" class="headerlink" title="表单（Forms）"></a><a href="https://reactjs.org/docs/forms.html" target="_blank" rel="external">表单（Forms）</a></h2><h2 id="状态提升（Lifting-State-Up）"><a href="#状态提升（Lifting-State-Up）" class="headerlink" title="状态提升（Lifting State Up）"></a><a href="https://reactjs.org/docs/forms.html" target="_blank" rel="external"><font color="red">状态提升（Lifting State Up）</font></a></h2><h2 id="构成与继承（Composition-vs-Inheritance））"><a href="#构成与继承（Composition-vs-Inheritance））" class="headerlink" title="构成与继承（Composition vs Inheritance））"></a><a href="https://reactjs.org/docs/composition-vs-inheritance.html" target="_blank" rel="external">构成与继承（Composition vs Inheritance））</a></h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;阅读了一下React的官方文档，翻译并归纳了一些知识点&lt;br&gt;
+    
+    </summary>
+    
+      <category term="框架" scheme="https://zqinmiao.github.io/categories/%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="React" scheme="https://zqinmiao.github.io/tags/React/"/>
+    
+  </entry>
   
   <entry>
     <title>古镇，仿古的步行街</title>
@@ -55,7 +230,7 @@
     <link href="https://zqinmiao.github.io/2017/09/%E4%BD%BF%E7%94%A8vue%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE%E6%A2%B3%E7%90%86%E5%8F%8A%E9%9C%80%E8%A6%81%E6%8E%8C%E6%8F%A1%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     <id>https://zqinmiao.github.io/2017/09/使用vue开发项目梳理及需要掌握的知识点/</id>
     <published>2017-09-13T06:57:14.000Z</published>
-    <updated>2017-10-05T09:32:57.000Z</updated>
+    <updated>2018-03-01T02:19:20.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>需要在部门内部做一个关于vue的培训，所以也就写了一个文档，来梳理一下vue的开发，及一些知识点<br><a id="more"></a></p>
@@ -286,7 +461,7 @@ app.all(&#39;/路由地址/*&#39;,function (req, res, next) {
       <category term="框架" scheme="https://zqinmiao.github.io/categories/%E6%A1%86%E6%9E%B6/"/>
     
     
-      <category term="Vue" scheme="https://zqinmiao.github.io/tags/Vue/"/>
+      <category term="vue" scheme="https://zqinmiao.github.io/tags/vue/"/>
     
   </entry>
   
@@ -767,7 +942,7 @@ $ git config user.email &quot;your email&quot;
     <link href="https://zqinmiao.github.io/2017/07/Vue%E4%B9%8Bvuex%E6%A6%82%E5%BF%B5-Modules/"/>
     <id>https://zqinmiao.github.io/2017/07/Vue之vuex概念-Modules/</id>
     <published>2017-07-13T08:08:47.000Z</published>
-    <updated>2017-09-12T02:34:03.000Z</updated>
+    <updated>2018-03-01T02:19:20.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>代码演示vuex中嵌套Modules是如何执行的<br><a id="more"></a></p>
@@ -841,7 +1016,7 @@ const app = new Vue({
       <category term="框架" scheme="https://zqinmiao.github.io/categories/%E6%A1%86%E6%9E%B6/"/>
     
     
-      <category term="Vue" scheme="https://zqinmiao.github.io/tags/Vue/"/>
+      <category term="vue" scheme="https://zqinmiao.github.io/tags/vue/"/>
     
   </entry>
   
