@@ -3,7 +3,7 @@ title: 使用vue开发项目梳理及需要掌握的知识点
 date: 2017-09-13 14:57:14
 update:
 comments:
-tags: Vue
+tags: Vue.js
 categories: 框架
 permalink:
 toc: true

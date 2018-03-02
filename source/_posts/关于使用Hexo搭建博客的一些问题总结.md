@@ -3,7 +3,7 @@ title: 关于使用Hexo搭建博客的一些问题总结
 date: 2017-01-01 10:20:50
 update: 2017-01-11
 comments:
-tags: Hexo
+tags: hexo
 categories: Hexo
 permalink:
 ---

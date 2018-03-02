@@ -3,7 +3,7 @@ title: Vue之vuex概念-Modules
 date: 2017-07-13 16:08:47
 update:
 comments:
-tags: [Vue]
+tags: Vue.js
 categories: 框架
 permalink:
 ---
