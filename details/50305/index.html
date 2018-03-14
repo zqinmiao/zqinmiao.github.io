@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="博客,blog,javascript,web,nodejs"/>
+	<meta name="description" content="博客、blog、技术、读读、想想、写写">
+	
+	<title>React官方文档知识点归纳-1 |reahink</title>
+	
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	
+	<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/monokai-sublime.css">
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?2a05102c590f33c9479010fb626665c1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+	</script>
+</head>
+
+
+<body>
+<div id="page">
+	<div class="header" style="background-color: null">
+    <div class="header-wrap clearfix">
+        <!--brand log-->
+        <h1 class="brand fl"><a href="/">reahink</a></h1>
+        <!--menu-->
+        <ul class="menu fr clearfix">
+            
+            <li class="fl home"><a href="/">HOME</a></li>
+            
+            <li class="fl about"><a href="/about">ABOUT</a></li>
+            
+            <li class="fl rss"><a href="/atom.xml">RSS</a></li>
+            
+        </ul>
+    </div>
+</div>
+	<div class="main clearfix">
+		<div class="left-area">
+			<div class="post-wrap">
+    <h2 class="post-title">React官方文档知识点归纳-1</h2>
+    <div>
+        <blockquote>
+<p>阅读了一下React的官方文档，翻译并归纳了一些知识点。这只是QUICK START部分<br>
+    </div>
+    
+    <div class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JSX语法："><span class="toc-text">JSX语法：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#元素属性名命名规则"><span class="toc-text">元素属性名命名规则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组件"><span class="toc-text">组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#组件状态（state）"><span class="toc-text">组件状态（state）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#状态与生命周期（State-and-Lifecycle）"><span class="toc-text">状态与生命周期（State and Lifecycle）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理事件（Handling-Events）"><span class="toc-text">处理事件（Handling Events）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#条件渲染（Conditional-Rendering）"><span class="toc-text">条件渲染（Conditional Rendering）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列表和键（Lists-and-Keys）"><span class="toc-text">列表和键（Lists and Keys）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表单（Forms）"><span class="toc-text">表单（Forms）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#状态提升（Lifting-State-Up）"><span class="toc-text">状态提升（Lifting State Up）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构成与继承（Composition-vs-Inheritance））"><span class="toc-text">构成与继承（Composition vs Inheritance））</span></a></li></ol>
+    </div>
+    
+    </p>
+</blockquote>
+<h2 id="JSX语法："><a href="#JSX语法：" class="headerlink" title="JSX语法："></a>JSX语法：</h2><h3 id="元素属性名命名规则"><a href="#元素属性名命名规则" class="headerlink" title="元素属性名命名规则"></a>元素属性名命名规则</h3><ul>
+<li><strong>属性名采用camelCase命名法，比如，类（class）就叫：’className’，tabindex就叫：’tabIndex’。<a href="https://reactjs.org/docs/introducing-jsx.html#specifying-attributes-with-jsx" target="_blank" rel="noopener">引用</a></strong></li>
+</ul>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><ul>
+<li><strong>命名规则：始终以大写字母开头。<a href="https://reactjs.org/docs/components-and-props.html#rendering-a-component" target="_blank" rel="noopener">引用</a></strong></li>
+<li><font color="red"><strong><a href="https://reactjs.org/docs/components-and-props.html#props-are-read-only" target="_blank" rel="noopener">React is pretty flexible but it has a single strict rule :</a></strong> <strong>All React components must act like pure functions with respect to their props.</strong></font>
+
+</li>
+</ul>
+<h3 id="组件状态（state）"><a href="#组件状态（state）" class="headerlink" title="组件状态（state）"></a>组件状态（state）</h3><ul>
+<li><strong>不要直接修改状态</strong></li>
+</ul>
+<pre><code>// 错误的
+this.state.comment = &#39;Hello&#39;;
+</code></pre><pre><code>// 正确的
+this.setState({comment: &#39;Hello&#39;});
+</code></pre><p><strong>唯一可以指定this.state的地方是构造函数。</strong></p>
+<ul>
+<li><strong>因为this.props和this.state可能会异步更新，所以不应该依赖它们的值来计算下一个状态。</strong></li>
+</ul>
+<pre><code>// 错误
+this.setState({
+  counter: this.state.counter + this.props.increment,
+});
+</code></pre><pre><code>// 正确
+this.setState((prevState, props) =&gt; ({
+  counter: prevState.counter + props.increment
+}));
+</code></pre><pre><code>// 正确
+this.setState(function(prevState, props) {
+  return {
+    counter: prevState.counter + props.increment
+  };
+});
+</code></pre><ul>
+<li>This is commonly called a “top-down” or “unidirectional” data flow. Any state is always owned by some specific component, and any data or UI derived from that state can only affect components “below” them in the tree.</li>
+</ul>
+<h2 id="状态与生命周期（State-and-Lifecycle）"><a href="#状态与生命周期（State-and-Lifecycle）" class="headerlink" title="状态与生命周期（State and Lifecycle）"></a><a href="https://reactjs.org/docs/state-and-lifecycle.html" target="_blank" rel="noopener">状态与生命周期（State and Lifecycle）</a></h2><ul>
+<li><strong>componentDidMount()</strong></li>
+<li><strong>componentWillUnmount()</strong></li>
+</ul>
+<h2 id="处理事件（Handling-Events）"><a href="#处理事件（Handling-Events）" class="headerlink" title="处理事件（Handling Events）"></a>处理事件（Handling Events）</h2><ul>
+<li><strong><a href="https://reactjs.org/docs/handling-events.html" target="_blank" rel="noopener">React事件使用camelCase命名，而不是小写。</a></strong></li>
+<li><strong><a href="https://reactjs.org/docs/handling-events.html" target="_blank" rel="noopener">使用JSX，您将传递一个函数作为事件处理程序，而不是字符串。</a></strong></li>
+</ul>
+<p>For example, the HTML:</p>
+<pre><code>&lt;button onclick=&quot;activateLasers()&quot;&gt;
+  Activate Lasers
+&lt;/button&gt;
+</code></pre><p>in React:</p>
+<pre><code>&lt;button onClick={activateLasers}&gt;
+  Activate Lasers
+&lt;/button&gt;
+</code></pre><ul>
+<li><strong>另一个区别是你不能返回false来防止React中的默认行为。您必须显式调用preventDefault。例如，对于纯HTML，为了防止打开新页面的默认链接行为，可以这样写：</strong></li>
+</ul>
+<pre><code>&lt;a href=&quot;#&quot; onclick=&quot;console.log(&#39;The link was clicked.&#39;); return false&quot;&gt;
+  Click me
+&lt;/a&gt;
+</code></pre><p>in React:</p>
+<pre><code>function ActionLink() {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log(&#39;The link was clicked.&#39;);
+  }
+
+  return (
+    &lt;a href=&quot;#&quot; onClick={handleClick}&gt;
+      Click me
+    &lt;/a&gt;
+  );
+}
+</code></pre><h2 id="条件渲染（Conditional-Rendering）"><a href="#条件渲染（Conditional-Rendering）" class="headerlink" title="条件渲染（Conditional Rendering）"></a><a href="https://reactjs.org/docs/conditional-rendering.html" target="_blank" rel="noopener">条件渲染（Conditional Rendering）</a></h2><h2 id="列表和键（Lists-and-Keys）"><a href="#列表和键（Lists-and-Keys）" class="headerlink" title="列表和键（Lists and Keys）"></a><a href="https://reactjs.org/docs/lists-and-keys.html" target="_blank" rel="noopener">列表和键（Lists and Keys）</a></h2><ul>
+<li><strong>关于列表中的key的添加的正确用法</strong></li>
+</ul>
+<pre><code>//错误的写法
+function ListItem(props) {
+  const value = props.value;
+  return (
+    // Wrong! There is no need to specify the key here:
+    &lt;li key={value.toString()}&gt;
+      {value}
+    &lt;/li&gt;
+  );
+}
+
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =&gt;
+    // Wrong! The key should have been specified here:
+    &lt;ListItem value={number} /&gt;
+  );
+  return (
+    &lt;ul&gt;
+      {listItems}
+    &lt;/ul&gt;
+  );
+}
+
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+  &lt;NumberList numbers={numbers} /&gt;,
+  document.getElementById(&#39;root&#39;)
+);
+</code></pre><pre><code>//正确的写法
+function ListItem(props) {
+  // Correct! There is no need to specify the key here:
+  return &lt;li&gt;{props.value}&lt;/li&gt;;
+}
+
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =&gt;
+    // Correct! Key should be specified inside the array.
+    &lt;ListItem key={number.toString()}
+              value={number} /&gt;
+
+  );
+  return (
+    &lt;ul&gt;
+      {listItems}
+    &lt;/ul&gt;
+  );
+}
+
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+  &lt;NumberList numbers={numbers} /&gt;,
+  document.getElementById(&#39;root&#39;)
+);
+</code></pre><ul>
+<li><p><strong>key在兄弟元素之间必须是唯一的</strong></p>
+</li>
+<li><p><strong>在JSX中插入map()</strong></p>
+</li>
+</ul>
+<pre><code>function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =&gt;
+    &lt;ListItem key={number.toString()}
+              value={number} /&gt;
+
+  );
+  return (
+    &lt;ul&gt;
+      {listItems}
+    &lt;/ul&gt;
+  );
+}
+</code></pre><h2 id="表单（Forms）"><a href="#表单（Forms）" class="headerlink" title="表单（Forms）"></a><a href="https://reactjs.org/docs/forms.html" target="_blank" rel="noopener">表单（Forms）</a></h2><h2 id="状态提升（Lifting-State-Up）"><a href="#状态提升（Lifting-State-Up）" class="headerlink" title="状态提升（Lifting State Up）"></a><a href="https://reactjs.org/docs/forms.html" target="_blank" rel="noopener"><font color="red">状态提升（Lifting State Up）</font></a></h2><h2 id="构成与继承（Composition-vs-Inheritance））"><a href="#构成与继承（Composition-vs-Inheritance））" class="headerlink" title="构成与继承（Composition vs Inheritance））"></a><a href="https://reactjs.org/docs/composition-vs-inheritance.html" target="_blank" rel="noopener">构成与继承（Composition vs Inheritance））</a></h2>
+    <div class="share-warp clearfix">
+        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+    </div>
+    
+    
+    <div class="page-prev">
+        <span>下一篇：</span>
+        <a href="https://zqinmiao.github.io/details/38305/">古镇，仿古的步行街</a>
+    </div>
+    
+    <div id="comment-wrap">
+
+</div>
+</div>
+
+            
+		</div>
+        <div class="sidebar">
+    <!--分类-->
+    <div class="category-wrap widget">
+        <h1>Category</h1>
+        <hr>
+        
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/其他/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/">框架</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">2</span></li></ul>
+        
+    </div>
+    <!--标签云-->
+    <div class="tag-wrap widget">
+        <h1>Tags</h1>
+        <hr>
+        
+        <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Gulp/" style="font-size: 14px;">Gulp</a> <a href="/tags/React/" style="font-size: 14px;">React</a> <a href="/tags/Vue-js/" style="font-size: 17px;">Vue.js</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/brew/" style="font-size: 14px;">brew</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/mvc/" style="font-size: 14px;">mvc</a> <a href="/tags/mvp/" style="font-size: 14px;">mvp</a> <a href="/tags/mvvm/" style="font-size: 14px;">mvvm</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/redis/" style="font-size: 14px;">redis</a> <a href="/tags/vim/" style="font-size: 14px;">vim</a> <a href="/tags/概念/" style="font-size: 17px;">概念</a> <a href="/tags/游记/" style="font-size: 14px;">游记</a> <a href="/tags/茶/" style="font-size: 14px;">茶</a>
+        
+    </div>
+    <!--归档-->
+    
+    <div class="archive-wrap widget">
+        <h1>Archive</h1>
+        <hr>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+    
+</div>
+	</div>
+	<div class="footer">
+    <!--<ul class="social">-->
+        <!--<li><a href="http://weibo.com/abcde6789ooo/" target="_blank"><i class="icon icon-weibo"></i></a></li>-->
+        <!--<li><a href="https://www.zhihu.com/people/reahink" target="_blank"><i class="icon icon-zhihu"></i></a></li>-->
+        <!--<li><a href="https://github.com/zqinmiao" target="_blank"><i class="icon icon-github"></i></a></li>-->
+    <!--</ul>-->
+    <p class="copyright">&copy; 2016 - 2018 <a href="/">reahink</a></p>
+    <p class="powered-by">Powered by <a href="https://hexo.io/">Hexo</a> | Theme by <a href="https://github.com/zqinmiao/hexo-theme-simpleLayout">simpleLayout</a></p>
+</div>
+
+</div>
+<script src="/lib/gitment.browser.js"></script>
+<script src="/lib/highlight.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

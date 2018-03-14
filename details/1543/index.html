@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="博客,blog,javascript,web,nodejs"/>
+	<meta name="description" content="博客、blog、技术、读读、想想、写写">
+	
+	<title>git全局/本地配置用户名和邮箱 |reahink</title>
+	
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	
+	<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/monokai-sublime.css">
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?2a05102c590f33c9479010fb626665c1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+	</script>
+</head>
+
+
+<body>
+<div id="page">
+	<div class="header" style="background-color: null">
+    <div class="header-wrap clearfix">
+        <!--brand log-->
+        <h1 class="brand fl"><a href="/">reahink</a></h1>
+        <!--menu-->
+        <ul class="menu fr clearfix">
+            
+            <li class="fl home"><a href="/">HOME</a></li>
+            
+            <li class="fl about"><a href="/about">ABOUT</a></li>
+            
+            <li class="fl rss"><a href="/atom.xml">RSS</a></li>
+            
+        </ul>
+    </div>
+</div>
+	<div class="main clearfix">
+		<div class="left-area">
+			<div class="post-wrap">
+    <h2 class="post-title">git全局/本地配置用户名和邮箱</h2>
+    <div>
+        
+    </div>
+    
+    <h2 id="查看用户名和地址"><a href="#查看用户名和地址" class="headerlink" title="查看用户名和地址"></a>查看用户名和地址</h2><h3 id="查看本地的用户名和邮箱"><a href="#查看本地的用户名和邮箱" class="headerlink" title="查看本地的用户名和邮箱"></a>查看本地的用户名和邮箱</h3><pre><code>$ git config user.name
+$ git config user.email
+</code></pre><h3 id="查看全局的命令"><a href="#查看全局的命令" class="headerlink" title="查看全局的命令"></a>查看全局的命令</h3><pre><code>$ git config --global user.name
+$ git config --global user.email
+</code></pre><h2 id="修改用户名和地址"><a href="#修改用户名和地址" class="headerlink" title="修改用户名和地址"></a>修改用户名和地址</h2><h3 id="全局"><a href="#全局" class="headerlink" title="全局"></a>全局</h3><pre><code>$ git config --global user.name &quot;your name&quot;
+$ git config --global user.email &quot;your email&quot;
+</code></pre><h3 id="本地"><a href="#本地" class="headerlink" title="本地"></a>本地</h3><p>进入项目文件夹，.git文件夹是隐藏的</p>
+<pre><code>$ cd .git
+$ git config user.name &quot;your name&quot;
+$ git config user.email &quot;your email&quot;
+</code></pre>
+    <div class="share-warp clearfix">
+        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+    </div>
+    
+    <div class="page-prev">
+        <span>上一篇：</span>
+        <a href="https://zqinmiao.github.io/details/22091/">vim常用</a>
+    </div>
+    
+    
+    <div class="page-prev">
+        <span>下一篇：</span>
+        <a href="https://zqinmiao.github.io/details/30406/">Vue之vuex概念-Modules</a>
+    </div>
+    
+    <div id="comment-wrap">
+
+</div>
+</div>
+
+            
+		</div>
+        <div class="sidebar">
+    <!--分类-->
+    <div class="category-wrap widget">
+        <h1>Category</h1>
+        <hr>
+        
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/其他/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/">框架</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">2</span></li></ul>
+        
+    </div>
+    <!--标签云-->
+    <div class="tag-wrap widget">
+        <h1>Tags</h1>
+        <hr>
+        
+        <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Gulp/" style="font-size: 14px;">Gulp</a> <a href="/tags/React/" style="font-size: 14px;">React</a> <a href="/tags/Vue-js/" style="font-size: 17px;">Vue.js</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/brew/" style="font-size: 14px;">brew</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/mvc/" style="font-size: 14px;">mvc</a> <a href="/tags/mvp/" style="font-size: 14px;">mvp</a> <a href="/tags/mvvm/" style="font-size: 14px;">mvvm</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/redis/" style="font-size: 14px;">redis</a> <a href="/tags/vim/" style="font-size: 14px;">vim</a> <a href="/tags/概念/" style="font-size: 17px;">概念</a> <a href="/tags/游记/" style="font-size: 14px;">游记</a> <a href="/tags/茶/" style="font-size: 14px;">茶</a>
+        
+    </div>
+    <!--归档-->
+    
+    <div class="archive-wrap widget">
+        <h1>Archive</h1>
+        <hr>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+    
+</div>
+	</div>
+	<div class="footer">
+    <!--<ul class="social">-->
+        <!--<li><a href="http://weibo.com/abcde6789ooo/" target="_blank"><i class="icon icon-weibo"></i></a></li>-->
+        <!--<li><a href="https://www.zhihu.com/people/reahink" target="_blank"><i class="icon icon-zhihu"></i></a></li>-->
+        <!--<li><a href="https://github.com/zqinmiao" target="_blank"><i class="icon icon-github"></i></a></li>-->
+    <!--</ul>-->
+    <p class="copyright">&copy; 2016 - 2018 <a href="/">reahink</a></p>
+    <p class="powered-by">Powered by <a href="https://hexo.io/">Hexo</a> | Theme by <a href="https://github.com/zqinmiao/hexo-theme-simpleLayout">simpleLayout</a></p>
+</div>
+
+</div>
+<script src="/lib/gitment.browser.js"></script>
+<script src="/lib/highlight.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
