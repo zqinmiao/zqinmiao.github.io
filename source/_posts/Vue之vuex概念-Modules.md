@@ -1,12 +1,12 @@
 ---
 title: Vue之vuex概念-Modules
+tags: Vue.js
+categories: 框架
+abbrlink: 30406
 date: 2017-07-13 16:08:47
 update:
 comments:
-tags: Vue.js
-categories: 框架
 permalink:
-subtitle: Vue之vuex
 ---
 >代码演示vuex中嵌套Modules是如何执行的
 <!--more-->

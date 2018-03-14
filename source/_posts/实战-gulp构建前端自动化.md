@@ -1,12 +1,12 @@
 ---
 title: '[实战]gulp构建前端自动化'
-date: 2017-09-12 11:38:32
-update: 2017-10-30
-comments:
 tags: Gulp
 categories: 工具
+abbrlink: 596
+date: 2017-09-12 11:38:32
+update: 2017-10-30 00:00:00
+comments:
 permalink:
-subtitle: gulp构建前端自动化
 ---
 >需要给部门前端组写一个关于使用gulp的文档，所以就写了一个
 <!--more-->

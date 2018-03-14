@@ -1,12 +1,14 @@
 ---
 title: git全局/本地配置用户名和邮箱
+tags:
+  - Git
+categories:
+  - 工具
+abbrlink: 1543
 date: 2017-08-11 23:41:20
 update:
 comments:
-tags: [Git]
-categories: [工具]
 permalink:
-subtitle: git全局/本地配置
 ---
 
 ## 查看用户名和地址

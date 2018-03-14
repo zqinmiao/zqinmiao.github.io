@@ -1,13 +1,13 @@
 ---
 title: 使用vue开发项目梳理及需要掌握的知识点
+tags: Vue.js
+categories: 框架
+toc: true
+abbrlink: 29189
 date: 2017-09-13 14:57:14
 update:
 comments:
-tags: Vue.js
-categories: 框架
 permalink:
-subtitle: vue开发项目梳理
-toc: true
 ---
 >需要在部门内部做一个关于vue的培训，所以也就写了一个文档，来梳理一下vue的开发，及一些知识点
 <!--more-->
@@ -57,12 +57,12 @@ $ vue --version
 ### 1.模式
 #### MVC模式
 代表：[backbone.js](http://backbonejs.org/)
-![MVC](/2017/09/使用vue开发项目梳理及需要掌握的知识点/MVC.png)
+![MVC](./MVC.png)
 
 #### MVVM
 
 代表：[AngularJs](https://angular.cn/)、[React](https://facebook.github.io/react/)、[Vue](https://vuefe.cn/v2/guide/)
-![MVVM](/2017/09/使用vue开发项目梳理及需要掌握的知识点/MVVM.png)
+![MVVM](./MVVM.png)
 
 ### 2.前端模块化
 

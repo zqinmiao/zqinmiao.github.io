@@ -1,12 +1,14 @@
 ---
 title: mac开发环境之MySQL
+tags:
+  - mac
+  - mysql
+categories: 工具
+abbrlink: 43582
 date: 2017-03-03 10:29:16
 update:
 comments:
-tags: [mac,mysql]
-categories: 工具
 permalink:
-subtitle: 开发环境之MySQL
 ---
 
 ## 安装配置mysql

@@ -1,13 +1,13 @@
 ---
 title: React官方文档知识点归纳-1
+tags: React
+categories: 框架
+toc: true
+abbrlink: 50305
 date: 2018-02-08 10:14:52
 update:
 comments:
-tags: React
-categories: 框架
 permalink:
-subtitle: React知识点归纳
-toc: true
 ---
 >阅读了一下React的官方文档，翻译并归纳了一些知识点。这只是QUICK START部分
 <!--more-->

@@ -1,12 +1,14 @@
 ---
 title: mac开发环境之brew、brew-cask
+tags:
+  - mac
+  - brew
+categories: 工具
+abbrlink: 38493
 date: 2017-03-05 10:23:50
 update:
 comments:
-tags: [mac,brew]
-categories: 工具
 permalink:
-subtitle: brew、brew-cask
 ---
 >包管理工具可以让你安装和更新程序变得更方便，目前在 OS X 系统中最受欢迎的包管理工具是 Homebrew.
 <!--more-->

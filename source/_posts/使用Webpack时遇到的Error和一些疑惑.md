@@ -1,12 +1,12 @@
 ---
 title: 使用Webpack时遇到的Error和一些疑惑
-date: 2017-07-06 22:07:29
-update: 2017-09-13
-comments:
 tags: Webpack
 categories: 工具
+abbrlink: 26270
+date: 2017-07-06 22:07:29
+update: 2017-09-13 00:00:00
+comments:
 permalink:
-subtitle: 使用Webpack时遇到的问题
 ---
 >在用Webpack时遇到了一些问题，和一些概念的疑惑，持续更新...
 <!--more-->

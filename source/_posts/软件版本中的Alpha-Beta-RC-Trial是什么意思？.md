@@ -1,12 +1,12 @@
 ---
 title: '软件版本中的Alpha,Beta,RC,Trial是什么意思？'
+tags: 概念
+abbrlink: 14198
 date: 2017-03-05 09:30:00
 update:
 comments:
-tags: 概念
 categories:
 permalink:
-subtitle: Alpha,Beta,RC,Trial
 ---
 >经常会看到一些软件有不同的版本，这些版本代表什么意思呢，搜了一下，转载一篇文章，科普一下
 <!--more-->

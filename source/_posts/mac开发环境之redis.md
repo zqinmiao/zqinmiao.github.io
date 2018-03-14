@@ -1,12 +1,14 @@
 ---
 title: mac开发环境之redis
+tags:
+  - mac
+  - redis
+categories: 工具
+abbrlink: 8655
 date: 2017-03-08 10:33:03
 update:
 comments:
-tags: [mac,redis]
-categories: 工具
 permalink:
-subtitle: mac开发环境之redis
 ---
 
 ## 安装配置redis

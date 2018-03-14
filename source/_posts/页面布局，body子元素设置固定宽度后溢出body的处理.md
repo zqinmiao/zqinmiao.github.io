@@ -1,12 +1,12 @@
 ---
 title: 页面布局，body子元素设置固定宽度后溢出body的处理
+categories: 其他
+abbrlink: 45580
 date: 2017-09-10 11:18:28
 update:
 comments:
 tags:
-categories: 其他
 permalink:
-subtitle: 页面布局
 ---
 >前段时间只用VUE+UI框架来做后台管理系统了，不用框架写页面竟然突然感到手生的厉害，甚至连布局的不灵便了.......
 <!--more-->
@@ -40,7 +40,7 @@ ___
 </html>
 ```
 ### 效果
-![Alt 图片](/2017/09/页面布局，body子元素设置固定宽度后溢出body的处理/1.png)
+![Alt 图片](./1.png)
 
 ## 解决办法
 
@@ -71,7 +71,7 @@ ___在设置宽的div元素外再增加一个div元素作为父级元素,并设�
 </html>
 ```
 ### 效果
-![Alt 图片](/2017/09/页面布局，body子元素设置固定宽度后溢出body的处理/2.png)
+![Alt 图片](./2.png)
 
 ### 方法二：
 ___在html,body上都设置上style="overflow:auto;"___

@@ -1,12 +1,14 @@
 ---
 title: mac开发环境之nvm
+tags:
+  - mac
+  - nvm
+categories: 工具
+abbrlink: 65137
 date: 2017-03-11 10:31:06
 update:
 comments:
-tags: [mac,nvm]
-categories: 工具
 permalink:
-subtitle: mac开发环境之nvm
 ---
 
 ## 安装配置nvm
