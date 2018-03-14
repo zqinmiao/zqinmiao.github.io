@@ -6,6 +6,7 @@ comments:
 tags: 概念
 categories: 笔记
 permalink:
+subtitle: polyfil和shim
 ---
 
 polyfill 是 shim 的一种。

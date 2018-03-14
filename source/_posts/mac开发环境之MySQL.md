@@ -6,6 +6,7 @@ comments:
 tags: [mac,mysql]
 categories: 工具
 permalink:
+subtitle: 开发环境之MySQL
 ---
 
 ## 安装配置mysql

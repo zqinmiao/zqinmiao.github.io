@@ -6,6 +6,7 @@ comments:
 tags: vim
 categories: 工具
 permalink:
+subtitle: vim常用命令
 ---
 
 >据说用vim是一个很好的装逼方式之一。即便是不能精通，但是为了能够在某个时刻偶尔装下逼，那么掌握一下常用的一些命令还是挺不错的，嘎嘎

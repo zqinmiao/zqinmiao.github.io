@@ -6,6 +6,7 @@ comments:
 tags: hexo
 categories: Hexo
 permalink:
+subtitle: 使用Hexo搭建博客
 ---
 >闲来无事，就使用Hexo也搭建了一个博客。
 >浏览了许多漂亮的主题模版，但是总感觉自己不动手搞一个主题有违极客精神。

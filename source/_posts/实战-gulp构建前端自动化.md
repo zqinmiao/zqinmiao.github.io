@@ -6,6 +6,7 @@ comments:
 tags: Gulp
 categories: 工具
 permalink:
+subtitle: gulp构建前端自动化
 ---
 >需要给部门前端组写一个关于使用gulp的文档，所以就写了一个
 <!--more-->

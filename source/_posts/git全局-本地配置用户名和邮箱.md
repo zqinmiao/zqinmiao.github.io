@@ -6,6 +6,7 @@ comments:
 tags: [Git]
 categories: [工具]
 permalink:
+subtitle: git全局/本地配置
 ---
 
 ## 查看用户名和地址

@@ -6,6 +6,7 @@ comments:
 tags: 概念
 categories:
 permalink:
+subtitle: Alpha,Beta,RC,Trial
 ---
 >经常会看到一些软件有不同的版本，这些版本代表什么意思呢，搜了一下，转载一篇文章，科普一下
 <!--more-->

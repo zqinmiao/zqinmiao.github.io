@@ -6,6 +6,7 @@ comments:
 tags: Vue.js
 categories: 框架
 permalink:
+subtitle: vue开发项目梳理
 toc: true
 ---
 >需要在部门内部做一个关于vue的培训，所以也就写了一个文档，来梳理一下vue的开发，及一些知识点

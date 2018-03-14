@@ -15,7 +15,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://zqinmiao.github.io/
 root: /
-permalink: :year/:month/:title/
+permalink: :year/:month/:day/:subtitle/
 permalink_defaults:
 
 # Directory

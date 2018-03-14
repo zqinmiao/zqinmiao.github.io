@@ -6,6 +6,7 @@ comments:
 tags: Vue.js
 categories: 框架
 permalink:
+subtitle: Vue之vuex
 ---
 >代码演示vuex中嵌套Modules是如何执行的
 <!--more-->

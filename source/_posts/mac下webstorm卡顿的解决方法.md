@@ -6,6 +6,7 @@ comments:
 tags: mac
 categories: 工具
 permalink:
+subtitle: mac下webstorm卡顿
 ---
 >mac pro上用webstorm出现卡顿的现象，上下滑动代码都卡，这种情况一般是因为webstrom设的内存较小导致的
 <!--more-->

@@ -6,6 +6,7 @@ comments:
 tags: React
 categories: 框架
 permalink:
+subtitle: React知识点归纳
 toc: true
 ---
 >阅读了一下React的官方文档，翻译并归纳了一些知识点。这只是QUICK START部分

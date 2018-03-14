@@ -6,6 +6,7 @@ comments:
 tags: [mac,nvm]
 categories: 工具
 permalink:
+subtitle: mac开发环境之nvm
 ---
 
 ## 安装配置nvm

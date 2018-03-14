@@ -1,5 +1,6 @@
 (function () {
     var gitment = new Gitment({
+        id: window.location.pathname, // 可选。默认为 location.href
         owner: 'zqinmiao',
         repo: 'zqinmiao.github.io',
         oauth: {

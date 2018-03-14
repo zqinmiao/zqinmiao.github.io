@@ -6,6 +6,7 @@ comments:
 tags: [mac,redis]
 categories: 工具
 permalink:
+subtitle: mac开发环境之redis
 ---
 
 ## 安装配置redis
