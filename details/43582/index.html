@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="博客,blog,javascript,web,nodejs"/>
+	<meta name="description" content="博客、blog、技术、读读、想想、写写">
+	
+	<title>mac开发环境之MySQL |reahink</title>
+	
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	
+	<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/monokai-sublime.css">
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?2a05102c590f33c9479010fb626665c1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+	</script>
+</head>
+
+
+<body>
+<div id="page">
+	<div class="header" style="background-color: null">
+    <div class="header-wrap clearfix">
+        <!--brand log-->
+        <h1 class="brand fl"><a href="/">reahink</a></h1>
+        <!--menu-->
+        <ul class="menu fr clearfix">
+            
+            <li class="fl home"><a href="/">HOME</a></li>
+            
+            <li class="fl about"><a href="/about">ABOUT</a></li>
+            
+            <li class="fl rss"><a href="/atom.xml">RSS</a></li>
+            
+        </ul>
+    </div>
+</div>
+	<div class="main clearfix">
+		<div class="left-area">
+			<div class="post-wrap">
+    <h2 class="post-title">mac开发环境之MySQL</h2>
+    <div>
+        
+    </div>
+    
+    <h2 id="安装配置mysql"><a href="#安装配置mysql" class="headerlink" title="安装配置mysql"></a>安装配置mysql</h2><h3 id="安装包安装："><a href="#安装包安装：" class="headerlink" title="安装包安装："></a>安装包安装：</h3><p>1、下载安装包，安装完后<br>2:配置环境变量<br>打开终端,输入： cd ~<br>会进入~文件夹<br>然后输入：</p>
+<pre><code>touch .bash_profile
+</code></pre><p>回车执行后，再输入：</p>
+<pre><code>open -e .bash_profile
+</code></pre><p>打开文件后添加：PATH=$PATH:/usr/local/mysql/bin<br>或者：<br>Try adding the following line to your .bash_profile file.</p>
+<pre><code>export PATH=&quot;/usr/local/mysql/bin:$PATH&quot;
+</code></pre><p>You can do this easily with the following command, which will append the line if the file already exists or create a new file with the line if it doesn’t.</p>
+<pre><code>echo &#39;export PATH=&quot;/usr/local/mysql/bin:$PATH&quot;&#39; &gt;&gt; ~/.bash_profile
+</code></pre><h3 id="安装-MySQL"><a href="#安装-MySQL" class="headerlink" title="安装 MySQL:"></a>安装 MySQL:</h3><pre><code>$ brew update # 这是一个好习惯
+$ brew install mysql
+</code></pre><p>在使用 MySQL 前，我们需要做一些设置：</p>
+<pre><code>$ unset TMPDIR
+$ mkdir /usr/local/var
+$ mysql_install_db --verbose --user=`whoami` --basedir=&quot;$(brew --prefix mysql)&quot; --datadir=/usr/local/var/mysql --tmpdir=/tmp
+</code></pre><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>启动 MySQL 服务，运行 mysql.server</p>
+<pre><code>$ mysql.server start
+</code></pre><p>关闭 MySQL，运行：</p>
+<pre><code>$ mysql.server stop
+</code></pre><p>你可以了解更多 mysql.server 的命令，运行：</p>
+<pre><code>$ mysql.server --help
+</code></pre><p>登录 MySQL, 运行:</p>
+<pre><code>$ mysql -uroot
+</code></pre><p>Note: 默认情况下，MySQL 用户 root 没有密码，这对本地开发没有关系，但如果你希望修改密码，你可以运行:</p>
+<pre><code>$ mysqladmin -u root password &#39;new-password&#39;
+</code></pre><p>退出mysql服务：</p>
+<pre><code>mysql &gt; quit
+</code></pre><p>quit不需要分号。</p>
+<p>重启服务：</p>
+<pre><code>mysql.server restart
+</code></pre><p>Note：如果已经设置过密码，需要修改密码的话：</p>
+<pre><code>mysql -u root -p
+mysql&gt; SET PASSWORD FOR &#39;root&#39;@&#39;localhost&#39; = PASSWORD(&#39;newpass’);
+</code></pre><h3 id="如使用brew安装：brew-uninstall-mysql-或者-brew-remove-mysql"><a href="#如使用brew安装：brew-uninstall-mysql-或者-brew-remove-mysql" class="headerlink" title="如使用brew安装：brew uninstall mysql 或者 brew remove mysql"></a>如使用brew安装：brew uninstall mysql 或者 brew remove mysql</h3><p>但是又有点怕某些东西没有卸载完全影响到下一次的安装（我第一次重装就是这样的��）以下是完整一点的手动卸载：</p>
+<ul>
+<li>sudo rm /usr/local/mysql</li>
+<li>sudo rm -rf /usr/local/mysql*</li>
+<li>sudo rm -rf /Library/StartupItems/MySQLCOM</li>
+<li>sudo rm -rf /Library/PreferencePanes/My*</li>
+<li>rm -rf ~/Library/PreferencePanes/My*</li>
+<li>sudo rm -rf /Library/Receipts/mysql*</li>
+<li>sudo rm -rf /Library/Receipts/MySQL*</li>
+<li>sudo rm -rf /var/db/receipts/com.mysql.*</li>
+</ul>
+<h3 id="添加修改mysql配置"><a href="#添加修改mysql配置" class="headerlink" title="添加修改mysql配置"></a>添加修改mysql配置</h3><pre><code>mysqld --help --verbose | more (查看帮助, 按空格下翻)
+</code></pre><p>你会看到开始的这一行(表示配置文件默认读取顺序)</p>
+<pre><code>Default options are read from the following files in the given order: /etc/my.cnf /etc/mysql/my.cnf /usr/local/etc/my.cnf ~/.my.cnf
+</code></pre><p>通常这些位置是没有配置文件的, 所以要自己建一个</p>
+<pre><code>ls $(brew --prefix mysql)/support-files/my-* (用这个可以找到样例.cnf)
+cp /usr/local/opt/mysql/support-files/my-default.cnf /etc/my.cnf (拷贝到第一个默认读取目录)
+</code></pre><p>按需修改my.cnf</p>
+<h3 id="错误相关："><a href="#错误相关：" class="headerlink" title="错误相关："></a>错误相关：</h3><h4 id="1、ERROR-2002-HY000-Can’t-connect-to-local-MySQL-server-through-socket-‘-tmp-mysql-sock’-61"><a href="#1、ERROR-2002-HY000-Can’t-connect-to-local-MySQL-server-through-socket-‘-tmp-mysql-sock’-61" class="headerlink" title="1、ERROR 2002 (HY000): Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (61)"></a>1、ERROR 2002 (HY000): Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (61)</h4><p>解决方法：</p>
+<pre><code>sudo /usr/local/mysql/support-files/mysql.server start
+</code></pre><h4 id="2、Error-Command-failed-bin-sh-mysql-command-not-found"><a href="#2、Error-Command-failed-bin-sh-mysql-command-not-found" class="headerlink" title="2、Error: Command failed:  /bin/sh: mysql: command not found"></a>2、Error: Command failed:  /bin/sh: mysql: command not found</h4><p>解决方法：<br>有可能是/user/local/bin目录下缺失mysql导致，需要以下方法来解决：把MYSQLPATH/bin/mysql映射到/usr/local/bin目录下：</p>
+<pre><code>$ cd /usr/local/bin$ ln -fs /MYAQLPATH/bin/mysql mysql
+</code></pre><p>注意：这里的MYAQLPATH要替换成/usr/local/mysql-5.7.16-osx10.11-x86_64/，即base Directory中的路径</p>
+
+    <div class="share-warp clearfix">
+        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+    </div>
+    
+    <div class="page-prev">
+        <span>上一篇：</span>
+        <a href="https://zqinmiao.github.io/details/14198/">软件版本中的Alpha-Beta-RC-Trial是什么意思？</a>
+    </div>
+    
+    
+    <div class="page-prev">
+        <span>下一篇：</span>
+        <a href="https://zqinmiao.github.io/details/6682/">polyfil和shim</a>
+    </div>
+    
+    <div id="comment-wrap">
+
+</div>
+</div>
+
+            
+		</div>
+        <div class="sidebar">
+    <!--分类-->
+    <div class="category-wrap widget">
+        <h1>Category</h1>
+        <hr>
+        
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/其他/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/">框架</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">3</span></li></ul>
+        
+    </div>
+    <!--标签云-->
+    <div class="tag-wrap widget">
+        <h1>Tags</h1>
+        <hr>
+        
+        <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Gulp/" style="font-size: 14px;">Gulp</a> <a href="/tags/React/" style="font-size: 14px;">React</a> <a href="/tags/Vue-js/" style="font-size: 17px;">Vue.js</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/brew/" style="font-size: 14px;">brew</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/mvc/" style="font-size: 14px;">mvc</a> <a href="/tags/mvp/" style="font-size: 14px;">mvp</a> <a href="/tags/mvvm/" style="font-size: 14px;">mvvm</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/redis/" style="font-size: 14px;">redis</a> <a href="/tags/vim/" style="font-size: 14px;">vim</a> <a href="/tags/概念/" style="font-size: 17px;">概念</a> <a href="/tags/游记/" style="font-size: 17px;">游记</a> <a href="/tags/茶/" style="font-size: 14px;">茶</a>
+        
+    </div>
+    <!--归档-->
+    
+    <div class="archive-wrap widget">
+        <h1>Archive</h1>
+        <hr>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+    
+</div>
+	</div>
+	<div class="footer">
+    <!--<ul class="social">-->
+        <!--<li><a href="http://weibo.com/abcde6789ooo/" target="_blank"><i class="icon icon-weibo"></i></a></li>-->
+        <!--<li><a href="https://www.zhihu.com/people/reahink" target="_blank"><i class="icon icon-zhihu"></i></a></li>-->
+        <!--<li><a href="https://github.com/zqinmiao" target="_blank"><i class="icon icon-github"></i></a></li>-->
+    <!--</ul>-->
+    <p class="copyright">&copy; 2016 - 2018 <a href="/">reahink</a></p>
+    <p class="powered-by">Powered by <a href="https://hexo.io/">Hexo</a> | Theme by <a href="https://github.com/zqinmiao/hexo-theme-simpleLayout">simpleLayout</a></p>
+</div>
+
+</div>
+<script src="/lib/gitment.browser.js"></script>
+<script src="/lib/highlight.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

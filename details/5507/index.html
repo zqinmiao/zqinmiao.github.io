@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="博客,blog,javascript,web,nodejs"/>
+	<meta name="description" content="博客、blog、技术、读读、想想、写写">
+	
+	<title>关于使用Hexo搭建博客的一些问题总结 |reahink</title>
+	
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	
+	<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/monokai-sublime.css">
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?2a05102c590f33c9479010fb626665c1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+	</script>
+</head>
+
+
+<body>
+<div id="page">
+	<div class="header" style="background-color: null">
+    <div class="header-wrap clearfix">
+        <!--brand log-->
+        <h1 class="brand fl"><a href="/">reahink</a></h1>
+        <!--menu-->
+        <ul class="menu fr clearfix">
+            
+            <li class="fl home"><a href="/">HOME</a></li>
+            
+            <li class="fl about"><a href="/about">ABOUT</a></li>
+            
+            <li class="fl rss"><a href="/atom.xml">RSS</a></li>
+            
+        </ul>
+    </div>
+</div>
+	<div class="main clearfix">
+		<div class="left-area">
+			<div class="post-wrap">
+    <h2 class="post-title">关于使用Hexo搭建博客的一些问题总结</h2>
+    <div>
+        <blockquote>
+<p>闲来无事，就使用Hexo也搭建了一个博客。<br>浏览了许多漂亮的主题模版，但是总感觉自己不动手搞一个主题有违极客精神。<br>无奈审美能力有限，看来自己搞出来的主题真是不忍直视。<br>在使用Hexo的过程中遇到了一些问题，<br>通过搜索前人的总结得到了解决，现在将一些自己认为有用的点总结一下，<br>也算是对玩Hexo的一个记录。<br>
+    </div>
+    
+    </p>
+</blockquote>
+<h1 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h1><blockquote>
+<p><a href="#博客网址使用自定义域名">博客网址使用自定义域名</a><br><a href="#设置文章摘要">设置文章摘要</a><br><a href="#添加文章分享功能">添加文章分享功能</a><br><a href="#添加文章评论功能">添加文章评论功能</a></p>
+</blockquote>
+<h2 id="博客网址使用自定义域名">• 博客网址使用自定义域名</h2>
+
+<h3 id="1-先去域名服务商处购买个喜欢的域名"><a href="#1-先去域名服务商处购买个喜欢的域名" class="headerlink" title="1. 先去域名服务商处购买个喜欢的域名"></a>1. 先去域名服务商处购买个喜欢的域名</h3><p>我是用万网买的域名。买过域名之后在后台找到，如下：<br><img src="./1.jpeg" alt="Alt 万网域名"></p>
+<p>点击解析，并添加两条解析，如下图所示：<br><img src="./2.jpeg" alt="Alt 域名解析"><br>其中A记录的记录值的ip的获取方法，你可以ping一下github上博客仓库的名字，我的仓库名称是：zqinmiao.github.io，所以：</p>
+<pre><code>PING github.map.fastly.net (151.101.88.133): 56 data bytes
+64 bytes from 151.101.88.133: icmp_seq=0 ttl=53 time=43.529 ms
+64 bytes from 151.101.88.133: icmp_seq=1 ttl=53 time=43.714 ms
+64 bytes from 151.101.88.133: icmp_seq=2 ttl=53 time=43.568 ms
+64 bytes from 151.101.88.133: icmp_seq=3 ttl=53 time=44.236 ms
+64 bytes from 151.101.88.133: icmp_seq=4 ttl=53 time=44.104 ms
+64 bytes from 151.101.88.133: icmp_seq=5 ttl=53 time=44.221 ms
+</code></pre><p>ping出的ip就是：151.101.88.133</p>
+<p>然后在记录类型：CNAME中的记录值上填上仓库名：<code>zqinmiao.github.io.</code>这里注意：仓库名后面要加上一个点”.”</p>
+<h3 id="2-然后回到github的博客仓库"><a href="#2-然后回到github的博客仓库" class="headerlink" title="2.然后回到github的博客仓库"></a>2.然后回到github的博客仓库</h3><p>点击博客仓库的设置，找到如下图所示的选项：<br><img src="./3.jpeg" alt="Alt 域名"></p>
+<h5 id="将自定义的域名填入，保存即可。"><a href="#将自定义的域名填入，保存即可。" class="headerlink" title="将自定义的域名填入，保存即可。"></a>将自定义的域名填入，保存即可。</h5><p>但是上面的方法有一些问题，每次写文章将博客部署后都要部署，比较麻烦。<br>我们可以在主题文件夹下的source文件夹里建一个名字为CNAME的文档，内容是我们的域名，比如我的域名是：yayajiu.com，那么文档的内容就填：yayajiu.com<br>文档所在位置如下：<br><img src="./4.jpeg" alt="Alt 文件夹位置"><br>这样，每次部署的时候仓库里就会存在一个CNAME的文档，就不用每次到设置里再设置了。</p>
+<h2 id="设置文章摘要">• 设置文章摘要</h2>
+
+<p>在文章中使用</p>
+<pre><code>&lt;!--more--&gt;
+</code></pre><p>more上面的就是文章的摘要<br>如下：<br><img src="./5.jpeg" alt="Alt 摘要"></p>
+<h2 id="添加文章分享功能">• 添加文章分享功能</h2>
+
+<p>文章的分享功能我使用的是百度的一个分享插件，只需增加一段代码即可。<br>还有开发版，可以自己定制，很简单。<a href="http://share.baidu.com/code" target="_blank" rel="noopener">官网链接</a></p>
+<h2 id="添加文章评论功能">• 添加文章评论功能</h2>
+
+<p>我使用的评论插件，<a href="https://imsun.net/posts/gitment-introduction/#more" target="_blank" rel="noopener">这是插件作者的教程，很详细</a></p>
+<p>如果想使用其他的评论插件，可以参考知乎<a href="https://www.zhihu.com/question/57426274" target="_blank" rel="noopener">如何评价“多说”即将关闭？有什么替代方案？</a>下的回答</p>
+<hr>
+<h4 id="感觉也没什么要总结了，关于Hexo的用法，官方文档看一遍应该就手到擒来了。"><a href="#感觉也没什么要总结了，关于Hexo的用法，官方文档看一遍应该就手到擒来了。" class="headerlink" title="感觉也没什么要总结了，关于Hexo的用法，官方文档看一遍应该就手到擒来了。"></a>感觉也没什么要总结了，关于Hexo的用法，<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>看一遍应该就手到擒来了。</h4>
+    <div class="share-warp clearfix">
+        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+    </div>
+    
+    <div class="page-prev">
+        <span>上一篇：</span>
+        <a href="https://zqinmiao.github.io/details/6682/">polyfil和shim</a>
+    </div>
+    
+    
+    <div id="comment-wrap">
+
+</div>
+</div>
+
+            
+		</div>
+        <div class="sidebar">
+    <!--分类-->
+    <div class="category-wrap widget">
+        <h1>Category</h1>
+        <hr>
+        
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/其他/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/">框架</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">3</span></li></ul>
+        
+    </div>
+    <!--标签云-->
+    <div class="tag-wrap widget">
+        <h1>Tags</h1>
+        <hr>
+        
+        <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Gulp/" style="font-size: 14px;">Gulp</a> <a href="/tags/React/" style="font-size: 14px;">React</a> <a href="/tags/Vue-js/" style="font-size: 17px;">Vue.js</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/brew/" style="font-size: 14px;">brew</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/mvc/" style="font-size: 14px;">mvc</a> <a href="/tags/mvp/" style="font-size: 14px;">mvp</a> <a href="/tags/mvvm/" style="font-size: 14px;">mvvm</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/redis/" style="font-size: 14px;">redis</a> <a href="/tags/vim/" style="font-size: 14px;">vim</a> <a href="/tags/概念/" style="font-size: 17px;">概念</a> <a href="/tags/游记/" style="font-size: 17px;">游记</a> <a href="/tags/茶/" style="font-size: 14px;">茶</a>
+        
+    </div>
+    <!--归档-->
+    
+    <div class="archive-wrap widget">
+        <h1>Archive</h1>
+        <hr>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+    
+</div>
+	</div>
+	<div class="footer">
+    <!--<ul class="social">-->
+        <!--<li><a href="http://weibo.com/abcde6789ooo/" target="_blank"><i class="icon icon-weibo"></i></a></li>-->
+        <!--<li><a href="https://www.zhihu.com/people/reahink" target="_blank"><i class="icon icon-zhihu"></i></a></li>-->
+        <!--<li><a href="https://github.com/zqinmiao" target="_blank"><i class="icon icon-github"></i></a></li>-->
+    <!--</ul>-->
+    <p class="copyright">&copy; 2016 - 2018 <a href="/">reahink</a></p>
+    <p class="powered-by">Powered by <a href="https://hexo.io/">Hexo</a> | Theme by <a href="https://github.com/zqinmiao/hexo-theme-simpleLayout">simpleLayout</a></p>
+</div>
+
+</div>
+<script src="/lib/gitment.browser.js"></script>
+<script src="/lib/highlight.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

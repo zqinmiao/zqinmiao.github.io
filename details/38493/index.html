@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="博客,blog,javascript,web,nodejs"/>
+	<meta name="description" content="博客、blog、技术、读读、想想、写写">
+	
+	<title>mac开发环境之brew、brew-cask |reahink</title>
+	
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	
+	<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/monokai-sublime.css">
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?2a05102c590f33c9479010fb626665c1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+	</script>
+</head>
+
+
+<body>
+<div id="page">
+	<div class="header" style="background-color: null">
+    <div class="header-wrap clearfix">
+        <!--brand log-->
+        <h1 class="brand fl"><a href="/">reahink</a></h1>
+        <!--menu-->
+        <ul class="menu fr clearfix">
+            
+            <li class="fl home"><a href="/">HOME</a></li>
+            
+            <li class="fl about"><a href="/about">ABOUT</a></li>
+            
+            <li class="fl rss"><a href="/atom.xml">RSS</a></li>
+            
+        </ul>
+    </div>
+</div>
+	<div class="main clearfix">
+		<div class="left-area">
+			<div class="post-wrap">
+    <h2 class="post-title">mac开发环境之brew、brew-cask</h2>
+    <div>
+        <blockquote>
+<p>包管理工具可以让你安装和更新程序变得更方便，目前在 OS X 系统中最受欢迎的包管理工具是 Homebrew.<br>
+    </div>
+    
+    </p>
+</blockquote>
+<h2 id="安装brew"><a href="#安装brew" class="headerlink" title="安装brew"></a>安装brew</h2><p>包管理工具可以让你安装和更新程序变得更方便，目前在 OS X 系统中最受欢迎的包管理工具是 Homebrew.</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在安装 Homebrew 之前，需要将 Xcode Command Line Tools 安装完成，这样你就可以使用基于 Xcode Command Line Tools 编译的 Homebrew。<br>在 terminal 中复制以下命令（不包括 $），跟随指引，将完成 Hombrew 安装。</p>
+<pre><code>$ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre><p>紧接着，我们需要做一件事让通过 Homebrew 安装的程序的启动链接 (在 /usr/local/bin中）可以直接运行，无需将完整路径写出。通过以下命令将 /usr/local/bin 添加至 $PATH 环境变量中:</p>
+<pre><code>$ echo &#39;export PATH=&quot;/usr/local/bin:$PATH&quot;&#39; &gt;&gt; ~/.bash_profile
+</code></pre><p>Cmd+T 打开一个新的 terminal 标签页，运行以下命令，确保 brew 运行正常。</p>
+<pre><code>$ brew doctor
+</code></pre><p>译注：<br>安装完成后，Homebrew 会将本地 /usr/local 初始化为 git 的工作树，并将目录所有者变更为当前所操作的用户，将来 brew 的相关操作不需要 sudo 。</p>
+<h3 id="Homebrew基本使用"><a href="#Homebrew基本使用" class="headerlink" title="Homebrew基本使用"></a>Homebrew基本使用</h3><p>安装一个包，可以简单的运行：</p>
+<pre><code>$ brew install &lt;package_name&gt;
+</code></pre><p>更新 Homebrew 在服务器端上的包目录：</p>
+<pre><code>$ brew update
+</code></pre><p>查看你的包是否需要更新：</p>
+<pre><code>$ brew outdated
+</code></pre><p>更新包：</p>
+<pre><code>$ brew upgrade &lt;package_name&gt;
+</code></pre><p>Homebrew 将会把老版本的包缓存下来，以便当你想回滚至旧版本时使用。但这是比较少使用的情况，当你想清理旧版本的包缓存时，可以运行：</p>
+<pre><code>$ brew cleanup
+</code></pre><p>查看你安装过的包列表（包括版本号）：</p>
+<pre><code>$ brew list --versions
+</code></pre><hr>
+<h2 id="安装brew-cask"><a href="#安装brew-cask" class="headerlink" title="安装brew-cask"></a>安装brew-cask</h2><p>通过Homebrew Cask 优雅、简单、快速的安装和管理 OS X 图形界面程序，比如 Google Chrome 和 Dropbox。</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>安装 Homebrew-cask 是如此的简单直接，运行以下命令即可完成：</p>
+<pre><code>$ brew install caskroom/cask/brew-cask
+$ brew cask install google-chrome // 安装 Google 浏览器
+$ brew update &amp;&amp; brew upgrade brew-cask &amp;&amp; brew cleanup // 更新
+</code></pre><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>如果你想查看 cask 上是否存在你需要的 app，可以到 caskroom.io 进行搜索。</p>
+<h3 id="文件预览插件"><a href="#文件预览插件" class="headerlink" title="文件预览插件"></a>文件预览插件</h3><p>有些 插件 可以让 Mac 上的文件预览更有效，比如语法高亮、markdown 渲染、json 预览等等。</p>
+<pre><code>$ brew cask install qlcolorcode
+$ brew cask install qlstephen
+$ brew cask install qlmarkdown
+$ brew cask install quicklook-json
+$ brew cask install qlprettypatch
+$ brew cask install quicklook-csv
+$ brew cask install betterzipql
+$ brew cask install webpquicklook
+$ brew cask install suspicious-package
+</code></pre><h3 id="OS-X-图形界面程序"><a href="#OS-X-图形界面程序" class="headerlink" title="OS X 图形界面程序"></a>OS X 图形界面程序</h3><p><code>`</code><br>$ brew cask install alfred<br>$ brew cask install appcleaner<br>$ brew cask install cheatsheet<br>$ brew cask install dropbox<br>$ brew cask install google-chrome<br>$ brew cask install onepassword<br>$ brew cask install sublime-text<br>$ brew cask install totalfinder</p>
+    <div class="share-warp clearfix">
+        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+    </div>
+    
+    <div class="page-prev">
+        <span>上一篇：</span>
+        <a href="https://zqinmiao.github.io/details/8655/">mac开发环境之redis</a>
+    </div>
+    
+    
+    <div class="page-prev">
+        <span>下一篇：</span>
+        <a href="https://zqinmiao.github.io/details/14198/">软件版本中的Alpha-Beta-RC-Trial是什么意思？</a>
+    </div>
+    
+    <div id="comment-wrap">
+
+</div>
+</div>
+
+            
+		</div>
+        <div class="sidebar">
+    <!--分类-->
+    <div class="category-wrap widget">
+        <h1>Category</h1>
+        <hr>
+        
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/其他/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/框架/">框架</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">3</span></li></ul>
+        
+    </div>
+    <!--标签云-->
+    <div class="tag-wrap widget">
+        <h1>Tags</h1>
+        <hr>
+        
+        <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/Gulp/" style="font-size: 14px;">Gulp</a> <a href="/tags/React/" style="font-size: 14px;">React</a> <a href="/tags/Vue-js/" style="font-size: 17px;">Vue.js</a> <a href="/tags/Webpack/" style="font-size: 14px;">Webpack</a> <a href="/tags/brew/" style="font-size: 14px;">brew</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/mvc/" style="font-size: 14px;">mvc</a> <a href="/tags/mvp/" style="font-size: 14px;">mvp</a> <a href="/tags/mvvm/" style="font-size: 14px;">mvvm</a> <a href="/tags/mysql/" style="font-size: 14px;">mysql</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/redis/" style="font-size: 14px;">redis</a> <a href="/tags/vim/" style="font-size: 14px;">vim</a> <a href="/tags/概念/" style="font-size: 17px;">概念</a> <a href="/tags/游记/" style="font-size: 17px;">游记</a> <a href="/tags/茶/" style="font-size: 14px;">茶</a>
+        
+    </div>
+    <!--归档-->
+    
+    <div class="archive-wrap widget">
+        <h1>Archive</h1>
+        <hr>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+    
+</div>
+	</div>
+	<div class="footer">
+    <!--<ul class="social">-->
+        <!--<li><a href="http://weibo.com/abcde6789ooo/" target="_blank"><i class="icon icon-weibo"></i></a></li>-->
+        <!--<li><a href="https://www.zhihu.com/people/reahink" target="_blank"><i class="icon icon-zhihu"></i></a></li>-->
+        <!--<li><a href="https://github.com/zqinmiao" target="_blank"><i class="icon icon-github"></i></a></li>-->
+    <!--</ul>-->
+    <p class="copyright">&copy; 2016 - 2018 <a href="/">reahink</a></p>
+    <p class="powered-by">Powered by <a href="https://hexo.io/">Hexo</a> | Theme by <a href="https://github.com/zqinmiao/hexo-theme-simpleLayout">simpleLayout</a></p>
+</div>
+
+</div>
+<script src="/lib/gitment.browser.js"></script>
+<script src="/lib/highlight.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
