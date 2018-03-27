@@ -6,16 +6,6 @@ layout: about
 
 ## 关于我
 
-张秦苗
-
-男
-
-大龄90后
-
-写着代码思考人生
+张秦苗，男，生于1991年12月25日，辛未年庚子月己巳日，前端开发者。
 
 zqinmiao@gmail.com
-
-## 关于reahink
-
-reahink = read + think ，保持阅读，保持思考。
